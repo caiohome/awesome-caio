@@ -1,14 +1,16 @@
 <div align="center">
 
+<a href="https://www.caiohome.com"><img src="assets/banner.svg" alt="Awesome Enterprise AI — the CAIO List" width="100%"></a>
+
 # 🧭 Awesome Enterprise AI — the CAIO List
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-0aa8d2.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Link check](https://img.shields.io/github/actions/workflow/status/caiohome/awesome-caio/links.yml?label=links&logo=github)](https://github.com/caiohome/awesome-caio/actions/workflows/links.yml)
 [![Website](https://img.shields.io/badge/🌐%20home-caiohome.com-6f42c1.svg)](https://www.caiohome.com)
 [![Stars](https://img.shields.io/github/stars/caiohome/awesome-caio?style=flat&color=f5c518)](https://github.com/caiohome/awesome-caio/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/caiohome/awesome-caio?color=blue)](https://github.com/caiohome/awesome-caio/commits/main)
-[![Contributors](https://img.shields.io/github/contributors/caiohome/awesome-caio?color=ff69b4)](https://github.com/caiohome/awesome-caio/graphs/contributors)
 
 **An adoption-first index of open-source AI for the enterprise — curated through the eyes of a CAIO.**
 
@@ -27,7 +29,7 @@
 > 本清单只回答一件事：**「这个开源项目能不能引入公司、引入到哪一层、谁来用、什么许可证、合规风险多大」**。
 > Maintained by **CAIO之家 · [caiohome.com](https://www.caiohome.com)** — the home for Chief AI Officers.
 
-Every other `awesome` list organizes by *technical category* or *research topic*, serving engineers and researchers. This one flips the axis: it is organized by the **CAIO adoption decision chain**, and every entry carries a set of **enterprise metadata tags**. Anyone can copy the entries — nobody can copy the *judgment*. That judgment is the only reason this list exists.
+Every other `awesome` list organizes by *technical category* or *research topic*, serving engineers and researchers. This one flips the axis: it is organized by the **CAIO adoption decision chain**, and every entry carries a set of **enterprise metadata tags** and a **direct link to its source**. Anyone can copy the entries — nobody can copy the *judgment*. That judgment is the only reason this list exists.
 
 <details>
 <summary><b>📖 Why another list? · 为什么再做一个清单</b></summary>
@@ -38,7 +40,7 @@ Awesome-LLM, Awesome-LLMOps, awesome-mcp-servers and friends are excellent — b
 
 So here the organizing principle is the **introduction decision** itself. A `🔴`-license 50k-star repo can be worth *less* to your company than a `🟢`-license 800-star one. Stars are not an inclusion criterion.
 
-市面上的 awesome 清单按技术类别组织，服务工程师与研究者。本清单换一根轴 —— 按 **CAIO 的引入决策链** 分层，并要求每个条目挂一套企业元数据。抄条目容易，抄不走这套「引入判断」。
+市面上的 awesome 清单按技术类别组织，服务工程师与研究者。本清单换一根轴 —— 按 **CAIO 的引入决策链** 分层，并要求每个条目挂一套企业元数据 + 一个可点击的源头链接。抄条目容易，抄不走这套「引入判断」。
 
 </details>
 
@@ -49,7 +51,7 @@ So here the organizing principle is the **introduction decision** itself. A `�
 > Tags are **decision aids, not endorsements.** Final adoption rests with your legal, compliance, and security review.
 > 标签是判断辅助，不是背书。最终引入决策以公司法务、合规、安全评审为准。
 >
-> **License `🟢🟡🔴` and Maturity `⭐🧪👀` are required on every entry.** Other tags are best-effort.
+> **License `🟢🟡🔴` and Maturity `⭐🧪👀` are required on every entry.** Other tags are best-effort. **Every project name is a link to its first-party source.**
 
 | Axis | Values |
 | --- | --- |
@@ -152,14 +154,14 @@ flowchart TB
 > **Adoption logic:** fix your base first. A *"2 China-led + 1 global/open backup"* multi-source policy hedges supply risk. **Weight licenses frequently differ from the code license — check each.**
 > 引入逻辑：先定底座来源，注意权重许可证常与代码许可证不同。
 
-- **DeepSeek** (`deepseek-ai`) 🇨🇳 ⭐ 🟢 — V/R-series open weights, mostly MIT. Strong reasoning & code.
-- **Qwen** (`QwenLM`) 🇨🇳 ⭐ 🟢 — Full size range + multimodal, mostly Apache-2.0; the enterprise-friendly default.
-- **GLM** (`zai-org` / `THUDM`) 🇨🇳 ⭐ 🟡 — GLM series; some versions carry usage terms — confirm before commercial use.
-- **Kimi** (`moonshotai`) 🇨🇳 ⭐ 🟢 — Long-context & agentic models, open weights.
-- **MiniMax** (`MiniMax-AI`) 🇨🇳 ⭐ 🟢 — Open-weight large models with long context.
-- **MiniCPM** (`OpenBMB`) 🇨🇳 ⭐ 🟡 📱 — Edge-friendly small models.
-- **Llama** (`meta-llama`) 🌍 ⭐ 🟡 — Llama Community License (includes an MAU-threshold clause); **not pure OSS**.
-- **Mistral / Gemma / Phi** (`mistralai` / `google` / `microsoft`) 🌍 ⭐ 🟢🟡 — overseas open-weight reference points.
+- **[DeepSeek](https://github.com/deepseek-ai)** (`deepseek-ai`) 🇨🇳 ⭐ 🟢 — V/R-series open weights, mostly MIT. Strong reasoning & code.
+- **[Qwen](https://github.com/QwenLM)** (`QwenLM`) 🇨🇳 ⭐ 🟢 — Full size range + multimodal, mostly Apache-2.0; the enterprise-friendly default.
+- **[GLM](https://github.com/zai-org)** (`zai-org` / `THUDM`) 🇨🇳 ⭐ 🟡 — GLM series; some versions carry usage terms — confirm before commercial use.
+- **[Kimi](https://github.com/MoonshotAI)** (`moonshotai`) 🇨🇳 ⭐ 🟢 — Long-context & agentic models, open weights.
+- **[MiniMax](https://github.com/MiniMax-AI)** (`MiniMax-AI`) 🇨🇳 ⭐ 🟢 — Open-weight large models with long context.
+- **[MiniCPM](https://github.com/OpenBMB/MiniCPM)** (`OpenBMB`) 🇨🇳 ⭐ 🟡 📱 — Edge-friendly small models.
+- **[Llama](https://github.com/meta-llama)** (`meta-llama`) 🌍 ⭐ 🟡 — Llama Community License (includes an MAU-threshold clause); **not pure OSS**.
+- **[Mistral](https://github.com/mistralai)** / **[Gemma](https://ai.google.dev/gemma)** / **[Phi](https://huggingface.co/microsoft)** (`mistralai` / `google` / `microsoft`) 🌍 ⭐ 🟢🟡 — overseas open-weight reference points.
 
 > ⚠️ Verify weight licenses one by one: Apache/MIT are commercial-safe; "community licenses" need legal to read the clauses (commercial caps, naming, acceptable-use).
 
@@ -169,66 +171,66 @@ flowchart TB
 > 引入逻辑：重点是微调（领域适配）与后训练/RL（对齐与推理增强）。
 
 **Distributed pretraining / large-scale training**
-- **Megatron-LM** (`NVIDIA`) 🌍 ⭐ 🟢 — A de-facto standard for large-scale parallel training.
-- **DeepSpeed** (`microsoft`) 🌍 ⭐ 🟢 — ZeRO optimization; memory & throughput.
-- **NeMo** (`NVIDIA`) 🌍 ⭐ 🟢 — End-to-end training framework; 🛡️ evaluate on non-Ascend domestic chips.
-- **ColossalAI** (`hpcaitech`) 🧪 🟢 — Parallel-training toolbox.
-- **TorchTitan** (`pytorch`) 🧪 🟢 — PyTorch-native large-model training reference.
+- **[Megatron-LM](https://github.com/NVIDIA/Megatron-LM)** (`NVIDIA`) 🌍 ⭐ 🟢 — A de-facto standard for large-scale parallel training.
+- **[DeepSpeed](https://github.com/deepspeedai/DeepSpeed)** (`deepspeedai`) 🌍 ⭐ 🟢 — ZeRO optimization; memory & throughput.
+- **[NeMo](https://github.com/NVIDIA/NeMo)** (`NVIDIA`) 🌍 ⭐ 🟢 — End-to-end training framework; 🛡️ evaluate on non-Ascend domestic chips.
+- **[ColossalAI](https://github.com/hpcaitech/ColossalAI)** (`hpcaitech`) 🧪 🟢 — Parallel-training toolbox.
+- **[TorchTitan](https://github.com/pytorch/torchtitan)** (`pytorch`) 🧪 🟢 — PyTorch-native large-model training reference.
 
 **Fine-tuning (most common)**
-- **LLaMA-Factory** (`hiyouga`) 🇨🇳 ⭐ 🟢 🏠 — One-stop fine-tuning; the most widely deployed in China.
-- **ms-swift** (`modelscope`) 🇨🇳 ⭐ 🟢 🏠 🛡️ — ModelScope training/tuning suite; good domestic-ecosystem fit.
-- **Unsloth** (`unslothai`) 🌍 ⭐ 🟢 — Efficient single-GPU fine-tuning; saves VRAM.
-- **Axolotl** (`axolotl-ai-cloud`) 🌍 ⭐ 🟢 — Config-driven fine-tuning.
-- **TRL** (`huggingface`) 🌍 ⭐ 🟢 — HF post-training library (SFT / DPO / GRPO).
+- **[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)** (`hiyouga`) 🇨🇳 ⭐ 🟢 🏠 — One-stop fine-tuning; the most widely deployed in China.
+- **[ms-swift](https://github.com/modelscope/ms-swift)** (`modelscope`) 🇨🇳 ⭐ 🟢 🏠 🛡️ — ModelScope training/tuning suite; good domestic-ecosystem fit.
+- **[Unsloth](https://github.com/unslothai/unsloth)** (`unslothai`) 🌍 ⭐ 🟢 — Efficient single-GPU fine-tuning; saves VRAM.
+- **[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** (`axolotl-ai-cloud`) 🌍 ⭐ 🟢 — Config-driven fine-tuning.
+- **[TRL](https://github.com/huggingface/trl)** (`huggingface`) 🌍 ⭐ 🟢 — HF post-training library (SFT / DPO / GRPO).
 
 **RLHF / RL (the reasoning-boost hot zone)**
-- **verl** (`volcengine` / `verl-project`) 🇨🇳 ⭐ 🟢 — ByteDance Seed's production-grade RL framework (HybridFlow).
-- **OpenRLHF** (`OpenRLHF`) 🌍 ⭐ 🟢 — Early-popular, approachable RLHF library.
-- **ROLL** (`alibaba`) 🇨🇳 🧪 🟢 — Alibaba large-scale RL framework.
-- **AReaL** (`inclusionAI` / Ant) 🇨🇳 🧪 🟢 — Asynchronous RL, throughput-focused.
-- **slime** (`THUDM`) 🇨🇳 🧪 🟢 — Zhipu/Tsinghua-lineage RL scaling.
-- **NeMo-RL** (`NVIDIA`) 🌍 🧪 🟢 — NVIDIA post-training RL.
-- **DAPO** (`BytedTsinghua-SIA`) 🇨🇳 👀 🟢 — ByteDance × Tsinghua open RL system/algorithm + dataset (built on verl).
+- **[verl](https://github.com/volcengine/verl)** (`volcengine` / `verl-project`) 🇨🇳 ⭐ 🟢 — ByteDance Seed's production-grade RL framework (HybridFlow).
+- **[OpenRLHF](https://github.com/OpenRLHF/OpenRLHF)** (`OpenRLHF`) 🌍 ⭐ 🟢 — Early-popular, approachable RLHF library.
+- **[ROLL](https://github.com/alibaba/ROLL)** (`alibaba`) 🇨🇳 🧪 🟢 — Alibaba large-scale RL framework.
+- **[AReaL](https://github.com/inclusionAI/AReaL)** (`inclusionAI` / Ant) 🇨🇳 🧪 🟢 — Asynchronous RL, throughput-focused.
+- **[slime](https://github.com/THUDM/slime)** (`THUDM`) 🇨🇳 🧪 🟢 — Zhipu/Tsinghua-lineage RL scaling.
+- **[NeMo-RL](https://github.com/NVIDIA-NeMo/RL)** (`NVIDIA-NeMo`) 🌍 🧪 🟢 — NVIDIA post-training RL.
+- **[DAPO](https://github.com/BytedTsinghua-SIA/DAPO)** (`BytedTsinghua-SIA`) 🇨🇳 👀 🟢 — ByteDance × Tsinghua open RL system/algorithm + dataset (built on verl).
 
 **Learn from scratch (capability-building for your seed engineers)**
-- **Karpathy** (`karpathy`) 🌍 ⭐ 🟢 — nanoGPT / llm.c / nanochat / micrograd / minGPT; the best "understand LLMs from zero" teaching code.
+- **[Karpathy](https://github.com/karpathy)** (`karpathy`) 🌍 ⭐ 🟢 — [nanoGPT](https://github.com/karpathy/nanoGPT) / [llm.c](https://github.com/karpathy/llm.c) / [nanochat](https://github.com/karpathy/nanochat) / [micrograd](https://github.com/karpathy/micrograd); the best "understand LLMs from zero" teaching code.
 
 ## 03 · High-performance Kernels & Low-level Systems
 
 > **Adoption logic:** in-house teams need these; almost everyone else only *uses* them, never *edits* them. Understanding them is what lets you push inference/training cost down.
 > 引入逻辑：绝大多数公司只「用」不「改」，但理解它们决定你能不能压低成本。
 
-- **DeepSeek open-infra-index** (`deepseek-ai/open-infra-index`) 🇨🇳 ⭐ 🟢 — Index of **FlashMLA** (MLA decode kernel), **DeepEP** (MoE comm library), **DeepGEMM** (FP8 GEMM), **DualPipe** (bidirectional pipeline parallel), **3FS** (high-perf parallel filesystem). Production-validated, mostly MIT.
-- **FlashAttention** (`Dao-AILab`) 🌍 ⭐ 🟢 — The attention-acceleration standard.
-- **Triton** (`triton-lang`) 🌍 ⭐ 🟢 — Language for writing GPU kernels.
-- **CUTLASS** (`NVIDIA`) 🌍 ⭐ 🟢 — CUDA matrix-op template library.
-- **Liger-Kernel** (`linkedin`) 🌍 🧪 🟢 — Fused training kernels; saves VRAM.
+- **[DeepSeek open-infra-index](https://github.com/deepseek-ai/open-infra-index)** (`deepseek-ai`) 🇨🇳 ⭐ 🟢 — Index of [FlashMLA](https://github.com/deepseek-ai/FlashMLA) (MLA decode kernel), [DeepEP](https://github.com/deepseek-ai/DeepEP) (MoE comm library), [DeepGEMM](https://github.com/deepseek-ai/DeepGEMM) (FP8 GEMM), [DualPipe](https://github.com/deepseek-ai/DualPipe) (pipeline parallel), [3FS](https://github.com/deepseek-ai/3FS) (parallel filesystem). Production-validated, mostly MIT.
+- **[FlashAttention](https://github.com/Dao-AILab/flash-attention)** (`Dao-AILab`) 🌍 ⭐ 🟢 — The attention-acceleration standard.
+- **[Triton](https://github.com/triton-lang/triton)** (`triton-lang`) 🌍 ⭐ 🟢 — Language for writing GPU kernels.
+- **[CUTLASS](https://github.com/NVIDIA/cutlass)** (`NVIDIA`) 🌍 ⭐ 🟢 — CUDA matrix-op template library.
+- **[Liger-Kernel](https://github.com/linkedin/Liger-Kernel)** (`linkedin`) 🌍 🧪 🟢 — Fused training kernels; saves VRAM.
 
 ## 04 · Inference Engines
 
 > **Adoption logic:** this is the **main cost battleground.** Engine choice directly sets per-GPU throughput and concurrency cost.
 > 引入逻辑：降本主战场，引擎选型直接决定单卡吞吐与并发成本。
 
-- **vLLM** (`vllm-project`) 🌍 ⭐ 🟢 🏠 — High-throughput inference standard (PagedAttention); 🛡️ `vllm-ascend` Ascend fork exists.
-- **SGLang** (`sgl-project`) 🌍 ⭐ 🟢 🏠 — High-performance serving; common for RAG / structured output.
-- **TensorRT-LLM** (`NVIDIA`) 🌍 ⭐ 🟢 — Peak optimization on NVIDIA GPUs.
-- **LMDeploy** (`InternLM`) 🇨🇳 ⭐ 🟢 🏠 — InternLM team's deploy stack; domestic-ecosystem friendly.
-- **llama.cpp** (`ggml-org`) 🌍 ⭐ 🟢 🏠 📱 — CPU / edge / quantized deployment.
-- **Xinference** (`xorbitsai`) 🇨🇳 🧪 🟢 🏠 — Multi-model local inference server.
+- **[vLLM](https://github.com/vllm-project/vllm)** (`vllm-project`) 🌍 ⭐ 🟢 🏠 — High-throughput inference standard (PagedAttention); 🛡️ [`vllm-ascend`](https://github.com/vllm-project/vllm-ascend) Ascend fork exists.
+- **[SGLang](https://github.com/sgl-project/sglang)** (`sgl-project`) 🌍 ⭐ 🟢 🏠 — High-performance serving; common for RAG / structured output.
+- **[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)** (`NVIDIA`) 🌍 ⭐ 🟢 — Peak optimization on NVIDIA GPUs.
+- **[LMDeploy](https://github.com/InternLM/lmdeploy)** (`InternLM`) 🇨🇳 ⭐ 🟢 🏠 — InternLM team's deploy stack; domestic-ecosystem friendly.
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp)** (`ggml-org`) 🌍 ⭐ 🟢 🏠 📱 — CPU / edge / quantized deployment.
+- **[Xinference](https://github.com/xorbitsai/inference)** (`xorbitsai`) 🇨🇳 🧪 🟢 🏠 — Multi-model local inference server.
 
 ## 05 · Compute Scheduling & Serving Orchestration
 
 > **Adoption logic:** once you have multi-GPU / multi-node clusters, you need a layer *above* the engine for load balancing, autoscaling, and multi-tenancy.
 > 引入逻辑：引擎之上需要调度与编排做负载均衡、扩缩容、多租户。
 
-- **llm-d** (`llm-d`) 🌍 🧪 🟢 🏠 — vLLM/SGLang orchestration on K8s: smart routing, tiered KV-cache, prefill/decode disaggregation, SLO autoscaling.
-- **llmaz** (`InftyAI`) 🌍 🧪 🟢 🏠 — Lightweight inference platform on K8s.
-- **K8s scheduler-plugins** (`kubernetes-sigs` / `InftyAI`) 🌍 ⭐ 🟢 🏠 — GPU scheduling plugins.
-- **Ray / Ray Serve** (`ray-project`) 🌍 ⭐ 🟢 🏠 — Distributed serving & orchestration; elastic, multi-model.
-- **KServe** (`kserve`) 🌍 ⭐ 🟢 🏠 — The K8s model-serving standard.
-- **NVIDIA Triton + Dynamo** (`triton-inference-server`) 🌍 ⭐ 🟢 — Official inference serving, enterprise support.
-- **BentoML / OpenLLM** (`bentoml`) 🌍 ⭐ 🟢 🏠 — Packaging & deployment.
+- **[llm-d](https://github.com/llm-d/llm-d)** (`llm-d`) 🌍 🧪 🟢 🏠 — vLLM/SGLang orchestration on K8s: smart routing, tiered KV-cache, prefill/decode disaggregation, SLO autoscaling.
+- **[llmaz](https://github.com/InftyAI/llmaz)** (`InftyAI`) 🌍 🧪 🟢 🏠 — Lightweight inference platform on K8s.
+- **[K8s scheduler-plugins](https://github.com/kubernetes-sigs/scheduler-plugins)** (`kubernetes-sigs`) 🌍 ⭐ 🟢 🏠 — GPU scheduling plugins.
+- **[Ray / Ray Serve](https://github.com/ray-project/ray)** (`ray-project`) 🌍 ⭐ 🟢 🏠 — Distributed serving & orchestration; elastic, multi-model.
+- **[KServe](https://github.com/kserve/kserve)** (`kserve`) 🌍 ⭐ 🟢 🏠 — The K8s model-serving standard.
+- **[NVIDIA Triton](https://github.com/triton-inference-server/server)** + **[Dynamo](https://github.com/ai-dynamo/dynamo)** (`triton-inference-server` / `ai-dynamo`) 🌍 ⭐ 🟢 — Official inference serving, enterprise support.
+- **[BentoML](https://github.com/bentoml/BentoML)** / **[OpenLLM](https://github.com/bentoml/OpenLLM)** (`bentoml`) 🌍 ⭐ 🟢 🏠 — Packaging & deployment.
 
 ## 06 · Gateway / Routing / API & Cost Governance
 
@@ -236,15 +238,15 @@ flowchart TB
 > 引入逻辑：企业级 AI「第一块基础设施」，统一接入与治理。
 
 **LLM gateways / API aggregation**
-- **LiteLLM** (`BerriAI`) 🌍 ⭐ 🟢 🏠 — Widest ecosystem, fastest to integrate, self-hostable.
-- **Portkey Gateway** (`Portkey-AI`) 🌍 ⭐ 🟢 🏠 — Routing / caching / guardrails / observability / budget control.
-- **Kong AI Gateway** (`Kong`) 🌍 ⭐ 🟢 — AI features on a mature API gateway; first choice if you already run Kong.
-- **Helicone AI Gateway** (`Helicone`) 🌍 🧪 🟢 🏠 — Lightweight, easy to integrate.
-- **One-API / New-API** (`songquanpeng` / `Calcium-Ion`) 🇨🇳 ⭐ 🟢 🏠 — Multi-tenant gateways with keys/quota/billing/audit; a top self-host choice in China.
+- **[LiteLLM](https://github.com/BerriAI/litellm)** (`BerriAI`) 🌍 ⭐ 🟢 🏠 — Widest ecosystem, fastest to integrate, self-hostable.
+- **[Portkey Gateway](https://github.com/Portkey-AI/gateway)** (`Portkey-AI`) 🌍 ⭐ 🟢 🏠 — Routing / caching / guardrails / observability / budget control.
+- **[Kong AI Gateway](https://github.com/Kong/kong)** (`Kong`) 🌍 ⭐ 🟢 — AI features on a mature API gateway; first choice if you already run Kong.
+- **[Helicone](https://github.com/Helicone/helicone)** (`Helicone`) 🌍 🧪 🟢 🏠 — Lightweight gateway/observability, easy to integrate.
+- **[One-API](https://github.com/songquanpeng/one-api)** (`songquanpeng`, 🟢 MIT) / **[New-API](https://github.com/Calcium-Ion/new-api)** (`Calcium-Ion`, 🔴 AGPL-3.0) 🇨🇳 ⭐ 🏠 — Multi-tenant gateways with keys/quota/billing/audit; a top self-host choice in China. ⚠️ New-API is **AGPL** — legal review before SaaS redistribution.
 
 **Model routing (pick a model per prompt — cut cost, raise quality)**
-- **RouteLLM** (`lm-sys`) 🌍 🧪 🟢 — Strong/weak model routing framework.
-- **Semantic Router** (`aurelio-labs`) 🌍 🧪 🟢 — Routing on semantic embeddings.
+- **[RouteLLM](https://github.com/lm-sys/RouteLLM)** (`lm-sys`) 🌍 🧪 🟢 — Strong/weak model routing framework.
+- **[Semantic Router](https://github.com/aurelio-labs/semantic-router)** (`aurelio-labs`) 🌍 🧪 🟢 — Routing on semantic embeddings.
 
 > ⚠️ The gateway is where keys and logs converge — design security / audit / PII-redaction *here*; it's the cheapest place to do it.
 
@@ -253,25 +255,25 @@ flowchart TB
 > **Adoption logic:** cuts the API/inference bill directly. As "Vibe Coding" scales across your dev team, token cost rises — this layer is explicit ROI.
 > 引入逻辑：直接砍 API/推理账单，显性 ROI。
 
-- **rtk (Rust Token Killer)** (`rtk-ai/rtk`) 🌍 ⭐ 🟢 🏠 — CLI proxy that filters/compresses command output before it enters context; saves 60–90% tokens; transparent hooks into Claude Code / Codex / Cursor / Gemini CLI.
-- **LLMLingua** (`microsoft`) 🌍 🧪 🟢 — Prompt / context compression.
-- **Repomix** (`yamadashy`) 🌍 ⭐ 🟢 — Pack a repo into a single file to feed a model.
-- **files-to-prompt / code2prompt** (`simonw` / `mufeedvh`) 🌍 🧪 🟢 — Code-context assembly.
+- **[rtk (Rust Token Killer)](https://github.com/rtk-ai/rtk)** (`rtk-ai`) 🌍 ⭐ 🟢 🏠 — CLI proxy that filters/compresses command output before it enters context; saves 60–90% tokens; transparent hooks into Claude Code / Codex / Cursor / Gemini CLI.
+- **[LLMLingua](https://github.com/microsoft/LLMLingua)** (`microsoft`) 🌍 🧪 🟢 — Prompt / context compression.
+- **[Repomix](https://github.com/yamadashy/repomix)** (`yamadashy`) 🌍 ⭐ 🟢 — Pack a repo into a single file to feed a model.
+- **[files-to-prompt](https://github.com/simonw/files-to-prompt)** / **[code2prompt](https://github.com/mufeedvh/code2prompt)** (`simonw` / `mufeedvh`) 🌍 🧪 🟢 — Code-context assembly.
 
 ## 08 · Orchestration Frameworks & Agents
 
 > **Adoption logic:** the main vehicle for internal enablement (sales / support / docs / R&D). In regulated/medical settings, prefer controllable, auditable, deterministic frameworks.
 > 引入逻辑：内部赋能落地的主载体；合规场景优先可控、可审计、确定性强的框架。
 
-- **LangGraph** (`langchain-ai`) 🌍 ⭐ 🟢 🏠 — Graph-based agent orchestration; production-ready, highly controllable.
-- **LlamaIndex** (`run-llama`) 🌍 ⭐ 🟢 🏠 — RAG / agent data framework.
-- **AutoGen** (`microsoft`) 🌍 ⭐ 🟢 — Multi-agent orchestration.
-- **DSPy** (`stanfordnlp`) 🌍 🧪 🟢 — Declarative prompt / program optimization.
-- **DeerFlow** (`bytedance`) 🇨🇳 🧪 🟢 🏠 — Deep-research multi-agent; production-base candidate.
-- **Dify** (`langgenius`) 🇨🇳 ⭐ 🟢 🏠 — LLM app platform; low-code + self-hostable.
-- **MetaGPT** (`FoundationAgents`) 🇨🇳 ⭐ 🟢 — Multi-agent "software team" paradigm.
-- **OpenHands** (`All-Hands-AI`) 🌍 ⭐ 🟢 🏠 — Open-source coding agent.
-- **n8n** (`n8n-io`) 🌍 ⭐ 🟡 🏠 — Workflow automation (Sustainable Use License — confirm terms).
+- **[LangGraph](https://github.com/langchain-ai/langgraph)** (`langchain-ai`) 🌍 ⭐ 🟢 🏠 — Graph-based agent orchestration; production-ready, highly controllable.
+- **[LlamaIndex](https://github.com/run-llama/llama_index)** (`run-llama`) 🌍 ⭐ 🟢 🏠 — RAG / agent data framework.
+- **[AutoGen](https://github.com/microsoft/autogen)** (`microsoft`) 🌍 ⭐ 🟢 — Multi-agent orchestration.
+- **[DSPy](https://github.com/stanfordnlp/dspy)** (`stanfordnlp`) 🌍 🧪 🟢 — Declarative prompt / program optimization.
+- **[DeerFlow](https://github.com/bytedance/deer-flow)** (`bytedance`) 🇨🇳 🧪 🟢 🏠 — Deep-research multi-agent; production-base candidate.
+- **[Dify](https://github.com/langgenius/dify)** (`langgenius`) 🇨🇳 ⭐ 🟢 🏠 — LLM app platform; low-code + self-hostable.
+- **[MetaGPT](https://github.com/FoundationAgents/MetaGPT)** (`FoundationAgents`) 🇨🇳 ⭐ 🟢 — Multi-agent "software team" paradigm.
+- **[OpenHands](https://github.com/All-Hands-AI/OpenHands)** (`All-Hands-AI`) 🌍 ⭐ 🟢 🏠 — Open-source coding agent.
+- **[n8n](https://github.com/n8n-io/n8n)** (`n8n-io`) 🌍 ⭐ 🟡 🏠 — Workflow automation (Sustainable Use License — confirm terms).
 
 > ⚠️ Medical Class II/III: fully dynamic multi-agent systems conflict with NMPA "deterministic, auditable" requirements — freeze a traceable chain at the orchestration layer.
 
@@ -280,12 +282,12 @@ flowchart TB
 > **Adoption logic:** the protocol + capability layer that lets agents safely touch enterprise systems. The enterprise focus is *gatewayed MCP + audit + permissions*.
 > 引入逻辑：让 Agent 安全接入企业系统的协议层与能力层。
 
-- **Model Context Protocol** (`modelcontextprotocol`) 🌍 ⭐ 🟢 — Official protocol + SDKs.
-- **awesome-mcp-servers** (`punkpeye/awesome-mcp-servers`) 🌍 — The master index of MCP servers.
-- **awesome-mcp-enterprise** (`bh-rat/awesome-mcp-enterprise`) 🌍 — Enterprise-grade MCP subset.
-- **MCP Gateway** (e.g. `lasso-security/mcp-gateway`, `mcpo`) 🌍 🧪 🟢 🏠 — MCP gateway / auth / audit.
-- **Composio** (`ComposioHQ`) 🌍 🧪 🟢 — Tool integration.
-- **awesome-claude-skills** (`ComposioHQ/awesome-claude-skills`) 🌍 — Skills asset index.
+- **[Model Context Protocol](https://modelcontextprotocol.io)** (`modelcontextprotocol`) 🌍 ⭐ 🟢 — [Official protocol + SDKs](https://github.com/modelcontextprotocol).
+- **[awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)** (`punkpeye`) 🌍 — The master index of MCP servers.
+- **[awesome-mcp-enterprise](https://github.com/bh-rat/awesome-mcp-enterprise)** (`bh-rat`) 🌍 — Enterprise-grade MCP subset.
+- **[MCP Gateway](https://github.com/lasso-security/mcp-gateway)** (`lasso-security`) + **[mcpo](https://github.com/open-webui/mcpo)** 🌍 🧪 🟢 🏠 — MCP gateway / auth / audit.
+- **[Composio](https://github.com/ComposioHQ/composio)** (`ComposioHQ`) 🌍 🧪 🟢 — Tool integration.
+- **[awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** (`ComposioHQ`) 🌍 — Skills asset index.
 
 ## 10 · RAG / Knowledge Base / Data Processing
 
@@ -293,23 +295,23 @@ flowchart TB
 > 引入逻辑：文档解析质量往往是 RAG 成败的真正瓶颈。
 
 **Vector DB / retrieval**
-- **Milvus** (`milvus-io` / Zilliz) 🇨🇳 ⭐ 🟢 🏠 — Mainstream vector database.
-- **Qdrant** (`qdrant`) 🌍 ⭐ 🟢 🏠 — Rust vector DB.
-- **pgvector** (`pgvector`) 🌍 ⭐ 🟢 🏠 — Postgres extension; lowest ops overhead.
+- **[Milvus](https://github.com/milvus-io/milvus)** (`milvus-io` / Zilliz) 🇨🇳 ⭐ 🟢 🏠 — Mainstream vector database.
+- **[Qdrant](https://github.com/qdrant/qdrant)** (`qdrant`) 🌍 ⭐ 🟢 🏠 — Rust vector DB.
+- **[pgvector](https://github.com/pgvector/pgvector)** (`pgvector`) 🌍 ⭐ 🟢 🏠 — Postgres extension; lowest ops overhead.
 
 **Embedding / rerank**
-- **BGE** (`FlagOpen` / BAAI) 🇨🇳 ⭐ 🟢 🏠 — BGE-M3 / BGE-Reranker; first choice for Chinese-language RAG retrieval.
+- **[BGE](https://github.com/FlagOpen/FlagEmbedding)** (`FlagOpen` / BAAI) 🇨🇳 ⭐ 🟢 🏠 — BGE-M3 / BGE-Reranker; first choice for Chinese-language RAG retrieval.
 
 **RAG frameworks / app platforms**
-- **RAGFlow** (`infiniflow`) 🇨🇳 ⭐ 🟢 🏠 — RAG engine with deep document understanding.
-- **LightRAG** (`HKUDS`) 🌍 🧪 🟢 — Graph-augmented RAG.
-- **GraphRAG** (`microsoft`) 🌍 🧪 🟢 — Knowledge-graph RAG.
-- **FastGPT** (`labring`) 🇨🇳 ⭐ 🟢 🏠 — Knowledge-base Q&A platform.
+- **[RAGFlow](https://github.com/infiniflow/ragflow)** (`infiniflow`) 🇨🇳 ⭐ 🟢 🏠 — RAG engine with deep document understanding.
+- **[LightRAG](https://github.com/HKUDS/LightRAG)** (`HKUDS`) 🌍 🧪 🟢 — Graph-augmented RAG.
+- **[GraphRAG](https://github.com/microsoft/graphrag)** (`microsoft`) 🌍 🧪 🟢 — Knowledge-graph RAG.
+- **[FastGPT](https://github.com/labring/FastGPT)** (`labring`) 🇨🇳 ⭐ 🟢 🏠 — Knowledge-base Q&A platform.
 
 **Document parsing (the real bottleneck)**
-- **MinerU** (`opendatalab`) 🇨🇳 ⭐ 🟢 🏠 — PDF / layout parsing; the domestic first choice.
-- **Docling** (`docling-project` / IBM) 🌍 ⭐ 🟢 🏠 — Documents → structured data.
-- **Unstructured** (`Unstructured-IO`) 🌍 ⭐ 🟡 — Multi-format parsing.
+- **[MinerU](https://github.com/opendatalab/MinerU)** (`opendatalab`) 🇨🇳 ⭐ 🟡 🏠 — PDF / layout parsing; the domestic first choice. ⚠️ Apache-2.0 **+ additional terms** — confirm for large-scale commercial use.
+- **[Docling](https://github.com/docling-project/docling)** (`docling-project` / IBM) 🌍 ⭐ 🟢 🏠 — Documents → structured data.
+- **[Unstructured](https://github.com/Unstructured-IO/unstructured)** (`Unstructured-IO`) 🌍 ⭐ 🟡 — Multi-format parsing.
 
 ## 11 · Evaluation / Observability / Guardrails / Governance
 
@@ -317,43 +319,43 @@ flowchart TB
 > 引入逻辑：CAIO 的「盾」。没有这一层，前面所有引入都不可审计、不可向董事会交代。
 
 **Evaluation**
-- **lm-evaluation-harness** (`EleutherAI`) 🌍 ⭐ 🟢 — The academic eval standard.
-- **OpenCompass** (`open-compass`) 🇨🇳 ⭐ 🟢 — Comprehensive China-origin eval.
-- **promptfoo** (`promptfoo`) 🌍 ⭐ 🟢 🏠 — Engineering-grade prompt/model eval & red-teaming.
+- **[lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)** (`EleutherAI`) 🌍 ⭐ 🟢 — The academic eval standard.
+- **[OpenCompass](https://github.com/open-compass/opencompass)** (`open-compass`) 🇨🇳 ⭐ 🟢 — Comprehensive China-origin eval.
+- **[promptfoo](https://github.com/promptfoo/promptfoo)** (`promptfoo`) 🌍 ⭐ 🟢 🏠 — Engineering-grade prompt/model eval & red-teaming.
 
 **Observability / tracing**
-- **Langfuse** (`langfuse`) 🌍 ⭐ 🟢 🏠 — Open-source LLM observability, self-hostable.
-- **Phoenix** (`Arize-ai`) 🌍 ⭐ 🟢 🏠 — Tracing & evaluation.
-- **OpenLLMetry** (`traceloop`) 🌍 🧪 🟢 — OpenTelemetry semantic conventions for LLMs.
+- **[Langfuse](https://github.com/langfuse/langfuse)** (`langfuse`) 🌍 ⭐ 🟢 🏠 — Open-source LLM observability, self-hostable.
+- **[Phoenix](https://github.com/Arize-ai/phoenix)** (`Arize-ai`) 🌍 ⭐ 🟢 🏠 — Tracing & evaluation.
+- **[OpenLLMetry](https://github.com/traceloop/openllmetry)** (`traceloop`) 🌍 🧪 🟢 — OpenTelemetry semantic conventions for LLMs.
 
 **Guardrails / safety**
-- **NeMo Guardrails** (`NVIDIA`) 🌍 ⭐ 🟢 🏠 — Conversational guardrails.
-- **Guardrails AI** (`guardrails-ai`) 🌍 🧪 🟢 — Output validation.
-- **Llama Guard / PurpleLlama** (`meta-llama`) 🌍 ⭐ 🟡 — Safety classification.
-- **garak** (`NVIDIA`) 🌍 🧪 🟢 — LLM vulnerability / red-team scanner.
+- **[NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails)** (`NVIDIA`) 🌍 ⭐ 🟢 🏠 — Conversational guardrails.
+- **[Guardrails AI](https://github.com/guardrails-ai/guardrails)** (`guardrails-ai`) 🌍 🧪 🟢 — Output validation.
+- **[Llama Guard / PurpleLlama](https://github.com/meta-llama/PurpleLlama)** (`meta-llama`) 🌍 ⭐ 🟡 — Safety classification.
+- **[garak](https://github.com/NVIDIA/garak)** (`NVIDIA`) 🌍 🧪 🟢 — LLM vulnerability / red-team scanner.
 
 ## 12 · Autonomous Research & Scientific Discovery
 
 > **Adoption logic:** the "research accelerator" for R&D / medical affairs. Mostly 👀 **Watch** for now — mind the non-standard licenses and reproducibility.
 > 引入逻辑：研发/医学事务的「研究加速器」，当前多为观察期。
 
-- **AI Scientist / v2** (`SakanaAI/AI-Scientist`) 🌍 👀 🔴 — Pioneering end-to-end autonomous research. ⚠️ **Non-standard license (RAIL-derived, with a mandatory-disclosure clause) — legal review mandatory before any enterprise use.**
-- **AI-Researcher** (`HKUDS/AI-Researcher`) 🌍 👀 🟢 — HKU Data Intelligence Lab; autonomous research innovation.
-- **open-ai-co-scientist** (`llnl/open-ai-co-scientist`) 🌍 👀 🟢 — Open reproduction of Google's AI co-scientist multi-agent system.
-- **GPT-Researcher** (`assafelovic/gpt-researcher`) 🌍 🧪 🟢 🏠 — Autonomous deep-research agent.
-- **DeerFlow** (see §08) 🇨🇳 — Deep-research orchestration, self-hostable.
+- **[AI Scientist / v2](https://github.com/SakanaAI/AI-Scientist)** (`SakanaAI`) 🌍 👀 🔴 — Pioneering end-to-end autonomous research. ⚠️ **Non-standard license (RAIL-derived, with a mandatory-disclosure clause) — legal review mandatory before any enterprise use.**
+- **[AI-Researcher](https://github.com/HKUDS/AI-Researcher)** (`HKUDS`) 🌍 👀 🟢 — HKU Data Intelligence Lab; autonomous research innovation.
+- **[open-ai-co-scientist](https://github.com/llnl/open-ai-co-scientist)** (`llnl`) 🌍 👀 🟢 — Open reproduction of Google's AI co-scientist multi-agent system.
+- **[GPT-Researcher](https://github.com/assafelovic/gpt-researcher)** (`assafelovic`) 🌍 🧪 🟢 🏠 — Autonomous deep-research agent.
+- **[DeerFlow](#08--orchestration-frameworks--agents)** (see §08) 🇨🇳 — Deep-research orchestration, self-hostable.
 
 ## 13 · Private / Xinchuang / Edge Deployment
 
 > **Adoption logic:** the hard constraints of medical / government / SOE — data never leaves, domestic substitution, edge/on-device. This layer decides whether everything above can *legally land*.
 > 引入逻辑：数据不出域、国产化替代、边缘端侧 —— 决定前面所有项目能不能合规落地。
 
-- **awesome-private-ai** (`tdi/awesome-private-ai`) 🌍 — On-prem / air-gap / self-hosted curated list.
-- **MindSpore / CANN** (`mindspore-ai` / Huawei Ascend) 🇨🇳 ⭐ 🟢 🏠 🛡️ — Ascend training/inference stack.
-- **vllm-ascend** (`vllm-project/vllm-ascend`) 🇨🇳 🧪 🟢 🏠 🛡️ — vLLM Ascend backend; the Xinchuang inference path.
-- **LocalAI** (`mudler/LocalAI`) 🌍 ⭐ 🟢 🏠 📱 — OpenAI-compatible local inference.
-- **Jan** (`menloresearch/jan`) 🌍 ⭐ 🟢 🏠 📱 — Offline AI assistant.
-- **Ollama** (`ollama`) 🌍 ⭐ 🟡 🏠 📱 — Local model runtime (mind the license & commercial terms).
+- **[awesome-private-ai](https://github.com/tdi/awesome-private-ai)** (`tdi`) 🌍 — On-prem / air-gap / self-hosted curated list.
+- **[MindSpore](https://github.com/mindspore-ai/mindspore)** / **[CANN](https://www.hiascend.com/software/cann)** (`mindspore-ai` / Huawei Ascend) 🇨🇳 ⭐ 🟢 🏠 🛡️ — Ascend training/inference stack.
+- **[vllm-ascend](https://github.com/vllm-project/vllm-ascend)** (`vllm-project`) 🇨🇳 🧪 🟢 🏠 🛡️ — vLLM Ascend backend; the Xinchuang inference path.
+- **[LocalAI](https://github.com/mudler/LocalAI)** (`mudler`) 🌍 ⭐ 🟢 🏠 📱 — OpenAI-compatible local inference.
+- **[Jan](https://github.com/menloresearch/jan)** (`menloresearch`) 🌍 ⭐ 🟢 🏠 📱 — Offline AI assistant.
+- **[Ollama](https://github.com/ollama/ollama)** (`ollama`) 🌍 ⭐ 🟢 🏠 📱 — Local model runtime (MIT; mind trademark & commercial positioning, not the license).
 
 ## 14 · Platforms, Hubs & Registries — where CAIOs source & host
 
@@ -363,57 +365,57 @@ flowchart TB
 > ⚠️ Managed clouds below are listed as **sourcing/hosting venues**, not as OSS entries — included because that is where CAIOs source & host in practice.
 
 **Model hubs & registries · 模型枢纽**
-- **Hugging Face** ([huggingface.co](https://huggingface.co)) 🌍 — The default global hub for models, datasets & Spaces.
-- **ModelScope 魔搭** ([modelscope.cn](https://modelscope.cn)) 🇨🇳 — Alibaba-backed hub; the de-facto China mirror for weights & datasets.
-- **GitCode AI / 模型广场** ([gitcode.com](https://gitcode.com)) 🇨🇳 — CSDN-backed mirror of OSS & models.
-- **Kaggle Models** ([kaggle.com/models](https://www.kaggle.com/models)) 🌍 — Hosted models + notebooks.
-- **Ollama Library** ([ollama.com/library](https://ollama.com/library)) 🌍 📱 — One-command local model pulls.
+- **[Hugging Face](https://huggingface.co)** 🌍 — The default global hub for models, datasets & Spaces.
+- **[ModelScope 魔搭](https://modelscope.cn)** 🇨🇳 — Alibaba-backed hub; the de-facto China mirror for weights & datasets.
+- **[GitCode AI / 模型广场](https://ai.gitcode.com)** 🇨🇳 — CSDN-backed mirror of OSS & models.
+- **[Kaggle Models](https://www.kaggle.com/models)** 🌍 — Hosted models + notebooks.
+- **[Ollama Library](https://ollama.com/library)** 🌍 📱 — One-command local model pulls.
 
 **Code hosting · 代码托管**
-- **GitHub** ([github.com](https://github.com)) 🌍 — Where most of this list lives.
-- **Gitee 码云** ([gitee.com](https://gitee.com)) 🇨🇳 — China's largest host; many domestic OSS mirrors.
-- **GitLab** ([gitlab.com](https://gitlab.com)) 🌍 — Self-hostable CE, common behind the firewall.
-- **AtomGit** ([atomgit.com](https://atomgit.com)) 🇨🇳 🛡️ — OpenAtom Foundation hosting, Xinchuang-aligned.
+- **[GitHub](https://github.com)** 🌍 — Where most of this list lives.
+- **[Gitee 码云](https://gitee.com)** 🇨🇳 — China's largest host; many domestic OSS mirrors.
+- **[GitLab](https://gitlab.com)** 🌍 — Self-hostable CE, common behind the firewall.
+- **[AtomGit](https://atomgit.com)** 🇨🇳 🛡️ — OpenAtom Foundation hosting, Xinchuang-aligned.
 
 **Managed AI clouds — overseas · 海外云**
-- **AWS Bedrock / SageMaker** ([aws.amazon.com/bedrock](https://aws.amazon.com/bedrock/)) 🌍 ☁️
-- **Azure AI Foundry** ([ai.azure.com](https://ai.azure.com)) 🌍 ☁️
-- **Google Vertex AI** ([cloud.google.com/vertex-ai](https://cloud.google.com/vertex-ai)) 🌍 ☁️
-- **NVIDIA NGC / NIM** ([catalog.ngc.nvidia.com](https://catalog.ngc.nvidia.com)) 🌍 ☁️ 🏠 — Containers, models, microservices.
+- **[AWS Bedrock / SageMaker](https://aws.amazon.com/bedrock/)** 🌍 ☁️
+- **[Azure AI Foundry](https://ai.azure.com)** 🌍 ☁️
+- **[Google Vertex AI](https://cloud.google.com/vertex-ai)** 🌍 ☁️
+- **[NVIDIA NGC / NIM](https://catalog.ngc.nvidia.com)** 🌍 ☁️ 🏠 — Containers, models, microservices.
 
 **Managed AI clouds — China · 国内云**
-- **Alibaba Cloud Model Studio 百炼** ([bailian.console.aliyun.com](https://bailian.console.aliyun.com)) 🇨🇳 ☁️
-- **Volcengine Ark 火山方舟** ([volcengine.com/product/ark](https://www.volcengine.com/product/ark)) 🇨🇳 ☁️
-- **Baidu Qianfan 千帆** ([cloud.baidu.com/product/wenxinworkshop](https://cloud.baidu.com/product/wenxinworkshop)) 🇨🇳 ☁️
-- **Tencent Cloud TI / Hunyuan 腾讯云** ([cloud.tencent.com/product/ti](https://cloud.tencent.com/product/ti)) 🇨🇳 ☁️
-- **Huawei Cloud ModelArts 华为云** ([huaweicloud.com/product/modelarts](https://www.huaweicloud.com/product/modelarts.html)) 🇨🇳 ☁️ 🛡️
+- **[Alibaba Cloud Model Studio 百炼](https://www.aliyun.com/product/bailian)** 🇨🇳 ☁️
+- **[Volcengine Ark 火山方舟](https://www.volcengine.com/product/ark)** 🇨🇳 ☁️
+- **[Baidu Qianfan 千帆](https://qianfan.cloud.baidu.com)** 🇨🇳 ☁️
+- **[Tencent Cloud TI / Hunyuan 腾讯云](https://cloud.tencent.com/product/ti)** 🇨🇳 ☁️
+- **[Huawei Cloud ModelArts 华为云](https://www.huaweicloud.com/product/modelarts.html)** 🇨🇳 ☁️ 🛡️
 
 **Inference-as-a-service / API aggregators · 推理即服务**
-- **OpenRouter** ([openrouter.ai](https://openrouter.ai)) 🌍 — Many models behind one key.
-- **Together / Fireworks / Groq / DeepInfra** 🌍 — Hosted open-weight inference at speed.
-- **SiliconFlow 硅基流动** ([siliconflow.cn](https://siliconflow.cn)) 🇨🇳 — Low-cost hosted open-weight inference.
+- **[OpenRouter](https://openrouter.ai)** 🌍 — Many models behind one key.
+- **[Together](https://www.together.ai)** / **[Fireworks](https://fireworks.ai)** / **[Groq](https://groq.com)** / **[DeepInfra](https://deepinfra.com)** 🌍 — Hosted open-weight inference at speed.
+- **[SiliconFlow 硅基流动](https://siliconflow.cn)** 🇨🇳 — Low-cost hosted open-weight inference.
 
 **Domestic compute stacks · 国产算力栈 (信创)**
-- **Huawei Ascend CANN** ([hiascend.com](https://www.hiascend.com)) 🇨🇳 🛡️ — The Ascend NPU compute architecture (the CUDA analog for Xinchuang).
-- **MindSpore** ([mindspore.cn](https://www.mindspore.cn)) 🇨🇳 🛡️ — Huawei's AI framework.
-- **Cambricon 寒武纪 · Moore Threads 摩尔线程 · Hygon 海光 · Biren 壁仞** 🇨🇳 🛡️ — Domestic accelerators to evaluate for Xinchuang procurement.
+- **[Huawei Ascend CANN](https://www.hiascend.com)** 🇨🇳 🛡️ — The Ascend NPU compute architecture (the CUDA analog for Xinchuang).
+- **[MindSpore](https://www.mindspore.cn)** 🇨🇳 🛡️ — Huawei's AI framework.
+- **[Cambricon 寒武纪](https://www.cambricon.com)** · **[Moore Threads 摩尔线程](https://www.mthreads.com)** · **[Hygon 海光](https://www.hygon.cn)** · **[Biren 壁仞](https://www.birentech.com)** 🇨🇳 🛡️ — Domestic accelerators to evaluate for Xinchuang procurement.
 
 ## 15 · Orgs & People to Follow (open-source account index)
 
 > **Adoption logic:** follow the *source*, not the repo. Watching these official org accounts gets you the signal earlier than chasing single repos. **Prioritize org accounts; keep personal accounts minimal.**
 > 引入逻辑：跟仓库不如跟「源头」。
 
-**Models & low-level — China:** `deepseek-ai` · `QwenLM` · `zai-org` (GLM) · `OpenBMB` · `ByteDanceSeed` · `moonshotai` (Kimi) · `MiniMax-AI` · `FlagOpen` (BAAI) · `InternLM` · `modelscope`
+**Models & low-level — China:** [`deepseek-ai`](https://github.com/deepseek-ai) · [`QwenLM`](https://github.com/QwenLM) · [`zai-org`](https://github.com/zai-org) (GLM) · [`OpenBMB`](https://github.com/OpenBMB) · [`ByteDanceSeed`](https://github.com/ByteDance-Seed) · [`MoonshotAI`](https://github.com/MoonshotAI) (Kimi) · [`MiniMax-AI`](https://github.com/MiniMax-AI) · [`FlagOpen`](https://github.com/FlagOpen) (BAAI) · [`InternLM`](https://github.com/InternLM) · [`modelscope`](https://github.com/modelscope)
 
-**Models & low-level — global:** `NVIDIA` · `microsoft` · `meta-llama` · `mistralai` · `huggingface` · `google-research`
+**Models & low-level — global:** [`NVIDIA`](https://github.com/NVIDIA) · [`microsoft`](https://github.com/microsoft) · [`meta-llama`](https://github.com/meta-llama) · [`mistralai`](https://github.com/mistralai) · [`huggingface`](https://github.com/huggingface) · [`google-research`](https://github.com/google-research)
 
-**Inference / infrastructure:** `vllm-project` · `sgl-project` · `ray-project` · `InftyAI` · `llm-d` · `BerriAI` (LiteLLM)
+**Inference / infrastructure:** [`vllm-project`](https://github.com/vllm-project) · [`sgl-project`](https://github.com/sgl-project) · [`ray-project`](https://github.com/ray-project) · [`InftyAI`](https://github.com/InftyAI) · [`llm-d`](https://github.com/llm-d) · [`BerriAI`](https://github.com/BerriAI) (LiteLLM)
 
-**Agents / apps / RAG:** `langchain-ai` · `run-llama` · `langgenius` (Dify) · `infiniflow` (RAGFlow) · `HKUDS` · `opendatalab`
+**Agents / apps / RAG:** [`langchain-ai`](https://github.com/langchain-ai) · [`run-llama`](https://github.com/run-llama) · [`langgenius`](https://github.com/langgenius) (Dify) · [`infiniflow`](https://github.com/infiniflow) (RAGFlow) · [`HKUDS`](https://github.com/HKUDS) · [`opendatalab`](https://github.com/opendatalab)
 
-**Protocol / tools:** `modelcontextprotocol` · `ComposioHQ`
+**Protocol / tools:** [`modelcontextprotocol`](https://github.com/modelcontextprotocol) · [`ComposioHQ`](https://github.com/ComposioHQ)
 
-**People (OSS maintainers, follow as needed):** `karpathy` (understand LLMs from zero) — otherwise track via the org accounts above.
+**People (OSS maintainers, follow as needed):** [`karpathy`](https://github.com/karpathy) (understand LLMs from zero) — otherwise track via the org accounts above.
 
 ## 16 · Other Awesome Lists (meta-index)
 
@@ -423,7 +425,6 @@ flowchart TB
 - **[tensorchord/Awesome-LLMOps](https://github.com/tensorchord/Awesome-LLMOps)** — Full-stack LLMOps; best-structured.
 - **[Not-Diamond/awesome-ai-model-routing](https://github.com/Not-Diamond/awesome-ai-model-routing)** — Model-routing focus.
 - **[xlite-dev/Awesome-LLM-Inference](https://github.com/xlite-dev/Awesome-LLM-Inference)** — Inference acceleration: papers + code.
-- **[tdi/awesome-private-ai](https://github.com/tdi/awesome-private-ai)** — Private / air-gap deployment.
 - **[deepseek-ai/open-infra-index](https://github.com/deepseek-ai/open-infra-index)** — DeepSeek's official infra index.
 - **[Hannibal046/Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM)** — The classic master LLM list.
 - **[EthicalML/awesome-production-machine-learning](https://github.com/EthicalML/awesome-production-machine-learning)** — Production ML / governance, the elder list.
@@ -438,9 +439,12 @@ PRs welcome — see **[CONTRIBUTING.md](CONTRIBUTING.md)**. The short version:
 
 1. **One project per PR**, in the right section, sorted by maturity then name.
 2. **License + maturity tags are mandatory**; add deployment/origin/compliance tags where you can.
-3. **Maintainer review before merge:** link validity, license matches the code's own declaration, activity in the last ~6 months.
-4. **One sentence** on *which layer it fits and what problem it solves* — no marketing fluff.
-5. Closed/commercial products don't go in the body; if there's an OSS core, link the core repo.
+3. **Every entry must link to its first-party source.**
+4. **Maintainer review before merge:** link validity, license matches the code's own declaration, activity in the last ~6 months.
+5. **One sentence** on *which layer it fits and what problem it solves* — no marketing fluff.
+6. Closed/commercial products don't go in the body; if there's an OSS core, link the core repo.
+
+> 🤖 A [GitHub Action](.github/workflows/links.yml) checks every link on each PR, and the [`scripts/audit.py`](scripts/audit.py) helper cross-checks stars + license against the GitHub API.
 
 ## Disclaimer
 

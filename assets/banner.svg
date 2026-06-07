@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-label="Awesome Enterprise AI — the CAIO List · caiohome.com">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#0f1830"/>
+      <stop offset="1" stop-color="#070a14"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#6f42c1"/>
+      <stop offset="1" stop-color="#f5c518"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.18" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#1e3a8a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1e3a8a" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .f { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, system-ui, sans-serif; }
+      .mono { font-family: "SFMono-Regular", "JetBrains Mono", Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="340" rx="20" fill="url(#bg)"/>
+  <rect width="1280" height="340" rx="20" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1280" height="6" fill="url(#accent)"/>
+
+  <!-- compass mark -->
+  <g transform="translate(92,118)">
+    <circle r="46" fill="none" stroke="url(#accent)" stroke-width="3"/>
+    <circle r="5" fill="#f5c518"/>
+    <path d="M0,-34 L11,0 L0,34 L-11,0 Z" fill="#22d3ee" opacity="0.92"/>
+    <path d="M0,-34 L11,0 L0,0 Z" fill="#6f42c1"/>
+  </g>
+
+  <!-- titles -->
+  <text x="170" y="92" class="f mono" font-size="22" letter-spacing="7" fill="#7dd3fc">AWESOME · ENTERPRISE · AI</text>
+  <text x="168" y="158" class="f" font-size="64" font-weight="800" fill="#ffffff">the CAIO List</text>
+  <text x="170" y="200" class="f" font-size="23" fill="#c7d2fe">An adoption-first index of open-source AI for the enterprise.</text>
+  <text x="170" y="232" class="f" font-size="18" fill="#8b9bc4">面向 CAIO（首席 AI 官）的「可引入性」开源索引 — 能不能引入公司，才是重点。</text>
+
+  <!-- tag chips -->
+  <g transform="translate(170,268)" class="f" font-size="15">
+    <circle cx="8" cy="-5" r="7" fill="#3fb950"/><text x="22" y="0" fill="#cbd5e1">Permissive</text>
+    <circle cx="128" cy="-5" r="7" fill="#d29922"/><text x="142" y="0" fill="#cbd5e1">Conditional</text>
+    <circle cx="252" cy="-5" r="7" fill="#f85149"/><text x="266" y="0" fill="#cbd5e1">Restricted</text>
+    <text x="372" y="0" fill="#6b7aa3" class="mono" font-size="14">|  License · Maturity · Deployment · Origin · Compliance</text>
+  </g>
+
+  <!-- site -->
+  <text x="1188" y="312" text-anchor="end" class="f mono" font-size="16" fill="#7dd3fc">caiohome.com</text>
+  <text x="1188" y="40" text-anchor="end" class="f mono" font-size="13" fill="#475569">CC&#160;BY&#160;4.0</text>
+</svg>
