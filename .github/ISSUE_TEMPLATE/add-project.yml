@@ -1,0 +1,58 @@
+name: "➕ Suggest a project"
+description: Suggest an open-source project for the Awesome CAIO list
+title: "[add] <project name>"
+labels: ["suggestion"]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repository URL · 仓库地址
+      placeholder: https://github.com/org/project
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section · 板块
+      options:
+        - "01 · Foundation Models & Open Weights"
+        - "02 · Training / Fine-tuning / Post-training (RL)"
+        - "03 · Kernels & Low-level Systems"
+        - "04 · Inference Engines"
+        - "05 · Compute Scheduling & Serving Orchestration"
+        - "06 · Gateway / Routing / API & Cost Governance"
+        - "07 · Context Engineering & Token Efficiency"
+        - "08 · Orchestration Frameworks & Agents"
+        - "09 · MCP / Tools / Skills"
+        - "10 · RAG / Knowledge Base / Data Processing"
+        - "11 · Evaluation / Observability / Guardrails / Governance"
+        - "12 · Autonomous Research & Scientific Discovery"
+        - "13 · Private / Xinchuang / Edge Deployment"
+        - "14 · Platforms, Hubs & Registries"
+        - "Other / not sure"
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License · 许可证
+      placeholder: "Apache-2.0 / MIT / AGPL / RAIL / custom ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Maturity · 成熟度
+      options:
+        - "⭐ Production"
+        - "🧪 Pilot"
+        - "👀 Watch"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs (CAIO view) · 为什么收录
+      description: Who adopts it, at which layer, and the main compliance caveat (if any).
+    validations:
+      required: true
