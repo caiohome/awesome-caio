@@ -36,6 +36,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [Mistral](https://github.com/mistralai) - Overseas open-weight reference models. Global, production, permissive.
 - [Gemma](https://ai.google.dev/gemma) - Google open-weight model family. Global, production, conditional.
 - [Phi](https://huggingface.co/microsoft) - Microsoft small open-weight models. Global, production, permissive.
+- [gpt-oss](https://github.com/openai/gpt-oss) - OpenAI first open-weight models, 120B and 20B, under Apache-2.0; an enterprise-safe Western open-weight anchor. Global, production, permissive.
+- [OLMo](https://github.com/allenai/OLMo) - Allen AI fully open model with training data, code and weights; the reference when full reproducibility and auditability is the requirement. Global, pilot, permissive.
 
 ## Training, Fine-tuning and Post-training
 
@@ -106,6 +108,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [Dynamo](https://github.com/ai-dynamo/dynamo) - NVIDIA datacenter-scale inference serving. Global, production, permissive.
 - [BentoML](https://github.com/bentoml/BentoML) - Model packaging and deployment. Global, production, permissive, self-hostable.
 - [OpenLLM](https://github.com/bentoml/OpenLLM) - Run open-weight LLMs as OpenAI-compatible APIs. Global, production, permissive, self-hostable.
+- [AIBrix](https://github.com/vllm-project/aibrix) - Cost-efficient, pluggable Kubernetes infrastructure for LLM inference from the vLLM project, with LLM-aware autoscaling, KV-cache offload and routing. Global, pilot, permissive, self-hostable.
+- [LMCache](https://github.com/LMCache/LMCache) - KV-cache layer that accelerates serving through cross-request reuse and offload; pairs with vLLM and llm-d. Global, pilot, permissive, self-hostable.
 
 ## Gateway, Routing and Cost Governance
 
@@ -119,6 +123,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [Helicone](https://github.com/Helicone/helicone) - Lightweight gateway and observability, easy to integrate. Global, pilot, permissive, self-hostable.
 - [One-API](https://github.com/songquanpeng/one-api) - Multi-tenant gateway with keys, quota, billing and audit; a top self-host choice in China, MIT. China-led, production, permissive, self-hostable.
 - [New-API](https://github.com/Calcium-Ion/new-api) - One-API-style multi-tenant gateway under AGPL-3.0, so legal review before SaaS redistribution. China-led, production, restricted, self-hostable.
+- [Higress](https://github.com/higress-group/higress) - AI-native API gateway based on Envoy with token rate-limiting, semantic caching and content-safety plugins; China-origin with a good Xinchuang story. China-led, production, permissive, self-hostable.
 
 ### Model routing
 
@@ -148,6 +153,11 @@ Every entry answers one question: can this open-source project be brought into a
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) - Multi-agent software-team paradigm. China-led, production, permissive.
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands) - Open-source coding agent. Global, production, permissive, self-hostable.
 - [n8n](https://github.com/n8n-io/n8n) - Workflow automation under the Sustainable Use License; confirm terms. Global, production, conditional, self-hostable.
+- [CrewAI](https://github.com/crewAIInc/crewAI) - Role-playing multi-agent orchestration for collaborative agent teams. Global, production, permissive.
+- [Pydantic AI](https://github.com/pydantic/pydantic-ai) - Type-safe agent framework; strong fit for controllable, testable enterprise agents. Global, production, permissive.
+- [Google ADK](https://github.com/google/adk-python) - Code-first Agent Development Kit to build, evaluate and deploy agents. Global, production, permissive.
+- [Agno](https://github.com/agno-agi/agno) - High-performance framework to build and run agent platforms. Global, production, permissive.
+- [Bisheng](https://github.com/dataelement/bisheng) - Enterprise LLM DevOps platform spanning workflow, RAG, agents, fine-tuning and observability; self-hostable. China-led, production, permissive, self-hostable.
 
 ## MCP, Tools and Skills
 
@@ -157,6 +167,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [MCP Gateway](https://github.com/lasso-security/mcp-gateway) - Security gateway, auth and audit for MCP. Global, pilot, permissive, self-hostable.
 - [mcpo](https://github.com/open-webui/mcpo) - Expose MCP servers as OpenAPI endpoints. Global, pilot, permissive, self-hostable.
 - [Composio](https://github.com/ComposioHQ/composio) - Tool integration for agents. Global, pilot, permissive.
+- [FastMCP](https://github.com/PrefectHQ/fastmcp) - A fast, Pythonic way to build MCP servers and clients. Global, production, permissive.
 
 ## RAG, Knowledge Base and Data Processing
 
@@ -185,6 +196,12 @@ Every entry answers one question: can this open-source project be brought into a
 - [MinerU](https://github.com/opendatalab/MinerU) - PDF and layout parsing; a domestic first choice under Apache-2.0 with additional terms, so confirm for large-scale commercial use. China-led, production, conditional, self-hostable.
 - [Docling](https://github.com/docling-project/docling) - Convert documents into structured data. Global, production, permissive, self-hostable.
 - [Unstructured](https://github.com/Unstructured-IO/unstructured) - Multi-format document parsing. Global, production, conditional.
+- [markitdown](https://github.com/microsoft/markitdown) - Convert Office, PDF, HTML and more into clean Markdown for LLMs. Global, production, permissive.
+
+### Web ingestion and memory
+
+- [Crawl4AI](https://github.com/unclecode/crawl4ai) - LLM-friendly web crawler and scraper for RAG data ingestion. Global, production, permissive.
+- [mem0](https://github.com/mem0ai/mem0) - Memory layer for agents with persistent user and agent memory across sessions. Global, production, permissive.
 
 ## Evaluation, Observability and Governance
 
@@ -195,6 +212,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) - The academic evaluation standard. Global, production, permissive.
 - [OpenCompass](https://github.com/open-compass/opencompass) - Comprehensive China-origin evaluation suite. China-led, production, permissive.
 - [promptfoo](https://github.com/promptfoo/promptfoo) - Engineering-grade prompt and model evaluation and red-teaming. Global, production, permissive, self-hostable.
+- [Ragas](https://github.com/vibrantlabsai/ragas) - Evaluation toolkit for RAG covering faithfulness, answer relevancy and context metrics. Global, production, permissive.
+- [DeepEval](https://github.com/confident-ai/deepeval) - LLM evaluation and unit-testing framework with many built-in metrics. Global, production, permissive.
 
 ### Observability and tracing
 
@@ -208,6 +227,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [Guardrails AI](https://github.com/guardrails-ai/guardrails) - Output validation. Global, pilot, permissive.
 - [PurpleLlama](https://github.com/meta-llama/PurpleLlama) - Meta trust and safety classification tools. Global, production, conditional.
 - [garak](https://github.com/NVIDIA/garak) - LLM vulnerability and red-team scanner. Global, pilot, permissive.
+- [Presidio](https://github.com/microsoft/presidio) - PII and PHI detection, redaction and anonymization; the gateway-side control for medical and financial data. Global, production, permissive, self-hostable.
 
 ## Autonomous Research
 
