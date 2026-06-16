@@ -18,6 +18,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [RAG, Knowledge Base and Data Processing](#rag-knowledge-base-and-data-processing)
 - [Evaluation, Observability and Governance](#evaluation-observability-and-governance)
 - [Autonomous Research](#autonomous-research)
+- [Vibe Coding for Enterprise R&D](#vibe-coding-for-enterprise-rd)
+- [Internal Knowledge Base](#internal-knowledge-base)
 - [Private, Xinchuang and Edge Deployment](#private-xinchuang-and-edge-deployment)
 - [Platforms, Hubs and Registries](#platforms-hubs-and-registries)
 - [Related](#related)
@@ -259,6 +261,59 @@ Every entry answers one question: can this open-source project be brought into a
 - [AI-Researcher](https://github.com/HKUDS/AI-Researcher) - HKU Data Intelligence Lab autonomous research system. Global, watch, permissive.
 - [open-ai-co-scientist](https://github.com/llnl/open-ai-co-scientist) - Open reproduction of the Google AI co-scientist multi-agent system. Global, watch, permissive.
 - [GPT-Researcher](https://github.com/assafelovic/gpt-researcher) - Autonomous deep-research agent. Global, pilot, permissive, self-hostable.
+
+## Vibe Coding for Enterprise R&D
+
+> The highest-ROI internal rollout: AI that makes your own engineers faster. Prefer self-hostable, bring-your-own-model agents you can point at an internal endpoint. Closed SaaS such as Cursor and Copilot is out of scope; their open-source ecosystem is not.
+
+### Self-hosted Copilot and IDE assistants
+
+- [Tabby](https://github.com/TabbyML/tabby) - Self-hosted Copilot replacement that runs its own completion and chat inference on your GPUs, fully air-gappable; open-core with enterprise features under a separate license. Global, production, conditional, self-hostable.
+- [Continue](https://github.com/continuedev/continue) - Self-hostable VS Code and JetBrains assistant plus a governance hub to share approved rules and models across the org. Global, production, permissive, self-hostable.
+- [Cline](https://github.com/cline/cline) - Most-starred in-editor autonomous agent with plan-act, MCP and terminal access, runnable against internal self-hosted endpoints. Global, production, permissive, self-hostable.
+- [Kilo Code](https://github.com/Kilo-Org/kilocode) - All-in-one agentic VS Code platform in the Roo and Cline lineage, an active migration target now that Roo-Code is archived. Global, production, permissive, self-hostable.
+
+### Terminal coding agents
+
+- [Aider](https://github.com/Aider-AI/aider) - Battle-tested terminal pair-programmer with strong git integration and repo-map context, bring your own model. Global, production, permissive, self-hostable.
+- [Goose](https://github.com/aaif-goose/goose) - Block extensible on-machine agent that installs, edits, runs and tests, with an MCP-based extension model. Global, production, permissive, self-hostable.
+- [OpenCode](https://github.com/anomalyco/opencode) - Model-agnostic terminal coding agent that works against OpenAI-compatible endpoints. Global, production, permissive, self-hostable.
+- [Qwen Code](https://github.com/QwenLM/qwen-code) - Terminal agent tuned for the open-weight Qwen-Coder family, the cleanest path to a fully on-prem open-weight coding stack. China-led, production, permissive, self-hostable.
+- [Codex CLI](https://github.com/openai/codex) - OpenAI Apache-2.0 terminal agent and scriptable harness that defaults to OpenAI-hosted models, so it is not air-gapped by default. Global, production, permissive.
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli) - Google Apache-2.0 terminal agent and a popular fork base; an open client with a hosted model by default. Global, production, permissive.
+
+### Autonomous software engineering and harness
+
+- [SWE-agent](https://github.com/SWE-agent/SWE-agent) - Reference GitHub issue-to-patch agent that runs in your own sandbox, a base for internal issue-automation experiments. Global, pilot, permissive, self-hostable.
+- [Superpowers](https://github.com/obra/superpowers) - A curated skills and methodology harness you can vendor internally to standardize how coding agents behave; pin a commit before org-wide use. Global, pilot, permissive.
+
+## Internal Knowledge Base
+
+> Turn scattered company knowledge such as documents, wikis, PDFs and the open web into an AI-queryable base: a self-hosted search front, research and literature tooling, and web collection to feed it. Many strong picks are copyleft or open-core, so review the license before any SaaS redistribution.
+
+### Knowledge base and enterprise search apps
+
+- [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) - Local-first all-in-one RAG workspace with document connectors, agents and per-workspace access control; air-gap-friendly. Global, production, permissive, self-hostable.
+- [Onyx](https://github.com/onyx-dot-app/onyx) - Enterprise search and chat over 40-plus connectors such as Slack, Drive and Confluence with RBAC and document-level permissions; an open Glean alternative, open-core with a proprietary enterprise edition. Global, production, conditional, self-hostable.
+- [MaxKB](https://github.com/1Panel-dev/MaxKB) - Turnkey enterprise knowledge-base and agent platform with a workflow builder, a top on-prem chatbot choice in China; GPL-3.0, so review before redistribution. China-led, production, restricted, self-hostable.
+- [Khoj](https://github.com/khoj-ai/khoj) - Self-hostable second-brain search over documents and the web with custom agents and scheduled automations, under network-copyleft AGPL-3.0. Global, production, restricted, self-hostable.
+- [DocsGPT](https://github.com/arc53/DocsGPT) - Private document question-answering and enterprise-search platform with agents and API connectivity. Global, pilot, permissive, self-hostable.
+
+### Scientific research, documents and literature
+
+- [PaperQA2](https://github.com/Future-House/paper-qa) - High-accuracy RAG that answers questions over scientific PDFs with grounded inline citations. Global, production, permissive, self-hostable.
+- [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) - Self-hosted document management with OCR, tagging and full-text archive, the standard for internal document archival; GPL-3.0. Global, production, restricted, self-hostable.
+- [STORM](https://github.com/stanford-oval/storm) - Generates cited, Wikipedia-style research reports from a topic, useful for internal literature synthesis. Global, pilot, permissive, self-hostable.
+- [Zotero](https://github.com/zotero/zotero) - The de-facto open reference and literature manager for collecting, annotating and citing sources, anchoring a research knowledge base; AGPL-3.0. Global, production, restricted, self-hostable.
+
+### Web collection, crawlers and scrapers
+
+- [Firecrawl](https://github.com/firecrawl/firecrawl) - Turn whole sites into clean, LLM-ready Markdown, the dominant ingestion tool; AGPL-3.0, so flag before SaaS use. Global, production, restricted, self-hostable.
+- [Scrapy](https://github.com/scrapy/scrapy) - The battle-tested production crawling framework for harvesting web data into structured corpora. Global, production, permissive, self-hostable.
+- [Crawlee](https://github.com/apify/crawlee) - Reliable Node.js and Python crawler with proxy rotation that explicitly outputs LLM and RAG-ready data. Global, production, permissive, self-hostable.
+- [Trafilatura](https://github.com/adbar/trafilatura) - Precise main-content and metadata extraction to clean Markdown and JSON, a gold standard for corpus cleaning. Global, production, permissive, self-hostable.
+- [Scrapegraph-ai](https://github.com/ScrapeGraphAI/Scrapegraph-ai) - LLM-driven scraping that turns prompts and URLs into structured extraction pipelines. Global, production, permissive, self-hostable.
+- [Crawlab](https://github.com/crawlab-team/crawlab) - Distributed crawler-management platform to run and schedule scraper fleets at scale. China-led, pilot, permissive, self-hostable.
 
 ## Private, Xinchuang and Edge Deployment
 

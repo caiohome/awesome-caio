@@ -94,10 +94,10 @@ flowchart TB
     TRN["🏗️ §02–03 Train · Tune<br/>fine-tune · RL · kernels"]
     SRV["⚙️ §04–05 Serve · Schedule<br/>inference engines · orchestration"]
     GW["🚪 §06–07 Gateway · Context<br/>routing · keys · token efficiency"]
-    APP["🤖 §08–10 · §12 Apps · Agents<br/>agents · RAG · MCP · auto-research"]
+    APP["🤖 §08–10 · §12–14 Apps · Agents<br/>agents · RAG · MCP · coding · knowledge"]
     GOV["🛡️ §11 Govern · Observe<br/>eval · tracing · guardrails"]
-    INF["🏠 §13 Private · Xinchuang · Edge<br/>air-gap · Ascend · on-device"]
-    HUB["🛰️ §14 Source · Host<br/>hubs · clouds · registries"]
+    INF["🏠 §15 Private · Xinchuang · Edge<br/>air-gap · Ascend · on-device"]
+    HUB["🛰️ §16 Source · Host<br/>hubs · clouds · registries"]
 
     MOD --> TRN --> SRV --> GW --> APP --> GOV
     INF -. underpins .-> MOD
@@ -120,7 +120,7 @@ flowchart TB
 | **Agents / Apps** | [LangGraph](#08--orchestration-frameworks--agents) + [Dify](#08--orchestration-frameworks--agents) | Dify (private) | Controllable, auditable orchestration |
 | **RAG** | [RAGFlow](#10--rag--knowledge-base--data-processing) + [Milvus](#10--rag--knowledge-base--data-processing) + [BGE](#10--rag--knowledge-base--data-processing) + [MinerU](#10--rag--knowledge-base--data-processing) | same (all 🏠) | Parsing quality is the real RAG bottleneck |
 | **Govern** | [Langfuse](#11--evaluation--observability--guardrails--governance) + [promptfoo](#11--evaluation--observability--guardrails--governance) + [NeMo Guardrails](#11--evaluation--observability--guardrails--governance) | Langfuse (self-host) | Without this layer, nothing is board-defensible |
-| **Base** | [MindSpore / CANN](#13--private--xinchuang--edge-deployment) | — | Domestic training/inference stack |
+| **Base** | [MindSpore / CANN](#15--private--xinchuang--edge-deployment) | — | Domestic training/inference stack |
 
 ---
 
@@ -139,10 +139,12 @@ flowchart TB
 - [10 · RAG / Knowledge Base / Data Processing](#10--rag--knowledge-base--data-processing)
 - [11 · Evaluation / Observability / Guardrails / Governance](#11--evaluation--observability--guardrails--governance)
 - [12 · Autonomous Research & Scientific Discovery](#12--autonomous-research--scientific-discovery)
-- [13 · Private / Xinchuang / Edge Deployment](#13--private--xinchuang--edge-deployment)
-- [14 · Platforms, Hubs & Registries — where CAIOs source & host](#14--platforms-hubs--registries--where-caios-source--host)
-- [15 · Orgs & People to Follow (open-source account index)](#15--orgs--people-to-follow-open-source-account-index)
-- [16 · Other Awesome Lists (meta-index)](#16--other-awesome-lists-meta-index)
+- [13 · Vibe Coding — Enterprise R&D Enablement](#13--vibe-coding--enterprise-rd-enablement)
+- [14 · Internal Knowledge Base — Research, Docs & Web Collection](#14--internal-knowledge-base--research-docs--web-collection)
+- [15 · Private / Xinchuang / Edge Deployment](#15--private--xinchuang--edge-deployment)
+- [16 · Platforms, Hubs & Registries — where CAIOs source & host](#16--platforms-hubs--registries--where-caios-source--host)
+- [17 · Orgs & People to Follow (open-source account index)](#17--orgs--people-to-follow-open-source-account-index)
+- [18 · Other Awesome Lists (meta-index)](#18--other-awesome-lists-meta-index)
 - [🤝 Contributing](#contributing) · [⚖️ Disclaimer](#disclaimer)
 
 > Each section below gives **representative anchor entries** that demonstrate the tagging format; full coverage is community-driven (see [Contributing](CONTRIBUTING.md)).
@@ -388,7 +390,64 @@ flowchart TB
 - **[GPT-Researcher](https://github.com/assafelovic/gpt-researcher)** (`assafelovic`) 🌍 🧪 🟢 🏠 — Autonomous deep-research agent.
 - **[DeerFlow](#08--orchestration-frameworks--agents)** (see §08) 🇨🇳 — Deep-research orchestration, self-hostable.
 
-## 13 · Private / Xinchuang / Edge Deployment
+## 13 · Vibe Coding — Enterprise R&D Enablement
+
+> **Adoption logic:** the highest-ROI internal rollout — AI that makes your *own* engineers faster. Prefer **self-hostable / BYO-model** agents you can point at an internal endpoint (vLLM / Ollama / gateway), with a transparent, auditable action loop. Closed SaaS (Cursor, Copilot, Tabnine) is excluded; their OSS ecosystem is fair game.
+> 引入逻辑：对内提效 ROI 最高的一层 —— 让自己的工程师更快。优先可自托管 / 自带模型、动作可审计的 Agent。
+>
+> ⚠️ License & supply-chain: pin a commit/fork before rolling an agent harness org-wide; "open client + hosted model" tools (Codex / Gemini CLI) are *not* air-gapped by default.
+
+**Self-hosted Copilot & IDE assistants (air-gap-friendly)**
+- **[Tabby](https://github.com/TabbyML/tabby)** (`TabbyML`) 🌍 ⭐ 🟡 🏠 — The flagship self-hosted Copilot replacement: runs its own completion/chat inference on your GPUs, fully air-gappable. Open-core — SSO/enterprise features under a separate `ee/` license.
+- **[Continue](https://github.com/continuedev/continue)** (`continuedev`) 🌍 ⭐ 🟢 🏠 — Self-hostable VS Code / JetBrains assistant **plus** a governance hub to share approved rules/models across the org; BYO local models.
+- **[Cline](https://github.com/cline/cline)** (`cline`) 🌍 ⭐ 🟢 🏠 — Most-starred in-editor autonomous agent (plan/act, MCP, terminal); runs against internal/self-hosted endpoints, transparent loop is good for review.
+- **[Kilo Code](https://github.com/Kilo-Org/kilocode)** (`Kilo-Org`) 🌍 ⭐ 🟢 🏠 — All-in-one agentic VS Code platform (Roo/Cline lineage); the active migration target now that Roo-Code is archived.
+
+**Terminal / CLI coding agents**
+- **[Aider](https://github.com/Aider-AI/aider)** (`Aider-AI`) 🌍 ⭐ 🟢 🏠 — Battle-tested terminal pair-programmer with strong git integration and repo-map context; low footprint, BYO model.
+- **[Goose](https://github.com/aaif-goose/goose)** (`aaif-goose` / Block) 🌍 ⭐ 🟢 🏠 — Block's extensible on-machine agent (install / edit / run / test); MCP-based extension model for internal tooling.
+- **[OpenCode](https://github.com/anomalyco/opencode)** (`anomalyco`) 🌍 ⭐ 🟢 🏠 — Model-agnostic terminal coding agent (OpenAI-compatible endpoints); MIT, very active.
+- **[Qwen Code](https://github.com/QwenLM/qwen-code)** (`QwenLM`) 🇨🇳 ⭐ 🟢 🏠 — Terminal agent tuned for the open-weight Qwen-Coder family — the cleanest path to a fully on-prem, open-weight coding stack.
+- **[Codex CLI](https://github.com/openai/codex)** (`openai`) 🌍 ⭐ 🟢 — OpenAI's Apache-2.0 terminal agent; scriptable harness, but defaults to OpenAI-hosted models (not air-gapped).
+- **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** (`google-gemini`) 🌍 ⭐ 🟢 — Google's Apache-2.0 terminal agent and a popular fork base; open client, hosted model by default.
+
+**Autonomous SWE & the agent-harness layer**
+- **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** (`SWE-agent` / Princeton) 🌍 🧪 🟢 🏠 — Reference "GitHub issue → patch" agent; runs in your own sandbox (SWE-ReX) — the base for internal issue-automation experiments.
+- **[Superpowers](https://github.com/obra/superpowers)** (`obra`) 🌍 🧪 🟢 — Not an agent but the *harness*: a curated, MIT skills/methodology layer you can vendor internally to standardize how coding agents behave. Pin a commit before org-wide use.
+
+> 🔗 See also **[OpenHands](#08--orchestration-frameworks--agents)** in §08 (open-source coding agent) and **[rtk](#07--context-engineering--token-efficiency)** in §07 (token-cost control as Vibe Coding scales across the team).
+
+## 14 · Internal Knowledge Base — Research, Docs & Web Collection
+
+> **Adoption logic:** turn scattered company knowledge — docs, wikis, PDFs, the open web — into an AI-queryable base. Three jobs: a **self-hosted KB / enterprise-search** front, **research & literature** tooling, and **web collection** to feed it. Parsing/connector quality and data-residency decide success. Sits on §10 (RAG engines, vector DBs, parsers) and the §10 OKF knowledge format.
+> 引入逻辑：把散落的文档 / wiki / PDF / 公开网页变成可被 AI 检索的知识库 —— 自托管检索前台 + 科研文献工具 + 网页采集。
+>
+> ⚠️ Many strong picks here are copyleft (AGPL / GPL) or open-core — fine for internal self-host, but **legal review before SaaS redistribution.**
+
+**Knowledge-base & enterprise-search apps (self-hosted)**
+- **[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)** (`Mintplex-Labs`) 🌍 ⭐ 🟢 🏠 — Local-first, all-in-one RAG workspace: doc connectors, agents and per-workspace access control; air-gap-friendly, clean MIT.
+- **[Onyx](https://github.com/onyx-dot-app/onyx)** (`onyx-dot-app`, ex-Danswer) 🌍 ⭐ 🟡 🏠 — Enterprise search/chat over 40+ connectors (Slack / Drive / Confluence) with RBAC and document-level permissions; the open "Glean" alternative. Open-core — MIT core, proprietary `ee/`.
+- **[MaxKB](https://github.com/1Panel-dev/MaxKB)** (`1Panel-dev`) 🇨🇳 ⭐ 🔴 🏠 — Turnkey enterprise KB + agent platform with a workflow builder; a top on-prem chatbot choice in China. **GPL-3.0 — legal review for redistribution.**
+- **[Khoj](https://github.com/khoj-ai/khoj)** (`khoj-ai`) 🌍 ⭐ 🔴 🏠 — Self-hostable "second brain" search over docs + web with custom agents and scheduled automations. **AGPL-3.0 — network-copyleft.**
+- **[DocsGPT](https://github.com/arc53/DocsGPT)** (`arc53`) 🌍 🧪 🟢 🏠 — Private doc-Q&A and enterprise-search platform with agents and API connectivity; clean MIT.
+
+**Scientific research, documents & literature**
+- **[PaperQA2](https://github.com/Future-House/paper-qa)** (`Future-House`) 🌍 ⭐ 🟢 🏠 — High-accuracy RAG that answers questions over scientific PDFs with grounded inline citations; the literature-Q&A reference.
+- **[Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)** (`paperless-ngx`) 🌍 ⭐ 🔴 🏠 — Self-hosted document management with OCR, tagging and full-text archive; the standard for internal doc archival. **GPL-3.0.**
+- **[STORM](https://github.com/stanford-oval/storm)** (`stanford-oval`) 🌍 🧪 🟢 🏠 — Generates cited, Wikipedia-style research reports from a topic; useful for internal literature synthesis.
+- **[Zotero](https://github.com/zotero/zotero)** (`zotero`) 🌍 ⭐ 🔴 🏠 — The de-facto open reference/literature manager for collecting, annotating and citing sources; anchors a research KB. **AGPL-3.0.**
+
+**Web collection — crawlers & scrapers (corpus ingestion)**
+- **[Firecrawl](https://github.com/firecrawl/firecrawl)** (`firecrawl`) 🌍 ⭐ 🔴 🏠 — Turn whole sites into clean, LLM-ready markdown; the dominant ingestion tool. **AGPL-3.0 — flag before SaaS use.**
+- **[Scrapy](https://github.com/scrapy/scrapy)** (`scrapy`) 🌍 ⭐ 🟢 🏠 — The battle-tested production crawling framework; clean BSD-3, air-gappable.
+- **[Crawlee](https://github.com/apify/crawlee)** (`apify`) 🌍 ⭐ 🟢 🏠 — Reliable Node.js (and Python twin) crawler with proxy rotation; explicitly outputs LLM / RAG-ready data.
+- **[Trafilatura](https://github.com/adbar/trafilatura)** (`adbar`) 🌍 ⭐ 🟢 🏠 — Precise main-content + metadata extraction to clean Markdown / JSON; the gold standard for corpus cleaning.
+- **[Scrapegraph-ai](https://github.com/ScrapeGraphAI/Scrapegraph-ai)** (`ScrapeGraphAI`) 🌍 ⭐ 🟢 🏠 — LLM-driven scraping: turn prompts + URLs into structured extraction pipelines; clean MIT.
+- **[Crawlab](https://github.com/crawlab-team/crawlab)** (`crawlab-team`) 🇨🇳 🧪 🟢 🏠 — Distributed crawler-management platform to run and schedule scraper fleets at scale; BSD-3.
+
+> 🔗 See also §10 — **[Crawl4AI](#10--rag--knowledge-base--data-processing)**, **[RAGFlow](#10--rag--knowledge-base--data-processing)**, the document parsers (**LiteParse / MinerU / Docling**) and **[GraphRAG](#10--rag--knowledge-base--data-processing)** — the RAG engines and parsers this knowledge base sits on.
+
+## 15 · Private / Xinchuang / Edge Deployment
 
 > **Adoption logic:** the hard constraints of medical / government / SOE — data never leaves, domestic substitution, edge/on-device. This layer decides whether everything above can *legally land*.
 > 引入逻辑：数据不出域、国产化替代、边缘端侧 —— 决定前面所有项目能不能合规落地。
@@ -400,7 +459,7 @@ flowchart TB
 - **[Jan](https://github.com/menloresearch/jan)** (`menloresearch`) 🌍 ⭐ 🟢 🏠 📱 — Offline AI assistant.
 - **[Ollama](https://github.com/ollama/ollama)** (`ollama`) 🌍 ⭐ 🟢 🏠 📱 — Local model runtime (MIT; mind trademark & commercial positioning, not the license).
 
-## 14 · Platforms, Hubs & Registries — where CAIOs source & host
+## 16 · Platforms, Hubs & Registries — where CAIOs source & host
 
 > **Adoption logic:** the repos are only half the story. A CAIO also needs the **sourcing & hosting map** — where models actually live, where you pull them behind the firewall, and which managed clouds and domestic silicon you can stand on.
 > 引入逻辑：知道仓库还不够，还要知道「去哪取模型、在哪托管、靠哪个国产栈」。
@@ -443,7 +502,7 @@ flowchart TB
 - **[MindSpore](https://www.mindspore.cn)** 🇨🇳 🛡️ — Huawei's AI framework.
 - **[Cambricon 寒武纪](https://www.cambricon.com)** · **[Moore Threads 摩尔线程](https://www.mthreads.com)** · **[Hygon 海光](https://www.hygon.cn)** · **[Biren 壁仞](https://www.birentech.com)** 🇨🇳 🛡️ — Domestic accelerators to evaluate for Xinchuang procurement.
 
-## 15 · Orgs & People to Follow (open-source account index)
+## 17 · Orgs & People to Follow (open-source account index)
 
 > **Adoption logic:** follow the *source*, not the repo. Watching these official org accounts gets you the signal earlier than chasing single repos. **Prioritize org accounts; keep personal accounts minimal.**
 > 引入逻辑：跟仓库不如跟「源头」。
@@ -460,7 +519,7 @@ flowchart TB
 
 **People (OSS maintainers, follow as needed):** [`karpathy`](https://github.com/karpathy) (understand LLMs from zero) — otherwise track via the org accounts above.
 
-## 16 · Other Awesome Lists (meta-index)
+## 18 · Other Awesome Lists (meta-index)
 
 > This list doesn't reinvent the wheel. Below are deeper, domain-specific lists — use them as drill-down entry points.
 > 本清单不重复造轮子；以下是各细分领域更深的专门清单。
