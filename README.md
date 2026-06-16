@@ -205,6 +205,7 @@ flowchart TB
 
 - **[DeepSeek open-infra-index](https://github.com/deepseek-ai/open-infra-index)** (`deepseek-ai`) 🇨🇳 ⭐ 🟢 — Index of [FlashMLA](https://github.com/deepseek-ai/FlashMLA) (MLA decode kernel), [DeepEP](https://github.com/deepseek-ai/DeepEP) (MoE comm library), [DeepGEMM](https://github.com/deepseek-ai/DeepGEMM) (FP8 GEMM), [DualPipe](https://github.com/deepseek-ai/DualPipe) (pipeline parallel), [3FS](https://github.com/deepseek-ai/3FS) (parallel filesystem). Production-validated, mostly MIT.
 - **[FlashAttention](https://github.com/Dao-AILab/flash-attention)** (`Dao-AILab`) 🌍 ⭐ 🟢 — The attention-acceleration standard.
+- **[FlashInfer](https://github.com/flashinfer-ai/flashinfer)** (`flashinfer-ai`) 🌍 ⭐ 🟢 — Kernel library for LLM serving (attention, MoE, sampling); the de-facto kernel backend under vLLM / SGLang / TensorRT-LLM.
 - **[Triton](https://github.com/triton-lang/triton)** (`triton-lang`) 🌍 ⭐ 🟢 — Language for writing GPU kernels.
 - **[CUTLASS](https://github.com/NVIDIA/cutlass)** (`NVIDIA`) 🌍 ⭐ 🟢 — CUDA matrix-op template library.
 - **[Liger-Kernel](https://github.com/linkedin/Liger-Kernel)** (`linkedin`) 🌍 🧪 🟢 — Fused training kernels; saves VRAM.
@@ -235,6 +236,9 @@ flowchart TB
 - **[BentoML](https://github.com/bentoml/BentoML)** / **[OpenLLM](https://github.com/bentoml/OpenLLM)** (`bentoml`) 🌍 ⭐ 🟢 🏠 — Packaging & deployment.
 - **[AIBrix](https://github.com/vllm-project/aibrix)** (`vllm-project`) 🌍 🧪 🟢 🏠 — Cost-efficient, pluggable K8s infra for LLM inference (ByteDance-origin): LLM-aware autoscaling, KV-cache offload, routing.
 - **[LMCache](https://github.com/LMCache/LMCache)** (`LMCache`) 🌍 🧪 🟢 🏠 — KV-cache layer that accelerates serving via cross-request reuse / offload; pairs with vLLM and llm-d.
+- **[OME (Open Model Engine)](https://github.com/ome-projects/ome)** (`ome-projects`) 🌍 🧪 🟢 🏠 — K8s operator for LLM serving: engine-agnostic model lifecycle, GPU scheduling and prefill/decode disaggregation across SGLang / vLLM / TensorRT-LLM / Triton.
+- **[kvcached](https://github.com/ovg-project/kvcached)** (`ovg-project`) 🌍 🧪 🟢 🏠 — Virtualized, elastic KV-cache that lets multiple models share GPU memory dynamically; raises utilization on expensive fleets (distinct from LMCache offload).
+- **[checkpoint-engine](https://github.com/MoonshotAI/checkpoint-engine)** (`MoonshotAI`) 🇨🇳 🧪 🟢 🏠 — Lightweight middleware to hot-update model weights in running inference engines; for RLHF online updates and zero-downtime model swaps.
 
 ## 06 · Gateway / Routing / API & Cost Governance
 
@@ -262,6 +266,7 @@ flowchart TB
 
 - **[rtk (Rust Token Killer)](https://github.com/rtk-ai/rtk)** (`rtk-ai`) 🌍 ⭐ 🟢 🏠 — CLI proxy that filters/compresses command output before it enters context; saves 60–90% tokens; transparent hooks into Claude Code / Codex / Cursor / Gemini CLI.
 - **[LLMLingua](https://github.com/microsoft/LLMLingua)** (`microsoft`) 🌍 🧪 🟢 — Prompt / context compression.
+- **[kvpress](https://github.com/NVIDIA/kvpress)** (`NVIDIA`) 🌍 🧪 🟢 — KV-cache compression toolkit (a library of "press" methods) to shrink long-context memory with minimal accuracy loss.
 - **[Repomix](https://github.com/yamadashy/repomix)** (`yamadashy`) 🌍 ⭐ 🟢 — Pack a repo into a single file to feed a model.
 - **[files-to-prompt](https://github.com/simonw/files-to-prompt)** / **[code2prompt](https://github.com/mufeedvh/code2prompt)** (`simonw` / `mufeedvh`) 🌍 🧪 🟢 — Code-context assembly.
 
@@ -284,6 +289,10 @@ flowchart TB
 - **[Google ADK](https://github.com/google/adk-python)** (`google`) 🌍 ⭐ 🟢 — Code-first Agent Development Kit: build, evaluate, deploy.
 - **[Agno](https://github.com/agno-agi/agno)** (`agno-agi`) 🌍 ⭐ 🟢 — High-performance framework to build and run agent platforms.
 - **[Bisheng](https://github.com/dataelement/bisheng)** (`dataelement`) 🇨🇳 ⭐ 🟢 🏠 — Enterprise LLM DevOps platform: workflow + RAG + agents + fine-tune + observability, self-hostable.
+- **[Agent Executor (AX)](https://github.com/google/ax)** (`google`) 🌍 🧪 🟢 🏠 — Google's open-source distributed agent runtime: durable execution, snapshot/resume on crash, sandboxed isolation for long-running agentic workloads. A runtime primitive, not a framework.
+- **[Symphony](https://github.com/openai/symphony)** (`openai`) 🌍 🧪 🟢 — OpenAI's open Codex-orchestration layer: turns tracker tickets into isolated, autonomous coding-agent runs so teams manage work instead of supervising agents. ⚠️ Engineering-preview — pilot, not GA.
+- **[Shannon](https://github.com/Kocoro-lab/Shannon)** (`Kocoro-lab`) 🌍 🧪 🟢 🏠 — Production-oriented multi-agent orchestration on Temporal durable workflows, with budget/policy enforcement, a Rust sandbox and OpenTelemetry/Prometheus observability.
+- **[agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** (`kubernetes-sigs`) 🌍 🧪 🟢 🏠 — Official K8s-SIG project: isolated, stateful, singleton sandboxes as a standard execution substrate for agent runtimes on existing Kubernetes.
 
 > ⚠️ Medical Class II/III: fully dynamic multi-agent systems conflict with NMPA "deterministic, auditable" requirements — freeze a traceable chain at the orchestration layer.
 
@@ -296,9 +305,12 @@ flowchart TB
 - **[awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)** (`punkpeye`) 🌍 — The master index of MCP servers.
 - **[awesome-mcp-enterprise](https://github.com/bh-rat/awesome-mcp-enterprise)** (`bh-rat`) 🌍 — Enterprise-grade MCP subset.
 - **[MCP Gateway](https://github.com/lasso-security/mcp-gateway)** (`lasso-security`) + **[mcpo](https://github.com/open-webui/mcpo)** 🌍 🧪 🟢 🏠 — MCP gateway / auth / audit.
+- **[MCP Gateway (Microsoft)](https://github.com/microsoft/mcp-gateway)** (`microsoft`) 🌍 🧪 🟢 🏠 — K8s reverse proxy + control plane for MCP servers: session-aware stateful routing, lifecycle management, OAuth2 / Entra ID + RBAC. The MCP front door for Azure/K8s shops.
+- **[Archestra](https://github.com/archestra-ai/archestra)** (`archestra-ai`) 🌍 🧪 🔴 🏠 ⚠️ — Enterprise AI platform: private MCP registry + K8s MCP gateway + deterministic guardrails (prompt-injection isolation) + A2A orchestration. **AGPL-3.0 — legal review before SaaS redistribution.**
 - **[Composio](https://github.com/ComposioHQ/composio)** (`ComposioHQ`) 🌍 🧪 🟢 — Tool integration.
 - **[FastMCP](https://github.com/PrefectHQ/fastmcp)** (`PrefectHQ`) 🌍 ⭐ 🟢 — The fast, Pythonic way to build MCP servers and clients.
 - **[awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** (`ComposioHQ`) 🌍 — Skills asset index.
+- **[SkillHub](https://github.com/iflytek/skillhub)** (`iflytek`) 🇨🇳 🧪 🟢 🏠 — Self-hosted enterprise agent-skill registry: publish & version SKILL.md packages, team namespaces, RBAC + audit logs, on-prem Docker/K8s. A governed "npm for agent skills."
 
 ## 10 · RAG / Knowledge Base / Data Processing
 
@@ -315,6 +327,7 @@ flowchart TB
 
 **Embedding / rerank**
 - **[BGE](https://github.com/FlagOpen/FlagEmbedding)** (`FlagOpen` / BAAI) 🇨🇳 ⭐ 🟢 🏠 — BGE-M3 / BGE-Reranker; first choice for Chinese-language RAG retrieval.
+- **[rerankers](https://github.com/AnswerDotAI/rerankers)** (`AnswerDotAI`) 🌍 🧪 🟢 — One lightweight, low-dependency API across cross-encoder / reranker models; upgrade retrieval quality with a one-line swap, vendor-neutral.
 
 **RAG frameworks / app platforms**
 - **[RAGFlow](https://github.com/infiniflow/ragflow)** (`infiniflow`) 🇨🇳 ⭐ 🟢 🏠 — RAG engine with deep document understanding.
@@ -327,10 +340,14 @@ flowchart TB
 - **[Docling](https://github.com/docling-project/docling)** (`docling-project` / IBM) 🌍 ⭐ 🟢 🏠 — Documents → structured data.
 - **[Unstructured](https://github.com/Unstructured-IO/unstructured)** (`Unstructured-IO`) 🌍 ⭐ 🟡 — Multi-format parsing.
 - **[markitdown](https://github.com/microsoft/markitdown)** (`microsoft`) 🌍 ⭐ 🟢 — Convert Office / PDF / HTML and more into clean Markdown for LLMs.
+- **[LiteParse](https://github.com/run-llama/liteparse)** (`run-llama`) 🌍 🧪 🟢 🏠 — Fast, local, model-free document parser (PDF / Office → clean structured output) from the LlamaIndex team; no GPU or API — the on-prem answer to paid parse services.
+- **[MonkeyOCR](https://github.com/Yuliang-Liu/MonkeyOCR)** (`Yuliang-Liu`) 🇨🇳 🧪 🟢 🏠 — Lightweight LMM-based document-parsing model; strong on tables, formulas and complex layouts for high-fidelity RAG ingestion of scanned/visual docs.
 
 **Web ingestion & memory**
 - **[Crawl4AI](https://github.com/unclecode/crawl4ai)** (`unclecode`) 🌍 ⭐ 🟢 — LLM-friendly web crawler / scraper for RAG data ingestion.
 - **[mem0](https://github.com/mem0ai/mem0)** (`mem0ai`) 🌍 ⭐ 🟢 — Memory layer for agents; persistent user / agent memory across sessions.
+- **[Hindsight](https://github.com/vectorize-io/hindsight)** (`vectorize-io`) 🌍 🧪 🟢 🏠 — Self-improving long-term agent memory that learns from past interactions; a vendor-neutral memory backbone, an alternative to mem0.
+- **[memsearch](https://github.com/zilliztech/memsearch)** (`zilliztech` / Zilliz) 🇨🇳 🧪 🟢 🏠 — Persistent, unified agent memory backed by Markdown + Milvus; governance-friendly plaintext storage over a production vector DB.
 
 **Knowledge formats & context standards**
 - **[OKF (Open Knowledge Format)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf)** (`GoogleCloudPlatform` / Google Cloud) 🌍 👀 🟢 🏠 — Vendor-neutral open spec (v0.1) that packages curated enterprise knowledge — table schemas, metrics, join paths, docs — as plain **Markdown + YAML frontmatter** files agents can read, diff in git, and ship as a tarball. Formalizes the "LLM wiki" / `AGENTS.md` / *metadata-as-code* pattern into a portable knowledge graph (markdown links = edges); separates knowledge *producers* from *consumers*. Apache-2.0; ships a BigQuery enrichment agent + a self-contained HTML graph visualizer + sample bundles. **New standard — track the direction before standardizing on it.**
@@ -351,6 +368,7 @@ flowchart TB
 - **[Langfuse](https://github.com/langfuse/langfuse)** (`langfuse`) 🌍 ⭐ 🟢 🏠 — Open-source LLM observability, self-hostable.
 - **[Phoenix](https://github.com/Arize-ai/phoenix)** (`Arize-ai`) 🌍 ⭐ 🟢 🏠 — Tracing & evaluation.
 - **[OpenLLMetry](https://github.com/traceloop/openllmetry)** (`traceloop`) 🌍 🧪 🟢 — OpenTelemetry semantic conventions for LLMs.
+- **[LangWatch](https://github.com/langwatch/langwatch)** (`langwatch`) 🌍 🧪 🟢 🏠 — Fully open-source (Apache-2.0) LLM evaluation + agent testing + tracing in one platform; OTel-style instrumentation, self-hostable.
 
 **Guardrails / safety**
 - **[NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails)** (`NVIDIA`) 🌍 ⭐ 🟢 🏠 — Conversational guardrails.
