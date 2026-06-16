@@ -203,6 +203,10 @@ Every entry answers one question: can this open-source project be brought into a
 - [Crawl4AI](https://github.com/unclecode/crawl4ai) - LLM-friendly web crawler and scraper for RAG data ingestion. Global, production, permissive.
 - [mem0](https://github.com/mem0ai/mem0) - Memory layer for agents with persistent user and agent memory across sessions. Global, production, permissive.
 
+### Knowledge formats and context standards
+
+- [OKF (Open Knowledge Format)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf) - Vendor-neutral Google Cloud spec that packages curated enterprise knowledge as portable Markdown and YAML-frontmatter files agents can read and version in git, formalizing the LLM-wiki and metadata-as-code pattern into a knowledge graph. Global, watch, permissive, self-hostable.
+
 ## Evaluation, Observability and Governance
 
 > The CAIO shield; without this layer everything above is unauditable and indefensible to the board.
