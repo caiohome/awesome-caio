@@ -17,7 +17,7 @@
 *面向 CAIO（首席 AI 官 / AI 负责人）的「可引入性」开源索引。*
 *Not the coolest projects — the ones you can actually bring into a company.*
 
-[🌐 caiohome.com](https://www.caiohome.com) · [🏷️ Legend](#legend) · [🧱 Starter Stack](#reference-starter-stack) · [🗺️ Decision Chain](#the-caio-decision-chain) · [🗂️ Contents](#contents) · [🤝 Contribute](CONTRIBUTING.md)
+[🌐 caiohome.com](https://www.caiohome.com) · [📜 Canon](#00--philosophy--concepts--the-caio-canon) · [🏷️ Legend](#legend) · [🧱 Starter Stack](#reference-starter-stack) · [🗺️ Decision Chain](#the-caio-decision-chain) · [🗂️ Contents](#contents) · [🤝 Contribute](CONTRIBUTING.md)
 
 </div>
 
@@ -127,6 +127,7 @@ flowchart TB
 ## Contents
 
 - [🏷️ Legend](#legend) · [🗺️ Decision Chain](#the-caio-decision-chain) · [🧱 Starter Stack](#reference-starter-stack)
+- [00 · Philosophy & Concepts — The CAIO Canon](#00--philosophy--concepts--the-caio-canon)
 - [01 · Foundation Models & Open Weights](#01--foundation-models--open-weights)
 - [02 · Training / Fine-tuning / Post-training (incl. RL)](#02--training--fine-tuning--post-training-incl-rl)
 - [03 · High-performance Kernels & Low-level Systems](#03--high-performance-kernels--low-level-systems)
@@ -150,6 +151,51 @@ flowchart TB
 > Each section below gives **representative anchor entries** that demonstrate the tagging format; full coverage is community-driven (see [Contributing](CONTRIBUTING.md)).
 
 ---
+
+## 00 · Philosophy & Concepts — The CAIO Canon
+
+> **Why this comes first:** tools change every quarter; *judgment* compounds. Before the stack, a CAIO needs a clear head about what these systems are, where they're heading, and how to deploy them without self-deception. These are **ideas, not adoption entries** — no license/maturity tags; each links to its **first-party source** (essay, talk or post). Read them to calibrate the decisions every later section asks you to make.
+> 引入逻辑：工具每季度都在变，唯有判断力会复利。这一层是「大佬们怎么想」的原文索引 —— 不是可引入条目、没有许可证标签，只给原文链接，用来校准后面每一层的决策。
+
+**Andrej Karpathy — the paradigm shift**
+- **[Software 2.0](https://karpathy.medium.com/software-2-0-a64152b37c35)** — *2017.* Neural nets are a new kind of software: you curate **data** and optimize weights instead of writing explicit logic — rethink your whole software supply chain around datasets.
+- **[Software Is Changing (Again) — "Software 3.0"](https://www.youtube.com/watch?v=LCEmiRjPEtQ)** — *YC AI Startup School, 2025.* LLMs are a new computer/OS and **English is the programming interface**; treat models as fallible "people spirits," keep a human on the **autonomy slider**, and build products for agents. ([YC writeup](https://www.ycombinator.com/library/MW-andrej-karpathy-software-is-changing-again))
+- **[Intro to Large Language Models — the "LLM OS"](https://www.youtube.com/watch?v=zjkBMFhNj_g)** — *2023.* The best plain-English mental model of an LLM as an OS kernel (context window = RAM, tools = peripherals) — ideal onboarding for non-technical leadership.
+- **["The hottest new programming language is English"](https://x.com/karpathy/status/1617979122625712128)** — *2023.* Natural language becomes the primary interface to computers — a shift in *who* can build software.
+- **[The origin of "vibe coding"](https://x.com/karpathy/status/1886192184808149383)** — *2025.* Describe intent, let the model generate; productive for prototypes, but output must be **verified, not trusted** (see §13).
+- **["AGI is still a decade away" — Dwarkesh Podcast](https://www.dwarkesh.com/p/andrej-karpathy)** — *2025.* It's the **decade of agents**, not the year: today's agents lack continual learning and robust multimodality — calibrate enterprise timelines accordingly.
+- **[The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)** — *2015.* The foundational "wow" of generative sequence models — a historical anchor for how far language modeling has come.
+
+**OpenAI — Sam Altman & the enterprise**
+- **[The Intelligence Age](https://ia.samaltman.com/)** — *Altman, 2024.* Deep learning works and scales; plan for **abundant intelligence** reshaping every industry, not a novelty.
+- **[Three Observations](https://blog.samaltman.com/three-observations)** — *Altman, 2025.* Intelligence scales with the log of compute; cost per unit of intelligence falls ~10× a year — budget around a steep cost-down curve.
+- **[The Gentle Singularity](https://blog.samaltman.com/the-gentle-singularity)** — *Altman, 2025.* The takeoff is underway but feels gradual; agents doing real cognitive work are the near-term inflection — position now, don't wait for a "moment."
+- **[Moore's Law for Everything](https://moores.samaltman.com/)** — *Altman, 2021.* If AI drives the cost of goods and services toward zero, the **governance** question — who captures the value — matters as much as the tech.
+- **[A Practical Guide to Building Agents (PDF)](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf)** — *OpenAI, 2025.* A concrete field guide: when to build an agent, tool/instruction design, orchestration patterns and guardrails.
+- **[AI in the Enterprise](https://openai.com/index/ai-in-the-enterprise/)** — *OpenAI, 2025.* Seven adoption lessons from frontier companies: start with evals, embed AI in products, invest early, get experts hands-on, set bold automation goals.
+
+**Anthropic — Dario Amodei & agent engineering**
+- **[Machines of Loving Grace](https://www.darioamodei.com/essay/machines-of-loving-grace)** — *Amodei, 2024.* The concrete optimistic case: "powerful AI" could compress 50–100 years of scientific progress into 5–10 across biology, health and the economy.
+- **[Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)** — *Anthropic, 2024.* Start simple: most value comes from composable **workflows**, not autonomous loops — add agentic complexity only when it measurably pays off. The most-cited agent-design piece.
+- **[Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)** — *Anthropic, 2025.* Context is a finite, managed resource; curating *what enters the window* is the core reliability discipline (see §07).
+- **[How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/built-multi-agent-research-system)** — *Anthropic, 2025.* Orchestrator + subagents beats a single agent on broad research — but costs far more tokens; match the pattern to task value.
+- **[The Urgency of Interpretability](https://www.darioamodei.com/post/the-urgency-of-interpretability)** — *Amodei, 2025.* We deploy systems we don't fully understand; interpretability is a race to win — the governance argument behind §11.
+
+**Google / DeepMind**
+- **[Agents (whitepaper)](https://www.kaggle.com/whitepaper-agents)** — *Google / Lee Boonstra, 2024.* The canonical primer on the agent stack — model + tools + orchestration — shared vocabulary for architecture debates.
+- **[Real-World Generative-AI Use Cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)** — *Google Cloud, 2025.* A 600+ catalog of production deployments by industry — the best "what are peers actually shipping" reference for use-case discovery.
+- **[Welcome to the Era of Experience](https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf)** — *Silver & Sutton (DeepMind), 2025.* The next leap is agents learning from their **own streams of experience** (RL in the world), not just human data — a signal on where capability heads next.
+
+**Microsoft — Satya Nadella**
+- **[On AI as a cognitive amplifier](https://x.com/satyanadella/status/2066182223213293753)** — *Nadella, 2025.* Reframes the debate from "AI slop" and substitution toward a **theory of mind where AI is a cognitive amplifier** — scaffolding for human potential, not a replacement.
+- **[Looking Ahead to 2026](https://snscratchpad.com/posts/looking-ahead-2026/)** — *Nadella, 2025.* "We will evolve from **models to systems**" — advantage shifts from raw model quality to the scaffolding that orchestrates many models and agents reliably.
+- **[2025: The Year the Frontier Firm Is Born](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)** — *Microsoft Work Trend Index, 2025.* A new org model of hybrid human + agent teams; most leaders expect significant agent integration within 12–18 months.
+
+**Other voices**
+- **[From Hierarchy to Intelligence](https://www.sequoiacap.com/article/from-hierarchy-to-intelligence/)** — *Jack Dorsey & Roelof Botha (Block / Sequoia), 2026.* The AI-era org needs only three kinds of people — **ICs** (judgment, taste, creativity; one person doing ten people's work), **DRIs** (own the customer outcome and assemble the team), and **Player-Coaches** (build others by *doing*, not directing). An **intelligence layer** replaces the permanent middle-management tier; the best people hold all three roles at once. ([podcast](https://www.sequoiacap.com/podcast/jack-dorsey-every-company-can-now-be-a-mini-agi/))
+- **[What's Next for AI Agentic Workflows](https://www.youtube.com/watch?v=sal78ACtGTc)** — *Andrew Ng (Sequoia AI Ascent), 2024.* Agentic patterns — reflection, tool use, planning, multi-agent — dramatically outperform single-shot prompting; the biggest near-term capability lever.
+
+> 🧭 Read top-to-bottom, these converge on one message for a CAIO: **the models are a moving target; your durable edge is judgment, governance, and how you wire intelligence into real work** — exactly what §01–§18 operationalize.
 
 ## 01 · Foundation Models & Open Weights
 

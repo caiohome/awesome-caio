@@ -6,6 +6,7 @@ Every entry answers one question: can this open-source project be brought into a
 
 ## Contents
 
+- [Philosophy and Concepts](#philosophy-and-concepts)
 - [Foundation Models and Open Weights](#foundation-models-and-open-weights)
 - [Training, Fine-tuning and Post-training](#training-fine-tuning-and-post-training)
 - [Kernels and Low-level Systems](#kernels-and-low-level-systems)
@@ -23,6 +24,54 @@ Every entry answers one question: can this open-source project be brought into a
 - [Private, Xinchuang and Edge Deployment](#private-xinchuang-and-edge-deployment)
 - [Platforms, Hubs and Registries](#platforms-hubs-and-registries)
 - [Related](#related)
+
+## Philosophy and Concepts
+
+> Tools change every quarter; judgment compounds. Before the stack, this section collects how leading practitioners think about what these systems are, where they are heading, and how to deploy them. These are ideas rather than adoption entries, so they carry no license or maturity tags; each links to its first-party source.
+
+### Andrej Karpathy
+
+- [Software 2.0](https://karpathy.medium.com/software-2-0-a64152b37c35) - Andrej Karpathy, 2017. Neural nets are a new kind of software where you curate data and optimize weights instead of writing explicit logic.
+- [Software Is Changing Again (Software 3.0)](https://www.youtube.com/watch?v=LCEmiRjPEtQ) - Andrej Karpathy, 2025. LLMs are a new computer and English is the programming interface; keep a human on the autonomy slider and build for agents.
+- [Intro to Large Language Models (the LLM OS)](https://www.youtube.com/watch?v=zjkBMFhNj_g) - Andrej Karpathy, 2023. The clearest plain-English mental model of an LLM as an operating-system kernel, ideal for onboarding leadership.
+- [The hottest new programming language is English](https://x.com/karpathy/status/1617979122625712128) - Andrej Karpathy, 2023. Natural language becomes the primary interface to computers, changing who can build software.
+- [The origin of vibe coding](https://x.com/karpathy/status/1886192184808149383) - Andrej Karpathy, 2025. Describe intent and let the model generate, productive for prototypes but output must be verified rather than trusted.
+- [AGI is still a decade away (Dwarkesh Podcast)](https://www.dwarkesh.com/p/andrej-karpathy) - Andrej Karpathy, 2025. It is the decade of agents rather than the year, since today's agents lack continual learning and robust multimodality.
+- [The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) - Andrej Karpathy, 2015. The foundational demonstration of generative sequence models and a historical anchor for language modeling.
+
+### OpenAI and Sam Altman
+
+- [The Intelligence Age](https://ia.samaltman.com/) - Sam Altman, 2024. Deep learning works and scales, so plan for abundant intelligence reshaping every industry.
+- [Three Observations](https://blog.samaltman.com/three-observations) - Sam Altman, 2025. Intelligence scales with the log of compute while cost per unit of intelligence falls about tenfold a year.
+- [The Gentle Singularity](https://blog.samaltman.com/the-gentle-singularity) - Sam Altman, 2025. The takeoff is underway but feels gradual, with agents doing real cognitive work as the near-term inflection.
+- [Moore's Law for Everything](https://moores.samaltman.com/) - Sam Altman, 2021. If AI drives the cost of goods and services toward zero, the governance question of who captures the value matters as much as the technology.
+- [A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) - OpenAI, 2025. A concrete field guide on when to build an agent and how to design tools, orchestration and guardrails.
+- [AI in the Enterprise](https://openai.com/index/ai-in-the-enterprise/) - OpenAI, 2025. Seven enterprise-adoption lessons from frontier companies, from starting with evals to setting bold automation goals.
+
+### Anthropic and Dario Amodei
+
+- [Machines of Loving Grace](https://www.darioamodei.com/essay/machines-of-loving-grace) - Dario Amodei, 2024. The concrete optimistic case that powerful AI could compress decades of scientific progress into years.
+- [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) - Anthropic, 2024. Start simple, since most value comes from composable workflows rather than autonomous loops; the most-cited agent-design piece.
+- [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) - Anthropic, 2025. Context is a finite, managed resource and curating what enters the window is the core reliability discipline.
+- [How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/built-multi-agent-research-system) - Anthropic, 2025. Orchestrator-plus-subagent architectures beat a single agent on broad research but cost far more tokens.
+- [The Urgency of Interpretability](https://www.darioamodei.com/post/the-urgency-of-interpretability) - Dario Amodei, 2025. We deploy systems we do not fully understand, making interpretability a race to win.
+
+### Google and DeepMind
+
+- [Agents (whitepaper)](https://www.kaggle.com/whitepaper-agents) - Google and Lee Boonstra, 2024. The canonical primer on the agent stack of model, tools and orchestration.
+- [Real-World Generative-AI Use Cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders) - Google Cloud, 2025. A catalog of 600-plus production deployments by industry, the best reference for use-case discovery.
+- [Welcome to the Era of Experience](https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf) - David Silver and Richard Sutton, 2025. The next leap is agents learning from their own streams of experience rather than only human data.
+
+### Microsoft and Satya Nadella
+
+- [On AI as a cognitive amplifier](https://x.com/satyanadella/status/2066182223213293753) - Satya Nadella, 2025. Reframes the debate from AI slop and substitution toward AI as a cognitive amplifier that scaffolds human potential.
+- [Looking Ahead to 2026](https://snscratchpad.com/posts/looking-ahead-2026/) - Satya Nadella, 2025. Advantage evolves from models to systems, the scaffolding that orchestrates many models and agents reliably.
+- [2025: The Year the Frontier Firm Is Born](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born) - Microsoft Work Trend Index, 2025. A new organizational model of hybrid human and agent teams that most leaders expect within 12 to 18 months.
+
+### Other voices
+
+- [From Hierarchy to Intelligence](https://www.sequoiacap.com/article/from-hierarchy-to-intelligence/) - Jack Dorsey and Roelof Botha, 2026. The AI-era organization needs only three kinds of people, namely individual contributors, directly responsible individuals and player-coaches, with an intelligence layer replacing permanent middle management.
+- [What's Next for AI Agentic Workflows](https://www.youtube.com/watch?v=sal78ACtGTc) - Andrew Ng, 2024. Agentic patterns such as reflection, tool use, planning and multi-agent dramatically outperform single-shot prompting.
 
 ## Foundation Models and Open Weights
 
