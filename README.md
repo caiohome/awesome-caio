@@ -461,7 +461,12 @@ flowchart TB
 - **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** (`SWE-agent` / Princeton) 🌍 🧪 🟢 🏠 — Reference "GitHub issue → patch" agent; runs in your own sandbox (SWE-ReX) — the base for internal issue-automation experiments.
 - **[Superpowers](https://github.com/obra/superpowers)** (`obra`) 🌍 🧪 🟢 — Not an agent but the *harness*: a curated, MIT skills/methodology layer you can vendor internally to standardize how coding agents behave. Pin a commit before org-wide use.
 
-> 🔗 See also **[OpenHands](#08--orchestration-frameworks--agents)** in §08 (open-source coding agent) and **[rtk](#07--context-engineering--token-efficiency)** in §07 (token-cost control as Vibe Coding scales across the team).
+**Practices & playbooks (企业实践 — field reports, not tools)**
+- **[Equipping Agents for the Real World with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)** — *Anthropic Engineering, 2025.* The practice behind Skills: package team know-how as composable **`SKILL.md` folders** (instructions + scripts + resources) the agent loads on demand — symptom→solution maps replace static runbooks, and a growing **"gotchas"** list captures each real-world failure (e.g. *a refund needs the charge ID, not the invoice ID*).
+- **[How Anthropic Teams Use Claude Code](https://www.anthropic.com/news/how-anthropic-teams-use-claude-code)** — *Anthropic, 2025.* Field report across data science, security, design, growth and legal: how real teams wire coding agents into daily work — the "what does adoption actually look like" reference.
+- **[The Complete Guide to Building Skills for Claude (PDF)](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)** — *Anthropic, 2025.* The build reference: a lean `SKILL.md` with **progressive disclosure** (detail in companion files), deterministic scripts for deterministic work, one job per skill, and skills that **evolve from a few lines → gotchas → validation scripts**.
+
+> 🔗 See also **[OpenHands](#08--orchestration-frameworks--agents)** in §08 (open-source coding agent), **[rtk](#07--context-engineering--token-efficiency)** in §07 (token-cost control as Vibe Coding scales), and the **[SkillHub](#09--mcp--tools--skills)** / **[Superpowers](#13--vibe-coding--enterprise-rd-enablement)** tooling that operationalizes these skill libraries.
 
 ## 14 · Internal Knowledge Base — Research, Docs & Web Collection
 

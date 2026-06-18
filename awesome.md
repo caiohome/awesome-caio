@@ -336,6 +336,12 @@ Every entry answers one question: can this open-source project be brought into a
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) - Reference GitHub issue-to-patch agent that runs in your own sandbox, a base for internal issue-automation experiments. Global, pilot, permissive, self-hostable.
 - [Superpowers](https://github.com/obra/superpowers) - A curated skills and methodology harness you can vendor internally to standardize how coding agents behave; pin a commit before org-wide use. Global, pilot, permissive.
 
+### Practices and playbooks
+
+- [Equipping Agents for the Real World with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) - Anthropic, 2025. The practice behind Skills, packaging team know-how as composable SKILL.md folders of instructions, scripts and resources, with symptom-to-solution maps and a growing gotchas list that captures each real-world failure.
+- [How Anthropic Teams Use Claude Code](https://www.anthropic.com/news/how-anthropic-teams-use-claude-code) - Anthropic, 2025. A field report on how data science, security, design, growth and legal teams wire coding agents into daily work.
+- [The Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) - Anthropic, 2025. The build reference covering a lean SKILL.md with progressive disclosure, deterministic scripts, one job per skill, and skills that evolve from a few lines to gotchas to validation scripts.
+
 ## Internal Knowledge Base
 
 > Turn scattered company knowledge such as documents, wikis, PDFs and the open web into an AI-queryable base: a self-hosted search front, research and literature tooling, and web collection to feed it. Many strong picks are copyleft or open-core, so review the license before any SaaS redistribution.
