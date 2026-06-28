@@ -122,6 +122,8 @@ flowchart TB
 | **Govern** | [Langfuse](#11--evaluation--observability--guardrails--governance) + [promptfoo](#11--evaluation--observability--guardrails--governance) + [NeMo Guardrails](#11--evaluation--observability--guardrails--governance) | Langfuse (self-host) | Without this layer, nothing is board-defensible |
 | **Base** | [MindSpore / CANN](#15--private--xinchuang--edge-deployment) | — | Domestic training/inference stack |
 
+> 🔒 **Air-gap variant:** for a fully self-carried, zero-egress kit (Skills + MCP + Agents + offline model/RAG), see [The Air-gap Bundle](#-the-air-gap-bundle--what-to-self-carry-behind-the-firewall-lan-ready) and the shippable [`/bundle`](bundle/) starter files.
+
 ---
 
 ## Contents
@@ -242,6 +244,7 @@ flowchart TB
 - **[slime](https://github.com/THUDM/slime)** (`THUDM`) 🇨🇳 🧪 🟢 — Zhipu/Tsinghua-lineage RL scaling.
 - **[NeMo-RL](https://github.com/NVIDIA-NeMo/RL)** (`NVIDIA-NeMo`) 🌍 🧪 🟢 — NVIDIA post-training RL.
 - **[DAPO](https://github.com/BytedTsinghua-SIA/DAPO)** (`BytedTsinghua-SIA`) 🇨🇳 👀 🟢 — ByteDance × Tsinghua open RL system/algorithm + dataset (built on verl).
+- **[ART (Agent Reinforcement Trainer)](https://github.com/OpenPipe/ART)** (`OpenPipe`) 🌍 ⭐ 🟢 — GRPO-based RL to give multi-step **agents** "on-the-job" training on open weights (Qwen, gpt-oss, Llama); practical post-training for real agent tasks, not just chat.
 
 **Learn from scratch (capability-building for your seed engineers)**
 - **[Karpathy](https://github.com/karpathy)** (`karpathy`) 🌍 ⭐ 🟢 — [nanoGPT](https://github.com/karpathy/nanoGPT) / [llm.c](https://github.com/karpathy/llm.c) / [nanochat](https://github.com/karpathy/nanochat) / [micrograd](https://github.com/karpathy/micrograd); the best "understand LLMs from zero" teaching code.
@@ -269,6 +272,8 @@ flowchart TB
 - **[LMDeploy](https://github.com/InternLM/lmdeploy)** (`InternLM`) 🇨🇳 ⭐ 🟢 🏠 — InternLM team's deploy stack; domestic-ecosystem friendly.
 - **[llama.cpp](https://github.com/ggml-org/llama.cpp)** (`ggml-org`) 🌍 ⭐ 🟢 🏠 📱 — CPU / edge / quantized deployment.
 - **[Xinference](https://github.com/xorbitsai/inference)** (`xorbitsai`) 🇨🇳 🧪 🟢 🏠 — Multi-model local inference server.
+- **[KTransformers](https://github.com/kvcache-ai/ktransformers)** (`kvcache-ai` / Tsinghua) 🇨🇳 ⭐ 🟢 🏠 — Heterogeneous CPU+GPU offload that runs huge MoE models (DeepSeek / Kimi-class) on limited GPU — slashes hardware cost for on-prem serving of frontier-size open weights.
+- **[xLLM](https://github.com/jd-opensource/xllm)** (`jd-opensource` / JD.com) 🇨🇳 🧪 🟢 🏠 — Production inference engine for LLM / VLM / DiT / REC, optimized for **diverse / domestic AI accelerators** — a path for sovereign-chip (Xinchuang) or non-NVIDIA fleets.
 
 ## 05 · Compute Scheduling & Serving Orchestration
 
@@ -287,6 +292,8 @@ flowchart TB
 - **[OME (Open Model Engine)](https://github.com/ome-projects/ome)** (`ome-projects`) 🌍 🧪 🟢 🏠 — K8s operator for LLM serving: engine-agnostic model lifecycle, GPU scheduling and prefill/decode disaggregation across SGLang / vLLM / TensorRT-LLM / Triton.
 - **[kvcached](https://github.com/ovg-project/kvcached)** (`ovg-project`) 🌍 🧪 🟢 🏠 — Virtualized, elastic KV-cache that lets multiple models share GPU memory dynamically; raises utilization on expensive fleets (distinct from LMCache offload).
 - **[checkpoint-engine](https://github.com/MoonshotAI/checkpoint-engine)** (`MoonshotAI`) 🇨🇳 🧪 🟢 🏠 — Lightweight middleware to hot-update model weights in running inference engines; for RLHF online updates and zero-downtime model swaps.
+- **[Mooncake](https://github.com/kvcache-ai/Mooncake)** (`kvcache-ai` / Moonshot) 🇨🇳 ⭐ 🟢 🏠 — KV-cache-centric **disaggregated** (prefill/decode split) serving platform that powers Kimi in production; pairs with vLLM / SGLang for large-scale, cost-efficient inference.
+- **[GPUStack](https://github.com/gpustack/gpustack)** (`gpustack` / Seal) 🇨🇳 ⭐ 🟢 🏠 — Self-hosted GPU-cluster manager that schedules and serves models across vLLM / SGLang (and Ascend / MindIE) nodes — an air-gappable control plane for heterogeneous fleets.
 
 ## 06 · Gateway / Routing / API & Cost Governance
 
@@ -300,6 +307,9 @@ flowchart TB
 - **[Helicone](https://github.com/Helicone/helicone)** (`Helicone`) 🌍 🧪 🟢 🏠 — Lightweight gateway/observability, easy to integrate.
 - **[One-API](https://github.com/songquanpeng/one-api)** (`songquanpeng`, 🟢 MIT) / **[New-API](https://github.com/Calcium-Ion/new-api)** (`Calcium-Ion`, 🔴 AGPL-3.0) 🇨🇳 ⭐ 🏠 — Multi-tenant gateways with keys/quota/billing/audit; a top self-host choice in China. ⚠️ New-API is **AGPL** — legal review before SaaS redistribution.
 - **[Higress](https://github.com/higress-group/higress)** (`higress-group` / Alibaba) 🇨🇳 ⭐ 🟢 🏠 — AI-native API gateway (Envoy-based) with token rate-limiting, semantic cache and content-safety plugins; China-origin, good Xinchuang/medical-content-safety story.
+- **[Envoy AI Gateway](https://github.com/envoyproxy/ai-gateway)** (`envoyproxy` / CNCF) 🌍 🧪 🟢 🏠 — CNCF-backed, Envoy-native unified gateway for GenAI traffic; the natural fit for enterprises already standardized on Envoy / Kubernetes.
+- **[Bifrost](https://github.com/maximhq/bifrost)** (`maximhq`) 🌍 ⭐ 🟢 🏠 — High-throughput AI gateway (claims ~50× LiteLLM, <100µs overhead at 5k RPS) with adaptive load balancing, cluster mode, guardrails and 1000+ models.
+- **[Plano (ex-Arch)](https://github.com/katanemo/plano)** (`katanemo`) 🌍 ⭐ 🟢 🏠 — Envoy-based AI-native proxy / data plane for agentic apps: smart LLM routing, safety and observability at the edge of every agent call.
 
 **Model routing (pick a model per prompt — cut cost, raise quality)**
 - **[RouteLLM](https://github.com/lm-sys/RouteLLM)** (`lm-sys`) 🌍 🧪 🟢 — Strong/weak model routing framework.
@@ -341,6 +351,7 @@ flowchart TB
 - **[Symphony](https://github.com/openai/symphony)** (`openai`) 🌍 🧪 🟢 — OpenAI's open Codex-orchestration layer: turns tracker tickets into isolated, autonomous coding-agent runs so teams manage work instead of supervising agents. ⚠️ Engineering-preview — pilot, not GA.
 - **[Shannon](https://github.com/Kocoro-lab/Shannon)** (`Kocoro-lab`) 🌍 🧪 🟢 🏠 — Production-oriented multi-agent orchestration on Temporal durable workflows, with budget/policy enforcement, a Rust sandbox and OpenTelemetry/Prometheus observability.
 - **[agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** (`kubernetes-sigs`) 🌍 🧪 🟢 🏠 — Official K8s-SIG project: isolated, stateful, singleton sandboxes as a standard execution substrate for agent runtimes on existing Kubernetes.
+- **[Langflow](https://github.com/langflow-ai/langflow)** (`langflow-ai`) 🌍 ⭐ 🟢 🏠 — Visual low-code builder for agents & RAG flows; self-hostable and can export a flow as an API or an MCP server — a fast on-prem path from prototype to internal tool. (Telemetry on by default; set `DO_NOT_TRACK` for air-gap.)
 
 > ⚠️ Medical Class II/III: fully dynamic multi-agent systems conflict with NMPA "deterministic, auditable" requirements — freeze a traceable chain at the orchestration layer.
 
@@ -354,6 +365,7 @@ flowchart TB
 - **[awesome-mcp-enterprise](https://github.com/bh-rat/awesome-mcp-enterprise)** (`bh-rat`) 🌍 — Enterprise-grade MCP subset.
 - **[MCP Gateway](https://github.com/lasso-security/mcp-gateway)** (`lasso-security`) + **[mcpo](https://github.com/open-webui/mcpo)** 🌍 🧪 🟢 🏠 — MCP gateway / auth / audit.
 - **[MCP Gateway (Microsoft)](https://github.com/microsoft/mcp-gateway)** (`microsoft`) 🌍 🧪 🟢 🏠 — K8s reverse proxy + control plane for MCP servers: session-aware stateful routing, lifecycle management, OAuth2 / Entra ID + RBAC. The MCP front door for Azure/K8s shops.
+- **[ContextForge (MCP Gateway)](https://github.com/IBM/mcp-context-forge)** (`IBM`) 🌍 🧪 🟢 🏠 — IBM's Apache-2.0 MCP / A2A / REST gateway + registry: federate and proxy tools behind one governed front door with auth, observability and an **air-gapped container build** (`Containerfile.lite`). A clean-license alternative to AGPL registries for behind-the-firewall MCP.
 - **[Archestra](https://github.com/archestra-ai/archestra)** (`archestra-ai`) 🌍 🧪 🔴 🏠 ⚠️ — Enterprise AI platform: private MCP registry + K8s MCP gateway + deterministic guardrails (prompt-injection isolation) + A2A orchestration. **AGPL-3.0 — legal review before SaaS redistribution.**
 - **[Composio](https://github.com/ComposioHQ/composio)** (`ComposioHQ`) 🌍 🧪 🟢 — Tool integration.
 - **[FastMCP](https://github.com/PrefectHQ/fastmcp)** (`PrefectHQ`) 🌍 ⭐ 🟢 — The fast, Pythonic way to build MCP servers and clients.
@@ -390,12 +402,14 @@ flowchart TB
 - **[markitdown](https://github.com/microsoft/markitdown)** (`microsoft`) 🌍 ⭐ 🟢 — Convert Office / PDF / HTML and more into clean Markdown for LLMs.
 - **[LiteParse](https://github.com/run-llama/liteparse)** (`run-llama`) 🌍 🧪 🟢 🏠 — Fast, local, model-free document parser (PDF / Office → clean structured output) from the LlamaIndex team; no GPU or API — the on-prem answer to paid parse services.
 - **[MonkeyOCR](https://github.com/Yuliang-Liu/MonkeyOCR)** (`Yuliang-Liu`) 🇨🇳 🧪 🟢 🏠 — Lightweight LMM-based document-parsing model; strong on tables, formulas and complex layouts for high-fidelity RAG ingestion of scanned/visual docs.
+- **[ParseBench](https://github.com/run-llama/ParseBench)** (`run-llama`) 🌍 🧪 🟢 — Reproducible benchmark to objectively compare document parsers (OCR, tables, layout) before you standardize on one — the eval companion to the parsers above.
 
 **Web ingestion & memory**
 - **[Crawl4AI](https://github.com/unclecode/crawl4ai)** (`unclecode`) 🌍 ⭐ 🟢 — LLM-friendly web crawler / scraper for RAG data ingestion.
 - **[mem0](https://github.com/mem0ai/mem0)** (`mem0ai`) 🌍 ⭐ 🟢 — Memory layer for agents; persistent user / agent memory across sessions.
 - **[Hindsight](https://github.com/vectorize-io/hindsight)** (`vectorize-io`) 🌍 🧪 🟢 🏠 — Self-improving long-term agent memory that learns from past interactions; a vendor-neutral memory backbone, an alternative to mem0.
 - **[memsearch](https://github.com/zilliztech/memsearch)** (`zilliztech` / Zilliz) 🇨🇳 🧪 🟢 🏠 — Persistent, unified agent memory backed by Markdown + Milvus; governance-friendly plaintext storage over a production vector DB.
+- **[OpenViking](https://github.com/volcengine/OpenViking)** (`volcengine` / ByteDance) 🇨🇳 🧪 🔴 🏠 — Open "context database" for agents: unifies memory, resources and skills under a filesystem paradigm with hierarchical, self-evolving context delivery. **AGPL-3.0 — legal review before SaaS redistribution.**
 
 **Knowledge formats & context standards**
 - **[OKF (Open Knowledge Format)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf)** (`GoogleCloudPlatform` / Google Cloud) 🌍 👀 🟢 🏠 — Vendor-neutral open spec (v0.1) that packages curated enterprise knowledge — table schemas, metrics, join paths, docs — as plain **Markdown + YAML frontmatter** files agents can read, diff in git, and ship as a tarball. Formalizes the "LLM wiki" / `AGENTS.md` / *metadata-as-code* pattern into a portable knowledge graph (markdown links = edges); separates knowledge *producers* from *consumers*. Apache-2.0; ships a BigQuery enrichment agent + a self-contained HTML graph visualizer + sample bundles. **New standard — track the direction before standardizing on it.**
@@ -424,6 +438,7 @@ flowchart TB
 - **[Llama Guard / PurpleLlama](https://github.com/meta-llama/PurpleLlama)** (`meta-llama`) 🌍 ⭐ 🟡 — Safety classification.
 - **[garak](https://github.com/NVIDIA/garak)** (`NVIDIA`) 🌍 🧪 🟢 — LLM vulnerability / red-team scanner.
 - **[Presidio](https://github.com/microsoft/presidio)** (`microsoft`) 🌍 ⭐ 🟢 🏠 ⚠️ — PII / PHI detection, redaction and anonymization; the gateway-side control for medical / financial data.
+- **[Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit)** (`microsoft`) 🌍 🧪 🟢 🏠 — First-party policy enforcement, zero-trust agent identity and execution sandboxing for autonomous agents, mapped to all 10 of the **OWASP Agentic Top 10** — governance scaffolding a CAIO can adopt directly.
 
 ## 12 · Autonomous Research & Scientific Discovery
 
@@ -434,6 +449,7 @@ flowchart TB
 - **[AI-Researcher](https://github.com/HKUDS/AI-Researcher)** (`HKUDS`) 🌍 👀 🟢 — HKU Data Intelligence Lab; autonomous research innovation.
 - **[open-ai-co-scientist](https://github.com/llnl/open-ai-co-scientist)** (`llnl`) 🌍 👀 🟢 — Open reproduction of Google's AI co-scientist multi-agent system.
 - **[GPT-Researcher](https://github.com/assafelovic/gpt-researcher)** (`assafelovic`) 🌍 🧪 🟢 🏠 — Autonomous deep-research agent.
+- **[Arbor](https://github.com/RUC-NLPIR/Arbor)** (`RUC-NLPIR` / Renmin Univ.) 🇨🇳 👀 🟢 🏠 — Generalist autonomous research agent that runs experiments and iteratively self-optimizes; academic, early-stage — track before adopting.
 - **[DeerFlow](#08--orchestration-frameworks--agents)** (see §08) 🇨🇳 — Deep-research orchestration, self-hostable.
 
 ## 13 · Vibe Coding — Enterprise R&D Enablement
@@ -509,6 +525,22 @@ flowchart TB
 - **[LocalAI](https://github.com/mudler/LocalAI)** (`mudler`) 🌍 ⭐ 🟢 🏠 📱 — OpenAI-compatible local inference.
 - **[Jan](https://github.com/menloresearch/jan)** (`menloresearch`) 🌍 ⭐ 🟢 🏠 📱 — Offline AI assistant.
 - **[Ollama](https://github.com/ollama/ollama)** (`ollama`) 🌍 ⭐ 🟢 🏠 📱 — Local model runtime (MIT; mind trademark & commercial positioning, not the license).
+- **[Open WebUI](https://github.com/open-webui/open-webui)** (`open-webui`) 🌍 ⭐ 🟡 🏠 ⚠️ — The de-facto self-hosted chat + RAG front-end over local models (Ollama / OpenAI-compatible); runs fully offline. **Custom license** (BSD-3 + a branding clause restricting white-labeling above 50 users) — legal review before rebranding; set `ANONYMIZED_TELEMETRY=false` for true air-gap.
+- **[GPT4All](https://github.com/nomic-ai/gpt4all)** (`nomic-ai`) 🌍 🧪 🟢 🏠 📱 — Desktop offline LLM app, no GPU or API required; MIT and air-gap-clean. Release cadence has slowed — track maturity before standardizing.
+
+### 🔒 The Air-gap Bundle — what to self-carry behind the firewall (LAN-ready)
+
+> **Adoption logic:** the CAIO's **self-carried library**. Air-gap is not *no internet ever* — it's *no internet at runtime*: stage once on a connected host, then run on the LAN with egress denied. Below is the assembly; the **shippable starter files** — real `SKILL.md` packages, an internal MCP manifest, agent definitions and an offline `docker-compose` — live in [`/bundle`](bundle/).
+> 引入逻辑：CAIO 的「自带库」。气隙 ≠ 永不联网，而是**运行时不出网** —— 连网主机一次性装载，局域网内断网运行。可直接复制的起步文件见 [`/bundle`](bundle/)。
+
+| Capability · 能力 | Pull behind the firewall (all 🏠, run with zero egress) | Self-carry file in `/bundle` |
+| --- | --- | --- |
+| **Skill registry & governance** | [SkillHub](#09--mcp--tools--skills) · [awesome-claude-skills](#09--mcp--tools--skills) | [`skills/`](bundle/skills/) — 3 `SKILL.md` packages |
+| **MCP gateway & audit** | [MCP Gateway (Microsoft)](#09--mcp--tools--skills) · [ContextForge](#09--mcp--tools--skills) · [mcpo](#09--mcp--tools--skills) | [`mcp/servers.json`](bundle/mcp/) + run/audit notes |
+| **Agent platform (self-hosted)** | [Dify](#08--orchestration-frameworks--agents) · [Bisheng](#08--orchestration-frameworks--agents) · [LangGraph](#08--orchestration-frameworks--agents) · [Langflow](#08--orchestration-frameworks--agents) | [`agents/`](bundle/agents/) — 2 agent defs |
+| **Offline model + RAG base** | [Ollama](#15--private--xinchuang--edge-deployment) / [vLLM](#04--inference-engines) · [pgvector](#10--rag--knowledge-base--data-processing) / [Milvus](#10--rag--knowledge-base--data-processing) · [RAGFlow](#10--rag--knowledge-base--data-processing) · [BGE](#10--rag--knowledge-base--data-processing) · [MinerU](#10--rag--knowledge-base--data-processing) | [`stack/`](bundle/stack/) — offline `docker-compose` |
+
+> **Air-gap hardening:** egress-deny by default · MCP only through the gateway (auth · RBAC · audit) · telemetry off (`ANONYMIZED_TELEMETRY=false`, `DO_NOT_TRACK=1`) · secrets via secret-manager, never inline · pin image digests at staging · license / SBOM review (mind Open WebUI's custom license and any AGPL registry). Full checklist in [`/bundle/README.md`](bundle/README.md).
 
 ## 16 · Platforms, Hubs & Registries — where CAIOs source & host
 

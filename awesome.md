@@ -119,6 +119,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [slime](https://github.com/THUDM/slime) - Zhipu and Tsinghua lineage RL scaling. China-led, pilot, permissive.
 - [NeMo-RL](https://github.com/NVIDIA-NeMo/RL) - NVIDIA post-training RL. Global, pilot, permissive.
 - [DAPO](https://github.com/BytedTsinghua-SIA/DAPO) - ByteDance and Tsinghua open RL system and dataset built on verl. China-led, watch, permissive.
+- [ART (Agent Reinforcement Trainer)](https://github.com/OpenPipe/ART) - GRPO-based reinforcement learning that gives multi-step agents on-the-job training on open weights such as Qwen, gpt-oss and Llama. Global, production, permissive.
 
 ### Learning from scratch
 
@@ -146,6 +147,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [LMDeploy](https://github.com/InternLM/lmdeploy) - InternLM team deploy stack, friendly to the domestic ecosystem. China-led, production, permissive, self-hostable.
 - [llama.cpp](https://github.com/ggml-org/llama.cpp) - CPU, edge and quantized deployment. Global, production, permissive, self-hostable, edge.
 - [Xinference](https://github.com/xorbitsai/inference) - Multi-model local inference server. China-led, pilot, permissive, self-hostable.
+- [KTransformers](https://github.com/kvcache-ai/ktransformers) - Heterogeneous CPU and GPU offload that runs huge MoE models like DeepSeek and Kimi on limited GPU, slashing hardware cost for on-prem serving. China-led, production, permissive, self-hostable.
+- [xLLM](https://github.com/jd-opensource/xllm) - Production inference engine for LLM, VLM, DiT and REC models optimized for diverse and domestic AI accelerators, a path for sovereign-chip or non-NVIDIA fleets. China-led, pilot, permissive, self-hostable.
 
 ## Compute Scheduling and Serving Orchestration
 
@@ -165,6 +168,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [OME](https://github.com/ome-projects/ome) - Kubernetes operator for LLM serving with engine-agnostic model lifecycle, GPU scheduling and prefill-decode disaggregation across SGLang, vLLM, TensorRT-LLM and Triton. Global, pilot, permissive, self-hostable.
 - [kvcached](https://github.com/ovg-project/kvcached) - Virtualized elastic KV-cache that lets multiple models share GPU memory dynamically to raise utilization on expensive fleets. Global, pilot, permissive, self-hostable.
 - [checkpoint-engine](https://github.com/MoonshotAI/checkpoint-engine) - Lightweight middleware to hot-update model weights in running inference engines for RLHF online updates and zero-downtime model swaps. China-led, pilot, permissive, self-hostable.
+- [Mooncake](https://github.com/kvcache-ai/Mooncake) - KV-cache-centric disaggregated prefill-decode serving platform that powers Kimi in production and pairs with vLLM and SGLang. China-led, production, permissive, self-hostable.
+- [GPUStack](https://github.com/gpustack/gpustack) - Self-hosted GPU-cluster manager that schedules and serves models across vLLM, SGLang and Ascend nodes, an air-gappable control plane for heterogeneous fleets. China-led, production, permissive, self-hostable.
 
 ## Gateway, Routing and Cost Governance
 
@@ -179,6 +184,9 @@ Every entry answers one question: can this open-source project be brought into a
 - [One-API](https://github.com/songquanpeng/one-api) - Multi-tenant gateway with keys, quota, billing and audit; a top self-host choice in China, MIT. China-led, production, permissive, self-hostable.
 - [New-API](https://github.com/Calcium-Ion/new-api) - One-API-style multi-tenant gateway under AGPL-3.0, so legal review before SaaS redistribution. China-led, production, restricted, self-hostable.
 - [Higress](https://github.com/higress-group/higress) - AI-native API gateway based on Envoy with token rate-limiting, semantic caching and content-safety plugins; China-origin with a good Xinchuang story. China-led, production, permissive, self-hostable.
+- [Envoy AI Gateway](https://github.com/envoyproxy/ai-gateway) - CNCF-backed, Envoy-native unified gateway for generative-AI traffic, a natural fit for enterprises already standardized on Envoy and Kubernetes. Global, pilot, permissive, self-hostable.
+- [Bifrost](https://github.com/maximhq/bifrost) - High-throughput AI gateway claiming around 50x LiteLLM with adaptive load balancing, cluster mode, guardrails and over 1000 models. Global, production, permissive, self-hostable.
+- [Plano](https://github.com/katanemo/plano) - Envoy-based AI-native proxy and data plane for agentic apps with smart LLM routing, safety and observability at the edge of every agent call. Global, production, permissive, self-hostable.
 
 ### Model routing
 
@@ -218,6 +226,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [Symphony](https://github.com/openai/symphony) - OpenAI open Codex-orchestration layer that turns tracker tickets into isolated, autonomous coding-agent runs; an engineering preview, so pilot rather than GA. Global, pilot, permissive.
 - [Shannon](https://github.com/Kocoro-lab/Shannon) - Production-oriented multi-agent orchestration on Temporal durable workflows with budget and policy enforcement, a Rust sandbox and OpenTelemetry observability. Global, pilot, permissive, self-hostable.
 - [agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) - Official Kubernetes SIG project providing isolated, stateful, singleton sandboxes as a standard execution substrate for agent runtimes. Global, pilot, permissive, self-hostable.
+- [Langflow](https://github.com/langflow-ai/langflow) - Visual low-code builder for agents and RAG flows that is self-hostable and can export a flow as an API or an MCP server; telemetry is on by default with an opt-out. Global, production, permissive, self-hostable.
 
 ## MCP, Tools and Skills
 
@@ -229,6 +238,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [Composio](https://github.com/ComposioHQ/composio) - Tool integration for agents. Global, pilot, permissive.
 - [FastMCP](https://github.com/PrefectHQ/fastmcp) - A fast, Pythonic way to build MCP servers and clients. Global, production, permissive.
 - [MCP Gateway (Microsoft)](https://github.com/microsoft/mcp-gateway) - Kubernetes reverse proxy and control plane for MCP servers with session-aware stateful routing, lifecycle management and OAuth2 with Entra ID and RBAC. Global, pilot, permissive, self-hostable.
+- [ContextForge (MCP Gateway)](https://github.com/IBM/mcp-context-forge) - IBM Apache-2.0 MCP, A2A and REST gateway and registry that federates and proxies tools behind one governed front door with auth and observability, and ships an air-gapped container build; a clean-license alternative to AGPL registries. Global, pilot, permissive, self-hostable.
 - [SkillHub](https://github.com/iflytek/skillhub) - Self-hosted enterprise agent-skill registry to publish and version skill packages with team namespaces, RBAC and audit logs, deployable on-premise. China-led, pilot, permissive, self-hostable.
 - [Archestra](https://github.com/archestra-ai/archestra) - Enterprise AI platform bundling a private MCP registry, a Kubernetes MCP gateway, deterministic prompt-injection guardrails and agent-to-agent orchestration, under AGPL-3.0 so legal review is needed before SaaS redistribution. Global, pilot, restricted, self-hostable.
 
@@ -263,6 +273,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [markitdown](https://github.com/microsoft/markitdown) - Convert Office, PDF, HTML and more into clean Markdown for LLMs. Global, production, permissive.
 - [LiteParse](https://github.com/run-llama/liteparse) - Fast, local, model-free document parser from the LlamaIndex team that turns PDF and Office files into clean structured output with no GPU or API. Global, pilot, permissive, self-hostable.
 - [MonkeyOCR](https://github.com/Yuliang-Liu/MonkeyOCR) - Lightweight LMM-based document-parsing model strong on tables, formulas and complex layouts for high-fidelity RAG ingestion. China-led, pilot, permissive, self-hostable.
+- [ParseBench](https://github.com/run-llama/ParseBench) - Reproducible benchmark to objectively compare document parsers across OCR, tables and layout before standardizing on one. Global, pilot, permissive.
 
 ### Web ingestion and memory
 
@@ -270,6 +281,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [mem0](https://github.com/mem0ai/mem0) - Memory layer for agents with persistent user and agent memory across sessions. Global, production, permissive.
 - [Hindsight](https://github.com/vectorize-io/hindsight) - Self-improving long-term agent memory that learns from past interactions; a vendor-neutral memory backbone and an alternative to mem0. Global, pilot, permissive, self-hostable.
 - [memsearch](https://github.com/zilliztech/memsearch) - Persistent, unified agent memory backed by Markdown and Milvus, pairing governance-friendly plaintext storage with a production vector database. China-led, pilot, permissive, self-hostable.
+- [OpenViking](https://github.com/volcengine/OpenViking) - Open context database for agents that unifies memory, resources and skills under a filesystem paradigm with hierarchical, self-evolving context delivery, under AGPL-3.0 so review the license before SaaS redistribution. China-led, pilot, restricted, self-hostable.
 
 ### Knowledge formats and context standards
 
@@ -301,6 +313,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [PurpleLlama](https://github.com/meta-llama/PurpleLlama) - Meta trust and safety classification tools. Global, production, conditional.
 - [garak](https://github.com/NVIDIA/garak) - LLM vulnerability and red-team scanner. Global, pilot, permissive.
 - [Presidio](https://github.com/microsoft/presidio) - PII and PHI detection, redaction and anonymization; the gateway-side control for medical and financial data. Global, production, permissive, self-hostable.
+- [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - First-party Microsoft policy enforcement, zero-trust agent identity and execution sandboxing for autonomous agents, mapped to all ten of the OWASP Agentic Top 10. Global, pilot, permissive, self-hostable.
 
 ## Autonomous Research
 
@@ -310,6 +323,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [AI-Researcher](https://github.com/HKUDS/AI-Researcher) - HKU Data Intelligence Lab autonomous research system. Global, watch, permissive.
 - [open-ai-co-scientist](https://github.com/llnl/open-ai-co-scientist) - Open reproduction of the Google AI co-scientist multi-agent system. Global, watch, permissive.
 - [GPT-Researcher](https://github.com/assafelovic/gpt-researcher) - Autonomous deep-research agent. Global, pilot, permissive, self-hostable.
+- [Arbor](https://github.com/RUC-NLPIR/Arbor) - Generalist autonomous research agent that runs experiments and iteratively self-optimizes; academic and early-stage. China-led, watch, permissive, self-hostable.
 
 ## Vibe Coding for Enterprise R&D
 
@@ -379,6 +393,10 @@ Every entry answers one question: can this open-source project be brought into a
 - [LocalAI](https://github.com/mudler/LocalAI) - OpenAI-compatible local inference. Global, production, permissive, self-hostable, edge.
 - [Jan](https://github.com/menloresearch/jan) - Offline AI assistant. Global, production, permissive, self-hostable, edge.
 - [Ollama](https://github.com/ollama/ollama) - Local model runtime, MIT; mind trademark and commercial positioning rather than the license. Global, production, permissive, self-hostable, edge.
+- [Open WebUI](https://github.com/open-webui/open-webui) - De-facto self-hosted chat and RAG front-end over local models that runs fully offline, under a custom license (BSD-3 plus a branding clause restricting white-labeling above 50 users), so review before rebranding and disable telemetry for true air-gap. Global, production, conditional, self-hostable.
+- [GPT4All](https://github.com/nomic-ai/gpt4all) - Desktop offline LLM app needing no GPU or API, MIT and air-gap-clean, though release cadence has slowed so track maturity before standardizing. Global, pilot, permissive, self-hostable, edge.
+
+> Air-gap bundle: a self-carried starter kit of SKILL.md packages, an internal MCP manifest, agent definitions and an offline docker-compose lives in the repository at [/bundle](bundle/), assembling the self-hostable picks above into a zero-egress library for LAN deployment.
 
 ## Platforms, Hubs and Registries
 

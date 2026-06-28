@@ -1,0 +1,72 @@
+# Air-gap reference stack — offline model + RAG + MCP gateway + UI.
+# This is a REFERENCE skeleton, not a turnkey deploy. Before running on the LAN:
+#   1. Pre-pull every image on a connected host and mirror to your internal registry.
+#   2. Replace each image tag with an immutable @sha256 digest captured at staging.
+#   3. Pre-pull model weights into the ollama volume (no runtime download).
+#   4. Run with outbound egress DENIED — nothing here needs to phone home.
+# Adapt registry.internal / volumes / model names to your environment.
+
+name: airgap-ai
+
+networks:
+  lan:
+    driver: bridge
+    internal: true        # no outbound egress from this network
+
+volumes:
+  ollama-models:          # pre-staged weights live here
+  pgdata:
+  webui-data:
+
+services:
+  # --- Offline model serving -------------------------------------------------
+  ollama:
+    image: registry.internal/ollama/ollama:0.x   # pin @sha256 at staging
+    networks: [lan]
+    volumes:
+      - ollama-models:/root/.ollama
+    environment:
+      OLLAMA_KEEP_ALIVE: "24h"
+    restart: unless-stopped
+    # For higher-throughput / 信创 fleets, swap this service for vLLM or Xinference.
+
+  # --- Vector store (lowest-ops choice; swap for Milvus if you need scale) ----
+  vectordb:
+    image: registry.internal/pgvector/pgvector:pg16
+    networks: [lan]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: rag
+      POSTGRES_USER: rag
+      POSTGRES_PASSWORD: ${PG_PASSWORD}      # from secret-manager, not inline
+    restart: unless-stopped
+
+  # --- MCP gateway: the single front door for all tools ----------------------
+  mcp-gateway:
+    image: registry.internal/ibm/mcp-context-forge:latest   # pin @sha256
+    networks: [lan]
+    environment:
+      MCPGATEWAY_AUTH: "rbac"
+      MCPGATEWAY_AUDIT_LOG: "true"           # ship to SIEM
+      DO_NOT_TRACK: "1"
+    restart: unless-stopped
+    # Register the servers from ../mcp/servers.json here.
+
+  # --- Chat + RAG front-end --------------------------------------------------
+  open-webui:
+    image: registry.internal/open-webui/open-webui:main     # pin @sha256
+    networks: [lan]
+    ports:
+      - "8080:8080"        # expose on the LAN only
+    volumes:
+      - webui-data:/app/backend/data
+    environment:
+      OLLAMA_BASE_URL: "http://ollama:11434"
+      ANONYMIZED_TELEMETRY: "false"          # telemetry OFF for air-gap
+      DO_NOT_TRACK: "1"
+      ENABLE_SIGNUP: "false"
+    depends_on: [ollama, vectordb, mcp-gateway]
+    restart: unless-stopped
+    # ⚠️ Open WebUI ships a custom license (BSD-3 + branding clause). Legal review
+    #    before rebranding/white-labeling above 50 users.

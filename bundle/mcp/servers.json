@@ -1,0 +1,30 @@
+{
+  "$comment": "Internal MCP server manifest — all servers run on the LAN and are reached THROUGH the gateway (gw.internal), never directly. Auth is injected from a secret-manager via ${VAR}; nothing is hardcoded. See README.md for the gateway + audit setup. Adapt hosts to your intranet.",
+  "mcpServers": {
+    "knowledge-base": {
+      "transport": "http",
+      "url": "http://gw.internal:8080/mcp/knowledge-base",
+      "headers": {
+        "Authorization": "Bearer ${MCP_GATEWAY_TOKEN}"
+      },
+      "scopes": ["kb:read"],
+      "description": "Read-only search over the on-prem RAG knowledge base (RAGFlow/Milvus). Pairs with the enterprise-rag-query skill."
+    },
+    "filesystem-readonly": {
+      "transport": "stdio",
+      "command": "mcp-server-filesystem",
+      "args": ["--root", "/srv/shared/docs", "--read-only"],
+      "scopes": ["fs:read"],
+      "description": "Read-only access to an approved internal document share. No write, no paths outside --root."
+    },
+    "ticketing": {
+      "transport": "http",
+      "url": "http://gw.internal:8080/mcp/ticketing",
+      "headers": {
+        "Authorization": "Bearer ${MCP_GATEWAY_TOKEN}"
+      },
+      "scopes": ["tickets:read", "tickets:comment"],
+      "description": "Internal ticketing (e.g. self-hosted Jira/GitLab). Can read and comment; cannot close or delete — keep write scopes minimal."
+    }
+  }
+}
