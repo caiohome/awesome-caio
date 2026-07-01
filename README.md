@@ -476,6 +476,7 @@ flowchart TB
 - **[MITRE D3FEND](https://d3fend.mitre.org/)** — *MITRE.* The defensive counterpart to ATT&CK — a knowledge graph of countermeasures — so you map detections and mitigations, not just attacks.
 - **[NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)** — *NIST, 2023.* The govern / map / measure / manage framework a CAIO cites to make AI risk board-defensible.
 - **[NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework)** — *NIST, 2024.* The foundational Govern / Identify / Protect / Detect / Respond / Recover framework enterprises baseline their whole security program on.
+- **[Agent Skills standard (agentskills.io)](https://agentskills.io/)** — *Open spec.* "A standardized way to give AI agents new capabilities" — the cross-vendor `SKILL.md` format both libraries above build on: instructions + scripts + resources packaged to load across Claude Code, Copilot, Cursor, Codex / Gemini CLI and 20+ hosts. The portability standard that makes a security skill pack vendor-neutral.
 
 > 🔗 See also §11's [garak](#11--evaluation--observability--guardrails--governance) / [Presidio](#11--evaluation--observability--guardrails--governance) / [Agent Governance Toolkit](#11--evaluation--observability--guardrails--governance) (the guardrail side of the same coin), and — for agent-runnable playbooks — the *DevSecOps* and *Supply-Chain Security* modules **inside** CyberSecurity-Skills.
 

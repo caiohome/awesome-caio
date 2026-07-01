@@ -352,6 +352,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [MITRE D3FEND](https://d3fend.mitre.org/) - MITRE. The defensive counterpart to ATT&CK, a knowledge graph of security countermeasures and mitigations.
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) - NIST, 2023. The govern, map, measure and manage framework for making AI risk board-defensible.
 - [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework) - NIST, 2024. The foundational govern, identify, protect, detect, respond and recover framework for enterprise security programs.
+- [Agent Skills standard (agentskills.io)](https://agentskills.io/) - Open spec. A standardized way to give AI agents new capabilities, the cross-vendor SKILL.md format both security-skill libraries above build on, portable across Claude Code, Copilot, Cursor, Codex CLI, Gemini CLI and 20-plus hosts.
 
 ## Autonomous Research
 
