@@ -18,6 +18,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [MCP, Tools and Skills](#mcp-tools-and-skills)
 - [RAG, Knowledge Base and Data Processing](#rag-knowledge-base-and-data-processing)
 - [Evaluation, Observability and Governance](#evaluation-observability-and-governance)
+- [Cybersecurity and AI Security](#cybersecurity-and-ai-security)
 - [Autonomous Research](#autonomous-research)
 - [Vibe Coding for Enterprise R&D](#vibe-coding-for-enterprise-rd)
 - [Internal Knowledge Base](#internal-knowledge-base)
@@ -314,6 +315,40 @@ Every entry answers one question: can this open-source project be brought into a
 - [garak](https://github.com/NVIDIA/garak) - LLM vulnerability and red-team scanner. Global, pilot, permissive.
 - [Presidio](https://github.com/microsoft/presidio) - PII and PHI detection, redaction and anonymization; the gateway-side control for medical and financial data. Global, production, permissive, self-hostable.
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - First-party Microsoft policy enforcement, zero-trust agent identity and execution sandboxing for autonomous agents, mapped to all ten of the OWASP Agentic Top 10. Global, pilot, permissive, self-hostable.
+
+## Cybersecurity and AI Security
+
+> Securing the AI stack and the enterprise it runs on; the AI-native attack surface (prompt injection, model-file malware, agent and tool abuse, mapped to OWASP LLM Top 10 and MITRE ATLAS) plus the classic security substrate that models, gateways and RAG deploy onto. Prefer self-hostable, agent-drivable tooling that runs behind the firewall.
+
+### Agent-operated security skill libraries
+
+- [CyberSecurity-Skills](https://atomgit.com/AtomGit/CyberSecurity-Skills) - An AI-operated cybersecurity knowledge base of 39 modules and 195 skills as SKILL.md-style files spanning offense (reconnaissance, exploitation, lateral movement, persistence) and defense (SOC operations, threat hunting, DFIR, IAM, Zero Trust, DevSecOps, container, API, cloud and LLM security, ransomware, governance), shipping an agent manifest, index.json and a skill_query.py CLI so an agent can list and fetch skills on demand, mapped to PTES, OWASP Testing Guide, NIST SP 800-115/61, MITRE ATT&CK and ATLAS, OWASP LLM Top 10, CIS, ISO 27001 and China MLPS 2.0; GitHub mirror at [Hi-FullHouse/CyberSecurity-Skills](https://github.com/Hi-FullHouse/CyberSecurity-Skills). China-led, pilot, permissive, self-hostable.
+
+### AI, LLM and agent red-teaming and model security
+
+- [garak](https://github.com/NVIDIA/garak) - The LLM vulnerability scanner covering jailbreak, prompt-injection and data-leak probes; the offensive companion to guardrails. Global, pilot, permissive, self-hostable.
+- [PyRIT](https://github.com/Azure/PyRIT) - Microsoft first-party Python risk-identification toolkit for generative-AI red-teaming that automates adversarial probing at scale, MITRE-aligned. Global, pilot, permissive, self-hostable.
+- [Giskard](https://github.com/Giskard-AI/giskard) - Open-source evaluation and vulnerability scan for LLM agents and ML models covering hallucination, injection, bias and robustness, wiring red-teaming into CI. Global, production, permissive, self-hostable.
+- [LLM Guard](https://github.com/protectai/llm-guard) - Input and output security toolkit for LLM interactions with prompt-injection, PII, toxicity and secret scanners; a self-hostable gateway-side filter. Global, pilot, permissive, self-hostable.
+- [Rebuff](https://github.com/protectai/rebuff) - Multi-layer prompt-injection detector combining heuristics, an LLM and canary tokens. Global, pilot, permissive.
+- [ModelScan](https://github.com/protectai/modelscan) - Scans model files (pickle, H5, SavedModel) for serialization attacks, the supply-chain check for models pulled from a hub. Global, pilot, permissive, self-hostable.
+
+### Enterprise security substrate
+
+- [Trivy](https://github.com/aquasecurity/trivy) - All-in-one scanner for container images, IaC, filesystems, SBOM and secrets. Global, production, permissive, self-hostable.
+- [Wazuh](https://github.com/wazuh/wazuh) - Open-source unified XDR and SIEM for log analysis, threat detection and compliance monitoring; GPL-2.0, so legal review is mandatory before redistribution. Global, production, restricted, self-hostable.
+- [Falco](https://github.com/falcosecurity/falco) - CNCF runtime security that detects anomalous syscalls and behavior in Kubernetes pods. Global, production, permissive, self-hostable.
+- [Semgrep](https://github.com/semgrep/semgrep) - Fast multi-language static analysis (SAST); LGPL-2.1 core, so check terms for embedding. Global, production, conditional, self-hostable.
+- [Gitleaks](https://github.com/gitleaks/gitleaks) - Secret scanner for git repositories and CI to stop keys, tokens and credentials leaking into code. Global, production, permissive, self-hostable.
+- [Nuclei](https://github.com/projectdiscovery/nuclei) - Fast, template-driven vulnerability scanner for exposed services and endpoints. Global, production, permissive, self-hostable.
+- [OWASP ZAP](https://github.com/zaproxy/zaproxy) - The de-facto open dynamic application security testing (DAST) web-app scanner. Global, production, permissive, self-hostable.
+- [OSV-Scanner](https://github.com/google/osv-scanner) - Dependency vulnerability scanner over the OSV database for supply-chain checks. Global, production, permissive, self-hostable.
+
+### Standards and frameworks
+
+- [OWASP Top 10 for LLM Applications and GenAI Security](https://genai.owasp.org/) - OWASP, 2025. The canonical risk taxonomy for LLM and GenAI apps plus the Agentic Security initiative.
+- [MITRE ATLAS](https://atlas.mitre.org/) - MITRE. Adversarial Threat Landscape for AI Systems, an ATT&CK-style matrix of real-world attacks on ML and AI.
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) - NIST, 2023. The govern, map, measure and manage framework for making AI risk board-defensible.
 
 ## Autonomous Research
 

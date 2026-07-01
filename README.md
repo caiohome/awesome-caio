@@ -94,12 +94,13 @@ flowchart TB
     TRN["🏗️ §02–03 Train · Tune<br/>fine-tune · RL · kernels"]
     SRV["⚙️ §04–05 Serve · Schedule<br/>inference engines · orchestration"]
     GW["🚪 §06–07 Gateway · Context<br/>routing · keys · token efficiency"]
-    APP["🤖 §08–10 · §12–14 Apps · Agents<br/>agents · RAG · MCP · coding · knowledge"]
+    APP["🤖 §08–10 · §13–15 Apps · Agents<br/>agents · RAG · MCP · coding · knowledge"]
     GOV["🛡️ §11 Govern · Observe<br/>eval · tracing · guardrails"]
-    INF["🏠 §15 Private · Xinchuang · Edge<br/>air-gap · Ascend · on-device"]
-    HUB["🛰️ §16 Source · Host<br/>hubs · clouds · registries"]
+    SEC["🔐 §12 Secure · Red-team<br/>AI/agent defense · scanning · SOC"]
+    INF["🏠 §16 Private · Xinchuang · Edge<br/>air-gap · Ascend · on-device"]
+    HUB["🛰️ §17 Source · Host<br/>hubs · clouds · registries"]
 
-    MOD --> TRN --> SRV --> GW --> APP --> GOV
+    MOD --> TRN --> SRV --> GW --> APP --> GOV --> SEC
     INF -. underpins .-> MOD
     INF -. underpins .-> SRV
     HUB -. supplies .-> MOD
@@ -120,7 +121,8 @@ flowchart TB
 | **Agents / Apps** | [LangGraph](#08--orchestration-frameworks--agents) + [Dify](#08--orchestration-frameworks--agents) | Dify (private) | Controllable, auditable orchestration |
 | **RAG** | [RAGFlow](#10--rag--knowledge-base--data-processing) + [Milvus](#10--rag--knowledge-base--data-processing) + [BGE](#10--rag--knowledge-base--data-processing) + [MinerU](#10--rag--knowledge-base--data-processing) | same (all 🏠) | Parsing quality is the real RAG bottleneck |
 | **Govern** | [Langfuse](#11--evaluation--observability--guardrails--governance) + [promptfoo](#11--evaluation--observability--guardrails--governance) + [NeMo Guardrails](#11--evaluation--observability--guardrails--governance) | Langfuse (self-host) | Without this layer, nothing is board-defensible |
-| **Base** | [MindSpore / CANN](#15--private--xinchuang--edge-deployment) | — | Domestic training/inference stack |
+| **Secure** | [Trivy](#12--security-red-teaming--aiagent-defense) + [garak](#12--security-red-teaming--aiagent-defense) / [PyRIT](#12--security-red-teaming--aiagent-defense) + [CyberSecurity-Skills](#12--security-red-teaming--aiagent-defense) | same (all 🏠) | Scan the supply chain, red-team the models, run security as agent skills |
+| **Base** | [MindSpore / CANN](#16--private--xinchuang--edge-deployment) | — | Domestic training/inference stack |
 
 > 🔒 **Air-gap variant:** for a fully self-carried, zero-egress kit (Skills + MCP + Agents + offline model/RAG), see [The Air-gap Bundle](#-the-air-gap-bundle--what-to-self-carry-behind-the-firewall-lan-ready) and the shippable [`/bundle`](bundle/) starter files.
 
@@ -141,13 +143,14 @@ flowchart TB
 - [09 · MCP / Tools / Skills](#09--mcp--tools--skills)
 - [10 · RAG / Knowledge Base / Data Processing](#10--rag--knowledge-base--data-processing)
 - [11 · Evaluation / Observability / Guardrails / Governance](#11--evaluation--observability--guardrails--governance)
-- [12 · Autonomous Research & Scientific Discovery](#12--autonomous-research--scientific-discovery)
-- [13 · Vibe Coding — Enterprise R&D Enablement](#13--vibe-coding--enterprise-rd-enablement)
-- [14 · Internal Knowledge Base — Research, Docs & Web Collection](#14--internal-knowledge-base--research-docs--web-collection)
-- [15 · Private / Xinchuang / Edge Deployment](#15--private--xinchuang--edge-deployment)
-- [16 · Platforms, Hubs & Registries — where CAIOs source & host](#16--platforms-hubs--registries--where-caios-source--host)
-- [17 · Orgs & People to Follow (open-source account index)](#17--orgs--people-to-follow-open-source-account-index)
-- [18 · Other Awesome Lists (meta-index)](#18--other-awesome-lists-meta-index)
+- [12 · Security, Red-Teaming & AI/Agent Defense](#12--security-red-teaming--aiagent-defense)
+- [13 · Autonomous Research & Scientific Discovery](#13--autonomous-research--scientific-discovery)
+- [14 · Vibe Coding — Enterprise R&D Enablement](#14--vibe-coding--enterprise-rd-enablement)
+- [15 · Internal Knowledge Base — Research, Docs & Web Collection](#15--internal-knowledge-base--research-docs--web-collection)
+- [16 · Private / Xinchuang / Edge Deployment](#16--private--xinchuang--edge-deployment)
+- [17 · Platforms, Hubs & Registries — where CAIOs source & host](#17--platforms-hubs--registries--where-caios-source--host)
+- [18 · Orgs & People to Follow (open-source account index)](#18--orgs--people-to-follow-open-source-account-index)
+- [19 · Other Awesome Lists (meta-index)](#19--other-awesome-lists-meta-index)
 - [🤝 Contributing](#contributing) · [⚖️ Disclaimer](#disclaimer)
 
 > Each section below gives **representative anchor entries** that demonstrate the tagging format; full coverage is community-driven (see [Contributing](CONTRIBUTING.md)).
@@ -164,7 +167,7 @@ flowchart TB
 - **[Software Is Changing (Again) — "Software 3.0"](https://www.youtube.com/watch?v=LCEmiRjPEtQ)** — *YC AI Startup School, 2025.* LLMs are a new computer/OS and **English is the programming interface**; treat models as fallible "people spirits," keep a human on the **autonomy slider**, and build products for agents. ([YC writeup](https://www.ycombinator.com/library/MW-andrej-karpathy-software-is-changing-again))
 - **[Intro to Large Language Models — the "LLM OS"](https://www.youtube.com/watch?v=zjkBMFhNj_g)** — *2023.* The best plain-English mental model of an LLM as an OS kernel (context window = RAM, tools = peripherals) — ideal onboarding for non-technical leadership.
 - **["The hottest new programming language is English"](https://x.com/karpathy/status/1617979122625712128)** — *2023.* Natural language becomes the primary interface to computers — a shift in *who* can build software.
-- **[The origin of "vibe coding"](https://x.com/karpathy/status/1886192184808149383)** — *2025.* Describe intent, let the model generate; productive for prototypes, but output must be **verified, not trusted** (see §13).
+- **[The origin of "vibe coding"](https://x.com/karpathy/status/1886192184808149383)** — *2025.* Describe intent, let the model generate; productive for prototypes, but output must be **verified, not trusted** (see §14).
 - **["AGI is still a decade away" — Dwarkesh Podcast](https://www.dwarkesh.com/p/andrej-karpathy)** — *2025.* It's the **decade of agents**, not the year: today's agents lack continual learning and robust multimodality — calibrate enterprise timelines accordingly.
 - **[The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/)** — *2015.* The foundational "wow" of generative sequence models — a historical anchor for how far language modeling has come.
 
@@ -197,7 +200,7 @@ flowchart TB
 - **[From Hierarchy to Intelligence](https://www.sequoiacap.com/article/from-hierarchy-to-intelligence/)** — *Jack Dorsey & Roelof Botha (Block / Sequoia), 2026.* The AI-era org needs only three kinds of people — **ICs** (judgment, taste, creativity; one person doing ten people's work), **DRIs** (own the customer outcome and assemble the team), and **Player-Coaches** (build others by *doing*, not directing). An **intelligence layer** replaces the permanent middle-management tier; the best people hold all three roles at once. ([podcast](https://www.sequoiacap.com/podcast/jack-dorsey-every-company-can-now-be-a-mini-agi/))
 - **[What's Next for AI Agentic Workflows](https://www.youtube.com/watch?v=sal78ACtGTc)** — *Andrew Ng (Sequoia AI Ascent), 2024.* Agentic patterns — reflection, tool use, planning, multi-agent — dramatically outperform single-shot prompting; the biggest near-term capability lever.
 
-> 🧭 Read top-to-bottom, these converge on one message for a CAIO: **the models are a moving target; your durable edge is judgment, governance, and how you wire intelligence into real work** — exactly what §01–§18 operationalize.
+> 🧭 Read top-to-bottom, these converge on one message for a CAIO: **the models are a moving target; your durable edge is judgment, governance, and how you wire intelligence into real work** — exactly what §01–§19 operationalize.
 
 ## 01 · Foundation Models & Open Weights
 
@@ -440,7 +443,40 @@ flowchart TB
 - **[Presidio](https://github.com/microsoft/presidio)** (`microsoft`) 🌍 ⭐ 🟢 🏠 ⚠️ — PII / PHI detection, redaction and anonymization; the gateway-side control for medical / financial data.
 - **[Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit)** (`microsoft`) 🌍 🧪 🟢 🏠 — First-party policy enforcement, zero-trust agent identity and execution sandboxing for autonomous agents, mapped to all 10 of the **OWASP Agentic Top 10** — governance scaffolding a CAIO can adopt directly.
 
-## 12 · Autonomous Research & Scientific Discovery
+## 12 · Security, Red-Teaming & AI/Agent Defense
+
+> **Adoption logic:** the half §11 implies but doesn't cover — securing the AI stack **and** the enterprise it rides on. Two fronts a CAIO owns: **(1) the AI-native attack surface** — prompt injection, model-file malware, agent/tool abuse, mapped to **OWASP LLM Top 10** & **MITRE ATLAS**; and **(2) the classic security substrate** your models, gateways and RAG deploy onto — supply-chain scanning, secrets, SIEM. Prefer self-hostable, agent-drivable tooling you can run behind the firewall.
+> 引入逻辑：这是 §11「盾」延伸出的另一半 —— 既要守护 AI 栈本身（提示注入、模型文件投毒、Agent/工具滥用，对标 OWASP LLM Top 10 与 MITRE ATLAS），也要守护它所依赖的传统安全底座（供应链扫描、密钥、SIEM）。优先可自托管、可被 Agent 驱动、能部署在防火墙内的工具。
+
+**Agent-operated security skill libraries · 由 Agent 运维的安全技能库**
+- **[CyberSecurity-Skills](https://atomgit.com/AtomGit/CyberSecurity-Skills)** (`AtomGit`) 🇨🇳 🧪 🟢 🏠 — An **AI-operated** cybersecurity knowledge base: **39 modules / 195 skills** as `SKILL.md`-style files spanning offense (recon → exploit → lateral movement → persistence) *and* defense (SOC ops, threat hunting, DFIR, IAM, Zero Trust, DevSecOps, container / API / cloud / LLM security, ransomware, governance). Ships an **agent manifest + `index.json` + `skill_query.py` CLI** so an agent can list/fetch skills on demand — the security counterpart to §09's [SkillHub](#09--mcp--tools--skills) / [Superpowers](#14--vibe-coding--enterprise-rd-enablement), and a natural add to the [Air-gap Bundle](#-the-air-gap-bundle--what-to-self-carry-behind-the-firewall-lan-ready). Maps to **PTES · OWASP Testing Guide · NIST SP 800-115/61 · MITRE ATT&CK / ATLAS · OWASP LLM Top 10 · CIS · ISO 27001 · 等保 2.0**. MIT — vendor it as an internal skill pack. (GitHub mirror: [Hi-FullHouse/CyberSecurity-Skills](https://github.com/Hi-FullHouse/CyberSecurity-Skills).)
+
+**AI / LLM / agent red-teaming & model security · 大模型红队与模型安全**
+- **[garak](https://github.com/NVIDIA/garak)** (`NVIDIA`) 🌍 🧪 🟢 🏠 — The LLM vulnerability scanner (jailbreak / prompt-injection / data-leak probes); also in §11 — the *offensive* companion to the guardrails you deploy.
+- **[PyRIT](https://github.com/Azure/PyRIT)** (`Azure` / Microsoft) 🌍 🧪 🟢 🏠 — Microsoft's first-party Python risk-identification toolkit for **generative-AI red-teaming**; automates adversarial probing at scale, MITRE-aligned. Smaller community — pilot-grade.
+- **[Giskard](https://github.com/Giskard-AI/giskard)** (`Giskard-AI`) 🌍 ⭐ 🟢 🏠 — Open-source eval **+ vulnerability scan** for LLM agents and ML models (hallucination, injection, bias, robustness); wires red-teaming into CI.
+- **[LLM Guard](https://github.com/protectai/llm-guard)** (`protectai`) 🌍 🧪 🟢 🏠 — Input/output security toolkit for LLM interactions: prompt-injection, PII, toxicity and secret scanners — a self-hostable gateway-side filter.
+- **[Rebuff](https://github.com/protectai/rebuff)** (`protectai`) 🌍 🧪 🟢 — Multi-layer prompt-injection detector (heuristics + LLM + canary tokens); pair it with LLM Guard.
+- **[ModelScan](https://github.com/protectai/modelscan)** (`protectai`) 🌍 🧪 🟢 🏠 — Scans model files (pickle / H5 / SavedModel) for **serialization attacks** — malware hiding in weights you pull from a hub; the supply-chain check for §01 / §17 model downloads.
+
+**Enterprise security substrate the AI stack rides on · AI 栈所依赖的安全底座**
+- **[Trivy](https://github.com/aquasecurity/trivy)** (`aquasecurity`) 🌍 ⭐ 🟢 🏠 — All-in-one scanner: container images, IaC, filesystems, SBOM, secrets — scan every image before it hits your GPU cluster.
+- **[Wazuh](https://github.com/wazuh/wazuh)** (`wazuh`) 🌍 ⭐ 🔴 🏠 — Open-source unified **XDR + SIEM**: log analysis, threat detection, compliance monitoring — the SOC backbone for a self-hosted AI platform. ⚠️ **GPL-2.0 — legal review mandatory before redistribution.**
+- **[Falco](https://github.com/falcosecurity/falco)** (`falcosecurity`) 🌍 ⭐ 🟢 🏠 — CNCF runtime security: detects anomalous syscalls/behavior in K8s pods — catches a compromised agent or model server at runtime.
+- **[Semgrep](https://github.com/semgrep/semgrep)** (`semgrep`) 🌍 ⭐ 🟡 🏠 — Fast multi-language **SAST**; write rules to catch insecure patterns in AI-app and tool code. ⚠️ LGPL-2.1 core — check terms for embedding.
+- **[Gitleaks](https://github.com/gitleaks/gitleaks)** (`gitleaks`) 🌍 ⭐ 🟢 🏠 — Secret scanner for git repos / CI — stop model keys, gateway tokens and creds leaking into agent-generated code.
+- **[Nuclei](https://github.com/projectdiscovery/nuclei)** (`projectdiscovery`) 🌍 ⭐ 🟢 🏠 — Fast, template-driven vulnerability scanner for exposed services and endpoints.
+- **[OWASP ZAP](https://github.com/zaproxy/zaproxy)** (`zaproxy`) 🌍 ⭐ 🟢 🏠 — The de-facto open **DAST** web-app scanner for the surfaces your AI apps expose.
+- **[OSV-Scanner](https://github.com/google/osv-scanner)** (`google`) 🌍 ⭐ 🟢 🏠 — Dependency vulnerability scanner over the OSV database — the Python/JS supply-chain check for your AI codebase.
+
+**Standards & frameworks · 标准与框架 (references, no license tag)**
+- **[OWASP Top 10 for LLM Applications & GenAI Security](https://genai.owasp.org/)** — *OWASP, 2025.* The canonical risk taxonomy for LLM/GenAI apps (prompt injection, insecure output, data poisoning …) plus the **Agentic Security** initiative; the checklist §11–§12 map to.
+- **[MITRE ATLAS](https://atlas.mitre.org/)** — *MITRE.* Adversarial Threat Landscape for AI Systems: an ATT&CK-style matrix of real-world attacks on ML/AI — the threat model for red-teaming.
+- **[NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)** — *NIST, 2023.* The govern / map / measure / manage framework a CAIO cites to make AI risk board-defensible.
+
+> 🔗 See also §11's [garak](#11--evaluation--observability--guardrails--governance) / [Presidio](#11--evaluation--observability--guardrails--governance) / [Agent Governance Toolkit](#11--evaluation--observability--guardrails--governance) (the guardrail side of the same coin), and — for agent-runnable playbooks — the *DevSecOps* and *Supply-Chain Security* modules **inside** CyberSecurity-Skills.
+
+## 13 · Autonomous Research & Scientific Discovery
 
 > **Adoption logic:** the "research accelerator" for R&D / medical affairs. Mostly 👀 **Watch** for now — mind the non-standard licenses and reproducibility.
 > 引入逻辑：研发/医学事务的「研究加速器」，当前多为观察期。
@@ -452,7 +488,7 @@ flowchart TB
 - **[Arbor](https://github.com/RUC-NLPIR/Arbor)** (`RUC-NLPIR` / Renmin Univ.) 🇨🇳 👀 🟢 🏠 — Generalist autonomous research agent that runs experiments and iteratively self-optimizes; academic, early-stage — track before adopting.
 - **[DeerFlow](#08--orchestration-frameworks--agents)** (see §08) 🇨🇳 — Deep-research orchestration, self-hostable.
 
-## 13 · Vibe Coding — Enterprise R&D Enablement
+## 14 · Vibe Coding — Enterprise R&D Enablement
 
 > **Adoption logic:** the highest-ROI internal rollout — AI that makes your *own* engineers faster. Prefer **self-hostable / BYO-model** agents you can point at an internal endpoint (vLLM / Ollama / gateway), with a transparent, auditable action loop. Closed SaaS (Cursor, Copilot, Tabnine) is excluded; their OSS ecosystem is fair game.
 > 引入逻辑：对内提效 ROI 最高的一层 —— 让自己的工程师更快。优先可自托管 / 自带模型、动作可审计的 Agent。
@@ -482,9 +518,9 @@ flowchart TB
 - **[How Anthropic Teams Use Claude Code](https://www.anthropic.com/news/how-anthropic-teams-use-claude-code)** — *Anthropic, 2025.* Field report across data science, security, design, growth and legal: how real teams wire coding agents into daily work — the "what does adoption actually look like" reference.
 - **[The Complete Guide to Building Skills for Claude (PDF)](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf)** — *Anthropic, 2025.* The build reference: a lean `SKILL.md` with **progressive disclosure** (detail in companion files), deterministic scripts for deterministic work, one job per skill, and skills that **evolve from a few lines → gotchas → validation scripts**.
 
-> 🔗 See also **[OpenHands](#08--orchestration-frameworks--agents)** in §08 (open-source coding agent), **[rtk](#07--context-engineering--token-efficiency)** in §07 (token-cost control as Vibe Coding scales), and the **[SkillHub](#09--mcp--tools--skills)** / **[Superpowers](#13--vibe-coding--enterprise-rd-enablement)** tooling that operationalizes these skill libraries.
+> 🔗 See also **[OpenHands](#08--orchestration-frameworks--agents)** in §08 (open-source coding agent), **[rtk](#07--context-engineering--token-efficiency)** in §07 (token-cost control as Vibe Coding scales), and the **[SkillHub](#09--mcp--tools--skills)** / **[Superpowers](#14--vibe-coding--enterprise-rd-enablement)** tooling that operationalizes these skill libraries.
 
-## 14 · Internal Knowledge Base — Research, Docs & Web Collection
+## 15 · Internal Knowledge Base — Research, Docs & Web Collection
 
 > **Adoption logic:** turn scattered company knowledge — docs, wikis, PDFs, the open web — into an AI-queryable base. Three jobs: a **self-hosted KB / enterprise-search** front, **research & literature** tooling, and **web collection** to feed it. Parsing/connector quality and data-residency decide success. Sits on §10 (RAG engines, vector DBs, parsers) and the §10 OKF knowledge format.
 > 引入逻辑：把散落的文档 / wiki / PDF / 公开网页变成可被 AI 检索的知识库 —— 自托管检索前台 + 科研文献工具 + 网页采集。
@@ -514,7 +550,7 @@ flowchart TB
 
 > 🔗 See also §10 — **[Crawl4AI](#10--rag--knowledge-base--data-processing)**, **[RAGFlow](#10--rag--knowledge-base--data-processing)**, the document parsers (**LiteParse / MinerU / Docling**) and **[GraphRAG](#10--rag--knowledge-base--data-processing)** — the RAG engines and parsers this knowledge base sits on.
 
-## 15 · Private / Xinchuang / Edge Deployment
+## 16 · Private / Xinchuang / Edge Deployment
 
 > **Adoption logic:** the hard constraints of medical / government / SOE — data never leaves, domestic substitution, edge/on-device. This layer decides whether everything above can *legally land*.
 > 引入逻辑：数据不出域、国产化替代、边缘端侧 —— 决定前面所有项目能不能合规落地。
@@ -538,11 +574,11 @@ flowchart TB
 | **Skill registry & governance** | [SkillHub](#09--mcp--tools--skills) · [awesome-claude-skills](#09--mcp--tools--skills) | [`skills/`](bundle/skills/) — 3 `SKILL.md` packages |
 | **MCP gateway & audit** | [MCP Gateway (Microsoft)](#09--mcp--tools--skills) · [ContextForge](#09--mcp--tools--skills) · [mcpo](#09--mcp--tools--skills) | [`mcp/servers.json`](bundle/mcp/) + run/audit notes |
 | **Agent platform (self-hosted)** | [Dify](#08--orchestration-frameworks--agents) · [Bisheng](#08--orchestration-frameworks--agents) · [LangGraph](#08--orchestration-frameworks--agents) · [Langflow](#08--orchestration-frameworks--agents) | [`agents/`](bundle/agents/) — 2 agent defs |
-| **Offline model + RAG base** | [Ollama](#15--private--xinchuang--edge-deployment) / [vLLM](#04--inference-engines) · [pgvector](#10--rag--knowledge-base--data-processing) / [Milvus](#10--rag--knowledge-base--data-processing) · [RAGFlow](#10--rag--knowledge-base--data-processing) · [BGE](#10--rag--knowledge-base--data-processing) · [MinerU](#10--rag--knowledge-base--data-processing) | [`stack/`](bundle/stack/) — offline `docker-compose` |
+| **Offline model + RAG base** | [Ollama](#16--private--xinchuang--edge-deployment) / [vLLM](#04--inference-engines) · [pgvector](#10--rag--knowledge-base--data-processing) / [Milvus](#10--rag--knowledge-base--data-processing) · [RAGFlow](#10--rag--knowledge-base--data-processing) · [BGE](#10--rag--knowledge-base--data-processing) · [MinerU](#10--rag--knowledge-base--data-processing) | [`stack/`](bundle/stack/) — offline `docker-compose` |
 
 > **Air-gap hardening:** egress-deny by default · MCP only through the gateway (auth · RBAC · audit) · telemetry off (`ANONYMIZED_TELEMETRY=false`, `DO_NOT_TRACK=1`) · secrets via secret-manager, never inline · pin image digests at staging · license / SBOM review (mind Open WebUI's custom license and any AGPL registry). Full checklist in [`/bundle/README.md`](bundle/README.md).
 
-## 16 · Platforms, Hubs & Registries — where CAIOs source & host
+## 17 · Platforms, Hubs & Registries — where CAIOs source & host
 
 > **Adoption logic:** the repos are only half the story. A CAIO also needs the **sourcing & hosting map** — where models actually live, where you pull them behind the firewall, and which managed clouds and domestic silicon you can stand on.
 > 引入逻辑：知道仓库还不够，还要知道「去哪取模型、在哪托管、靠哪个国产栈」。
@@ -585,7 +621,7 @@ flowchart TB
 - **[MindSpore](https://www.mindspore.cn)** 🇨🇳 🛡️ — Huawei's AI framework.
 - **[Cambricon 寒武纪](https://www.cambricon.com)** · **[Moore Threads 摩尔线程](https://www.mthreads.com)** · **[Hygon 海光](https://www.hygon.cn)** · **[Biren 壁仞](https://www.birentech.com)** 🇨🇳 🛡️ — Domestic accelerators to evaluate for Xinchuang procurement.
 
-## 17 · Orgs & People to Follow (open-source account index)
+## 18 · Orgs & People to Follow (open-source account index)
 
 > **Adoption logic:** follow the *source*, not the repo. Watching these official org accounts gets you the signal earlier than chasing single repos. **Prioritize org accounts; keep personal accounts minimal.**
 > 引入逻辑：跟仓库不如跟「源头」。
@@ -602,7 +638,7 @@ flowchart TB
 
 **People (OSS maintainers, follow as needed):** [`karpathy`](https://github.com/karpathy) (understand LLMs from zero) — otherwise track via the org accounts above.
 
-## 18 · Other Awesome Lists (meta-index)
+## 19 · Other Awesome Lists (meta-index)
 
 > This list doesn't reinvent the wheel. Below are deeper, domain-specific lists — use them as drill-down entry points.
 > 本清单不重复造轮子；以下是各细分领域更深的专门清单。
