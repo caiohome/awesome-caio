@@ -323,6 +323,7 @@ Every entry answers one question: can this open-source project be brought into a
 ### Agent-operated security skill libraries
 
 - [CyberSecurity-Skills](https://atomgit.com/AtomGit/CyberSecurity-Skills) - An AI-operated cybersecurity knowledge base of 39 modules and 195 skills as SKILL.md-style files spanning offense (reconnaissance, exploitation, lateral movement, persistence) and defense (SOC operations, threat hunting, DFIR, IAM, Zero Trust, DevSecOps, container, API, cloud and LLM security, ransomware, governance), shipping an agent manifest, index.json and a skill_query.py CLI so an agent can list and fetch skills on demand, mapped to PTES, OWASP Testing Guide, NIST SP 800-115/61, MITRE ATT&CK and ATLAS, OWASP LLM Top 10, CIS, ISO 27001 and China MLPS 2.0; GitHub mirror at [Hi-FullHouse/CyberSecurity-Skills](https://github.com/Hi-FullHouse/CyberSecurity-Skills). China-led, pilot, permissive, self-hostable.
+- [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) - The large-scale English-first counterpart with 817 agent skills across 29 security domains (web, pentest, DFIR, threat intelligence, cloud, malware, fraud), each a SKILL.md folder on the agentskills.io standard with a validate-skill.py gate, cross-mapped to six frameworks (MITRE ATT&CK, ATLAS, D3FEND, NIST CSF 2.0, NIST AI RMF and MITRE F3) and shipped as an installable Claude Code plugin that also runs in Copilot, Codex CLI, Cursor, Gemini CLI and 20 more; a community project named for the skill format, not an official Anthropic release. Global, production, permissive, self-hostable.
 
 ### AI, LLM and agent red-teaming and model security
 
@@ -348,7 +349,9 @@ Every entry answers one question: can this open-source project be brought into a
 
 - [OWASP Top 10 for LLM Applications and GenAI Security](https://genai.owasp.org/) - OWASP, 2025. The canonical risk taxonomy for LLM and GenAI apps plus the Agentic Security initiative.
 - [MITRE ATLAS](https://atlas.mitre.org/) - MITRE. Adversarial Threat Landscape for AI Systems, an ATT&CK-style matrix of real-world attacks on ML and AI.
+- [MITRE D3FEND](https://d3fend.mitre.org/) - MITRE. The defensive counterpart to ATT&CK, a knowledge graph of security countermeasures and mitigations.
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) - NIST, 2023. The govern, map, measure and manage framework for making AI risk board-defensible.
+- [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework) - NIST, 2024. The foundational govern, identify, protect, detect, respond and recover framework for enterprise security programs.
 
 ## Autonomous Research
 
