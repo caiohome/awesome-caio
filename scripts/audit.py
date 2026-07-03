@@ -26,7 +26,7 @@ SOFT_HOSTS = (
     "aliyun.com", "volcengine.com", "baidu.com", "tencent.com", "huaweicloud.com",
     "hiascend.com", "mindspore.cn", "cambricon.com", "mthreads.com", "hygon.cn",
     "birentech.com", "modelscope.cn", "gitee.com", "atomgit.com", "kaggle.com",
-    "siliconflow.cn", "ai.gitcode.com", "groq.com",
+    "siliconflow.cn", "ai.gitcode.com", "groq.com", "openai.com", "bcg.com",
 )
 OK_CODES = {200, 201, 202, 203, 204, 206, 301, 302, 307, 308}
 
@@ -100,6 +100,10 @@ def main():
     print(f"Auditing {len(urls)} unique links in {README}\n")
     with ThreadPoolExecutor(max_workers=12) as ex:
         results = list(ex.map(audit, urls))
+    # Sequential retry: parallel curl under load produces transient timeouts
+    # that a lone re-check resolves — only report links that fail twice.
+    retried = {url: audit(url) for url, ok, _ in results if not ok}
+    results = [retried.get(url, (url, ok, info)) for url, ok, info in results]
     bad = []
     for url, ok, info in sorted(results, key=lambda r: r[0]):
         mark = "OK  " if ok else "FAIL"

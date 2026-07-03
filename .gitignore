@@ -4,3 +4,10 @@
 __pycache__/
 .DS_Store
 .gitnexus
+.ruff_cache/
+
+# GitNexus-generated local tooling (like .gitnexus above)
+CLAUDE.md
+AGENTS.md
+.claude/settings.local.json
+.claude/skills/gitnexus/
