@@ -38,6 +38,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [The hottest new programming language is English](https://x.com/karpathy/status/1617979122625712128) - Andrej Karpathy, 2023. Natural language becomes the primary interface to computers, changing who can build software.
 - [The origin of vibe coding](https://x.com/karpathy/status/1886192184808149383) - Andrej Karpathy, 2025. Describe intent and let the model generate, productive for prototypes but output must be verified rather than trusted.
 - [AGI is still a decade away (Dwarkesh Podcast)](https://www.dwarkesh.com/p/andrej-karpathy) - Andrej Karpathy, 2025. It is the decade of agents rather than the year, since today's agents lack continual learning and robust multimodality.
+- [2025 LLM Year in Review](https://karpathy.bearblog.dev/year-in-review-2025/) - Andrej Karpathy, 2025. The year's real shift was reinforcement learning from verifiable rewards, producing jagged intelligence that is superhuman where outputs can be checked and weak elsewhere.
+- [Sequoia AI Ascent 2026 fireside](https://karpathy.bearblog.dev/sequoia-ascent-2026/) - Andrej Karpathy, 2026. December 2025 was the agentic inflection point; durable advantage comes from verifiable business domains, custom RL environments and agent-native products.
 - [The Unreasonable Effectiveness of Recurrent Neural Networks](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) - Andrej Karpathy, 2015. The foundational demonstration of generative sequence models and a historical anchor for language modeling.
 
 ### OpenAI and Sam Altman
@@ -48,6 +50,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [Moore's Law for Everything](https://moores.samaltman.com/) - Sam Altman, 2021. If AI drives the cost of goods and services toward zero, the governance question of who captures the value matters as much as the technology.
 - [A Practical Guide to Building Agents](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf) - OpenAI, 2025. A concrete field guide on when to build an agent and how to design tools, orchestration and guardrails.
 - [AI in the Enterprise](https://openai.com/index/ai-in-the-enterprise/) - OpenAI, 2025. Seven enterprise-adoption lessons from frontier companies, from starting with evals to setting bold automation goals.
+- [The State of Enterprise AI](https://openai.com/index/the-state-of-enterprise-ai-2025-report/) - OpenAI, 2026. The telemetry successor to AI in the Enterprise, with reasoning-token consumption per organization up 320 times year over year and workers saving 40 to 60 minutes a day.
+- [Introducing OpenAI Frontier](https://openai.com/index/introducing-openai-frontier/) - OpenAI, 2026. An enterprise platform for deploying and managing agents like employees, signaling that the bottleneck has moved from model intelligence to agent operations.
 
 ### Anthropic and Dario Amodei
 
@@ -56,33 +60,44 @@ Every entry answers one question: can this open-source project be brought into a
 - [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) - Anthropic, 2025. Context is a finite, managed resource and curating what enters the window is the core reliability discipline.
 - [How We Built Our Multi-Agent Research System](https://www.anthropic.com/engineering/built-multi-agent-research-system) - Anthropic, 2025. Orchestrator-plus-subagent architectures beat a single agent on broad research but cost far more tokens.
 - [The Urgency of Interpretability](https://www.darioamodei.com/post/the-urgency-of-interpretability) - Dario Amodei, 2025. We deploy systems we do not fully understand, making interpretability a race to win.
+- [The Adolescence of Technology](https://www.darioamodei.com/essay/the-adolescence-of-technology) - Dario Amodei, 2026. The successor to Machines of Loving Grace, mapping five concrete risk classes with pragmatic remedies.
+- [Policy on the AI Exponential](https://www.darioamodei.com/post/policy-on-the-ai-exponential) - Dario Amodei, 2026. Five policy pillars for governing the run-up to a country of geniuses in a datacenter.
+- [Building Multi-Agent Systems: When and How](https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them) - Anthropic, 2026. Multi-agent systems pay off only for context isolation, parallelization or specialization; most enterprise scenarios are better served by one well-scaffolded agent.
+- [Anthropic Economic Index](https://www.anthropic.com/economic-index) - Anthropic, 2026. The only vendor index linking real usage logs to worker surveys, ground truth for what AI is actually used for at work.
 
 ### Google and DeepMind
 
 - [Agents (whitepaper)](https://www.kaggle.com/whitepaper-agents) - Google and Lee Boonstra, 2024. The canonical primer on the agent stack of model, tools and orchestration.
 - [Real-World Generative-AI Use Cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders) - Google Cloud, 2025. A catalog of 600-plus production deployments by industry, the best reference for use-case discovery.
 - [Welcome to the Era of Experience](https://storage.googleapis.com/deepmind-media/Era-of-Experience%20/The%20Era%20of%20Experience%20Paper.pdf) - David Silver and Richard Sutton, 2025. The next leap is agents learning from their own streams of experience rather than only human data.
+- [AI Agent Trends 2026](https://services.google.com/fh/files/misc/google_cloud_ai_agent_trends_2026_report.pdf) - Google Cloud, 2026. The most-cited agent ROI numbers of the cycle: 52 percent of executives have agents in production and 74 percent see ROI within year one.
 
 ### Microsoft and Satya Nadella
 
 - [On AI as a cognitive amplifier](https://x.com/satyanadella/status/2066182223213293753) - Satya Nadella, 2025. Reframes the debate from AI slop and substitution toward AI as a cognitive amplifier that scaffolds human potential.
 - [Looking Ahead to 2026](https://snscratchpad.com/posts/looking-ahead-2026/) - Satya Nadella, 2025. Advantage evolves from models to systems, the scaffolding that orchestrates many models and agents reliably.
 - [2025: The Year the Frontier Firm Is Born](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born) - Microsoft Work Trend Index, 2025. A new organizational model of hybrid human and agent teams that most leaders expect within 12 to 18 months.
+- [2026 Work Trend Index](https://news.microsoft.com/annual-work-trend-index-2026/) - Microsoft, 2026. The Transformation Paradox: organizational factors drive twice as much of AI's impact as individual behavior, and only 19 percent of organizations sit in the frontier zone.
 
 ### Other voices
 
 - [From Hierarchy to Intelligence](https://www.sequoiacap.com/article/from-hierarchy-to-intelligence/) - Jack Dorsey and Roelof Botha, 2026. The AI-era organization needs only three kinds of people, namely individual contributors, directly responsible individuals and player-coaches, with an intelligence layer replacing permanent middle management.
 - [What's Next for AI Agentic Workflows](https://www.youtube.com/watch?v=sal78ACtGTc) - Andrew Ng, 2024. Agentic patterns such as reflection, tool use, planning and multi-agent dramatically outperform single-shot prompting.
+- [2026: This Is AGI](https://sequoiacap.com/article/2026-this-is-agi/) - Pat Grady and Sonya Huang, 2026. Long-horizon agents are functionally AGI, with coding as the first domino from chat in 2022 to reasoning in 2025 to agents as colleagues in 2026.
+- [Stanford AI Index 2026](https://hai.stanford.edu/ai-index/2026-ai-index-report) - Stanford HAI, 2026. The neutral yardstick for any board deck: 88 percent organizational adoption and generative AI at 53 percent population adoption within three years.
+- [AI at Work 2026](https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools) - BCG, 2026. Regular users save about eight hours a week, and an explicit AI strategy beats better tools roughly five to one on impact.
 
 ## Foundation Models and Open Weights
 
 > Fix your base first; a multi-source policy hedges supply risk. Weight licenses often differ from the code license, so check each one.
 
-- [DeepSeek](https://github.com/deepseek-ai) - V and R series open weights with strong reasoning and code; mostly MIT. China-led, production, permissive.
-- [Qwen](https://github.com/QwenLM) - Full size range plus multimodal, mostly Apache-2.0; the enterprise-friendly default. China-led, production, permissive.
-- [GLM](https://github.com/zai-org) - Open model series where some versions carry usage terms, so confirm before commercial use. China-led, production, conditional.
-- [Kimi](https://github.com/MoonshotAI) - Long-context and agentic models with open weights. China-led, production, permissive.
-- [MiniMax](https://github.com/MiniMax-AI) - Open-weight large models with long context. China-led, production, permissive.
+- [DeepSeek](https://github.com/deepseek-ai) - V and R series open weights through V4 with strong reasoning and code; mostly MIT. China-led, production, permissive.
+- [Qwen](https://github.com/QwenLM) - Full size range plus native multimodal across the Qwen3.x ladder, mostly Apache-2.0; the enterprise-friendly default. China-led, production, permissive.
+- [GLM](https://github.com/zai-org) - Open model series where GLM-5 ships Apache-2.0 and GLM-5.2 MIT, though some earlier versions carry usage terms, so confirm per model. China-led, production, permissive.
+- [Kimi](https://github.com/MoonshotAI) - Long-context and agentic open weights, with the K2.x line under a modified MIT license. China-led, production, permissive.
+- [MiniMax](https://github.com/MiniMax-AI) - Open-weight large models with long context; the M2.x agentic line adds office-document fluency. China-led, production, permissive.
+- [MiMo-Code](https://github.com/XiaomiMiMo/MiMo-Code) - Xiaomi open coding model where models and agents co-evolve, shipping weights plus an agent harness under MIT. China-led, pilot, permissive, self-hostable.
+- [Step](https://github.com/stepfun-ai/Step-3.7-Flash) - StepFun sparse MoE with native image and video understanding and top-ranked output speed, an open multimodal option for real-time agents. China-led, pilot, permissive.
 - [MiniCPM](https://github.com/OpenBMB/MiniCPM) - Edge-friendly small models. China-led, production, conditional, edge.
 - [LLaMA](https://github.com/meta-llama) - Meta open-weight models under the LLaMA Community License with an active-user threshold clause; not pure open source. Global, production, conditional.
 - [Mistral](https://github.com/mistralai) - Overseas open-weight reference models. Global, production, permissive.
@@ -99,13 +114,13 @@ Every entry answers one question: can this open-source project be brought into a
 
 - [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) - De-facto standard for large-scale parallel training. Global, production, permissive.
 - [DeepSpeed](https://github.com/deepspeedai/DeepSpeed) - ZeRO optimization for memory and throughput. Global, production, permissive.
-- [NeMo](https://github.com/NVIDIA/NeMo) - End-to-end training framework. Global, production, permissive.
+- [NeMo](https://github.com/NVIDIA-NeMo) - End-to-end training framework, now split into per-domain repos such as Speech, RL, Automodel and Megatron-Bridge. Global, production, permissive.
 - [ColossalAI](https://github.com/hpcaitech/ColossalAI) - Parallel-training toolbox. Pilot, permissive.
 - [TorchTitan](https://github.com/pytorch/torchtitan) - PyTorch-native large-model training reference. Pilot, permissive.
 
 ### Fine-tuning
 
-- [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) - One-stop fine-tuning; the most widely deployed in China. China-led, production, permissive, self-hostable.
+- [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) - One-stop fine-tuning; the most widely deployed in China. China-led, production, permissive, self-hostable.
 - [ms-swift](https://github.com/modelscope/ms-swift) - ModelScope training and tuning suite with good domestic-ecosystem fit. China-led, production, permissive, self-hostable.
 - [Unsloth](https://github.com/unslothai/unsloth) - Efficient single-GPU fine-tuning that saves VRAM. Global, production, permissive.
 - [Axolotl](https://github.com/axolotl-ai-cloud/axolotl) - Config-driven fine-tuning. Global, production, permissive.
@@ -113,10 +128,10 @@ Every entry answers one question: can this open-source project be brought into a
 
 ### RLHF and reinforcement learning
 
-- [verl](https://github.com/volcengine/verl) - ByteDance Seed production-grade RL framework based on HybridFlow. China-led, production, permissive.
+- [verl](https://github.com/verl-project/verl) - ByteDance Seed production-grade RL framework based on HybridFlow. China-led, production, permissive.
 - [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) - Approachable RLHF library. Global, production, permissive.
 - [ROLL](https://github.com/alibaba/ROLL) - Alibaba large-scale RL framework. China-led, pilot, permissive.
-- [AReaL](https://github.com/inclusionAI/AReaL) - Ant Group asynchronous, throughput-focused RL. China-led, pilot, permissive.
+- [AReaL](https://github.com/areal-project/AReaL) - Ant Group asynchronous, throughput-focused RL. China-led, pilot, permissive.
 - [slime](https://github.com/THUDM/slime) - Zhipu and Tsinghua lineage RL scaling. China-led, pilot, permissive.
 - [NeMo-RL](https://github.com/NVIDIA-NeMo/RL) - NVIDIA post-training RL. Global, pilot, permissive.
 - [DAPO](https://github.com/BytedTsinghua-SIA/DAPO) - ByteDance and Tsinghua open RL system and dataset built on verl. China-led, watch, permissive.
@@ -137,6 +152,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [CUTLASS](https://github.com/NVIDIA/cutlass) - CUDA matrix-operation template library. Global, production, permissive.
 - [Liger-Kernel](https://github.com/linkedin/Liger-Kernel) - Fused training kernels that save VRAM. Global, pilot, permissive.
 - [FlashInfer](https://github.com/flashinfer-ai/flashinfer) - Kernel library for LLM serving covering attention, MoE and sampling; the de-facto kernel backend under vLLM, SGLang and TensorRT-LLM. Global, production, permissive.
+- [DeepSpec](https://github.com/deepseek-ai/DeepSpec) - DeepSeek full-stack codebase for training and evaluating speculative-decoding algorithms, the reference stack for the biggest current inference cost-cut lever. China-led, pilot, permissive.
 
 ## Inference Engines
 
@@ -150,6 +166,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [Xinference](https://github.com/xorbitsai/inference) - Multi-model local inference server. China-led, pilot, permissive, self-hostable.
 - [KTransformers](https://github.com/kvcache-ai/ktransformers) - Heterogeneous CPU and GPU offload that runs huge MoE models like DeepSeek and Kimi on limited GPU, slashing hardware cost for on-prem serving. China-led, production, permissive, self-hostable.
 - [xLLM](https://github.com/jd-opensource/xllm) - Production inference engine for LLM, VLM, DiT and REC models optimized for diverse and domestic AI accelerators, a path for sovereign-chip or non-NVIDIA fleets. China-led, pilot, permissive, self-hostable.
+- [ds4](https://github.com/antirez/ds4) - DeepSeek 4 Flash and Pro local inference engine for Metal, CUDA and ROCm by the Redis creator, a single-purpose offline alternative to llama.cpp. Global, pilot, permissive, self-hostable.
+- [omlx](https://github.com/jundot/omlx) - Inference server with continuous batching and SSD KV caching for Apple Silicon, turning Mac fleets into viable inference nodes for large MoE models. Global, pilot, permissive, self-hostable, edge.
 
 ## Compute Scheduling and Serving Orchestration
 
@@ -183,7 +201,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [Kong AI Gateway](https://github.com/Kong/kong) - AI features on a mature API gateway; first choice if you already run Kong. Global, production, permissive.
 - [Helicone](https://github.com/Helicone/helicone) - Lightweight gateway and observability, easy to integrate. Global, pilot, permissive, self-hostable.
 - [One-API](https://github.com/songquanpeng/one-api) - Multi-tenant gateway with keys, quota, billing and audit; a top self-host choice in China, MIT. China-led, production, permissive, self-hostable.
-- [New-API](https://github.com/Calcium-Ion/new-api) - One-API-style multi-tenant gateway under AGPL-3.0, so legal review before SaaS redistribution. China-led, production, restricted, self-hostable.
+- [New-API](https://github.com/QuantumNous/new-api) - One-API-style multi-tenant gateway under AGPL-3.0, so legal review before SaaS redistribution. China-led, production, restricted, self-hostable.
 - [Higress](https://github.com/higress-group/higress) - AI-native API gateway based on Envoy with token rate-limiting, semantic caching and content-safety plugins; China-origin with a good Xinchuang story. China-led, production, permissive, self-hostable.
 - [Envoy AI Gateway](https://github.com/envoyproxy/ai-gateway) - CNCF-backed, Envoy-native unified gateway for generative-AI traffic, a natural fit for enterprises already standardized on Envoy and Kubernetes. Global, pilot, permissive, self-hostable.
 - [Bifrost](https://github.com/maximhq/bifrost) - High-throughput AI gateway claiming around 50x LiteLLM with adaptive load balancing, cluster mode, guardrails and over 1000 models. Global, production, permissive, self-hostable.
@@ -200,6 +218,7 @@ Every entry answers one question: can this open-source project be brought into a
 
 - [rtk](https://github.com/rtk-ai/rtk) - CLI proxy that filters and compresses command output before it enters context, saving 60 to 90 percent of tokens; hooks into Claude Code, Codex, Cursor and Gemini CLI. Global, production, permissive, self-hostable.
 - [LLMLingua](https://github.com/microsoft/LLMLingua) - Prompt and context compression. Global, pilot, permissive.
+- [Headroom](https://github.com/headroomlabs-ai/headroom) - Compresses tool outputs, logs, files and RAG chunks 60 to 95 percent before they reach the LLM, in library, proxy or MCP modes. Global, production, permissive, self-hostable.
 - [Repomix](https://github.com/yamadashy/repomix) - Pack a repository into a single file to feed a model. Global, production, permissive.
 - [files-to-prompt](https://github.com/simonw/files-to-prompt) - Concatenate files into one prompt for code context. Global, pilot, permissive.
 - [code2prompt](https://github.com/mufeedvh/code2prompt) - Turn a codebase into an LLM prompt with templates. Global, pilot, permissive.
@@ -213,10 +232,11 @@ Every entry answers one question: can this open-source project be brought into a
 - [LlamaIndex](https://github.com/run-llama/llama_index) - RAG and agent data framework. Global, production, permissive, self-hostable.
 - [AutoGen](https://github.com/microsoft/autogen) - Multi-agent orchestration. Global, production, permissive.
 - [DSPy](https://github.com/stanfordnlp/dspy) - Declarative prompt and program optimization. Global, pilot, permissive.
-- [DeerFlow](https://github.com/bytedance/deer-flow) - ByteDance deep-research multi-agent system; a production-base candidate. China-led, pilot, permissive, self-hostable.
+- [DeerFlow](https://github.com/bytedance/deer-flow) - ByteDance long-horizon SuperAgent harness with sandboxes, memory, skills and subagents, grown from a deep-research system into a full agent base. China-led, production, permissive, self-hostable.
+- [AgentScope](https://github.com/agentscope-ai/agentscope) - Alibaba production agent framework with fine-grained permissions, multi-tenancy, sandboxing, MCP and A2A support and Kubernetes deploy, in Python, TypeScript and Java. China-led, production, permissive, self-hostable.
 - [Dify](https://github.com/langgenius/dify) - LLM app platform; low-code and self-hostable. China-led, production, permissive, self-hostable.
 - [MetaGPT](https://github.com/FoundationAgents/MetaGPT) - Multi-agent software-team paradigm. China-led, production, permissive.
-- [OpenHands](https://github.com/All-Hands-AI/OpenHands) - Open-source coding agent. Global, production, permissive, self-hostable.
+- [OpenHands](https://github.com/OpenHands/OpenHands) - Open-source coding agent. Global, production, permissive, self-hostable.
 - [n8n](https://github.com/n8n-io/n8n) - Workflow automation under the Sustainable Use License; confirm terms. Global, production, conditional, self-hostable.
 - [CrewAI](https://github.com/crewAIInc/crewAI) - Role-playing multi-agent orchestration for collaborative agent teams. Global, production, permissive.
 - [Pydantic AI](https://github.com/pydantic/pydantic-ai) - Type-safe agent framework; strong fit for controllable, testable enterprise agents. Global, production, permissive.
@@ -228,6 +248,9 @@ Every entry answers one question: can this open-source project be brought into a
 - [Shannon](https://github.com/Kocoro-lab/Shannon) - Production-oriented multi-agent orchestration on Temporal durable workflows with budget and policy enforcement, a Rust sandbox and OpenTelemetry observability. Global, pilot, permissive, self-hostable.
 - [agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) - Official Kubernetes SIG project providing isolated, stateful, singleton sandboxes as a standard execution substrate for agent runtimes. Global, pilot, permissive, self-hostable.
 - [Langflow](https://github.com/langflow-ai/langflow) - Visual low-code builder for agents and RAG flows that is self-hostable and can export a flow as an API or an MCP server; telemetry is on by default with an opt-out. Global, production, permissive, self-hostable.
+- [Paperclip](https://github.com/paperclipai/paperclip) - Open agent workforce console to assign, review and audit fleets of agents at work, the management layer above agent frameworks. Global, production, permissive, self-hostable.
+- [nanobot](https://github.com/HKUDS/nanobot) - Lightweight agent runtime for tools, chats and workflows from the LightRAG group, with a tiny footprint under MIT. Global, production, permissive, self-hostable.
+- [OpenSandbox](https://github.com/opensandbox-group/OpenSandbox) - Secure, fast and extensible sandbox runtime for AI agent code execution, a self-hostable alternative to sandbox SaaS. Global, pilot, permissive, self-hostable.
 
 ## MCP, Tools and Skills
 
@@ -242,6 +265,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [ContextForge (MCP Gateway)](https://github.com/IBM/mcp-context-forge) - IBM Apache-2.0 MCP, A2A and REST gateway and registry that federates and proxies tools behind one governed front door with auth and observability, and ships an air-gapped container build; a clean-license alternative to AGPL registries. Global, pilot, permissive, self-hostable.
 - [SkillHub](https://github.com/iflytek/skillhub) - Self-hosted enterprise agent-skill registry to publish and version skill packages with team namespaces, RBAC and audit logs, deployable on-premise. China-led, pilot, permissive, self-hostable.
 - [Archestra](https://github.com/archestra-ai/archestra) - Enterprise AI platform bundling a private MCP registry, a Kubernetes MCP gateway, deterministic prompt-injection guardrails and agent-to-agent orchestration, under AGPL-3.0 so legal review is needed before SaaS redistribution. Global, pilot, restricted, self-hostable.
+- [agent-skills](https://github.com/addyosmani/agent-skills) - Production-grade engineering skill library for AI coding agents curated by Addy Osmani, directly importable into coding-agent fleets. Global, production, permissive.
+- [financial-services](https://github.com/anthropics/financial-services) - Anthropic official skill and agent pack for financial-services workflows, the first vendor-maintained regulated-vertical skill pack. Global, pilot, permissive.
 
 ## RAG, Knowledge Base and Data Processing
 
@@ -253,6 +278,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [Qdrant](https://github.com/qdrant/qdrant) - Rust vector database. Global, production, permissive, self-hostable.
 - [pgvector](https://github.com/pgvector/pgvector) - PostgreSQL extension for vectors; lowest ops overhead. Global, production, permissive, self-hostable.
 - [TurboVec](https://github.com/RyanCodrai/turbovec) - Embedded vector index in the FAISS class, not a server database, built on Google Research TurboQuant; about 16x compression versus float32 with recall on par with FAISS-PQ. New and single-maintainer, MIT. Global, pilot, permissive, self-hostable.
+- [zvec](https://github.com/alibaba/zvec) - Alibaba lightweight in-process vector database that removes a whole service tier for embedded and edge RAG. China-led, pilot, permissive, self-hostable.
 
 ### Embedding and rerank
 
@@ -280,13 +306,14 @@ Every entry answers one question: can this open-source project be brought into a
 
 - [Crawl4AI](https://github.com/unclecode/crawl4ai) - LLM-friendly web crawler and scraper for RAG data ingestion. Global, production, permissive.
 - [mem0](https://github.com/mem0ai/mem0) - Memory layer for agents with persistent user and agent memory across sessions. Global, production, permissive.
+- [MemPalace](https://github.com/MemPalace/mempalace) - Benchmark-driven agent memory system with published evaluations, an evidence-backed alternative in the agent-memory space. Global, production, permissive, self-hostable.
 - [Hindsight](https://github.com/vectorize-io/hindsight) - Self-improving long-term agent memory that learns from past interactions; a vendor-neutral memory backbone and an alternative to mem0. Global, pilot, permissive, self-hostable.
 - [memsearch](https://github.com/zilliztech/memsearch) - Persistent, unified agent memory backed by Markdown and Milvus, pairing governance-friendly plaintext storage with a production vector database. China-led, pilot, permissive, self-hostable.
 - [OpenViking](https://github.com/volcengine/OpenViking) - Open context database for agents that unifies memory, resources and skills under a filesystem paradigm with hierarchical, self-evolving context delivery, under AGPL-3.0 so review the license before SaaS redistribution. China-led, pilot, restricted, self-hostable.
 
 ### Knowledge formats and context standards
 
-- [OKF (Open Knowledge Format)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf) - Vendor-neutral Google Cloud spec that packages curated enterprise knowledge as portable Markdown and YAML-frontmatter files agents can read and version in git, formalizing the LLM-wiki and metadata-as-code pattern into a knowledge graph. Global, watch, permissive, self-hostable.
+- [OKF (Open Knowledge Format)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf) - Vendor-neutral Google Cloud spec that packages curated enterprise knowledge as portable Markdown and YAML-frontmatter files agents can read and version in Git, formalizing the LLM-wiki and metadata-as-code pattern into a knowledge graph. Global, watch, permissive, self-hostable.
 
 ## Evaluation, Observability and Governance
 
@@ -309,11 +336,10 @@ Every entry answers one question: can this open-source project be brought into a
 
 ### Guardrails and safety
 
-- [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) - Conversational guardrails. Global, production, permissive, self-hostable.
+- [NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) - Conversational guardrails. Global, production, permissive, self-hostable.
 - [Guardrails AI](https://github.com/guardrails-ai/guardrails) - Output validation. Global, pilot, permissive.
 - [PurpleLlama](https://github.com/meta-llama/PurpleLlama) - Meta trust and safety classification tools. Global, production, conditional.
-- [garak](https://github.com/NVIDIA/garak) - LLM vulnerability and red-team scanner. Global, pilot, permissive.
-- [Presidio](https://github.com/microsoft/presidio) - PII and PHI detection, redaction and anonymization; the gateway-side control for medical and financial data. Global, production, permissive, self-hostable.
+- [Presidio](https://github.com/data-privacy-stack/presidio) - PII and PHI detection, redaction and anonymization; the gateway-side control for medical and financial data. Global, production, permissive, self-hostable.
 - [Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - First-party Microsoft policy enforcement, zero-trust agent identity and execution sandboxing for autonomous agents, mapped to all ten of the OWASP Agentic Top 10. Global, pilot, permissive, self-hostable.
 
 ## Cybersecurity and AI Security
@@ -328,11 +354,13 @@ Every entry answers one question: can this open-source project be brought into a
 ### AI, LLM and agent red-teaming and model security
 
 - [garak](https://github.com/NVIDIA/garak) - The LLM vulnerability scanner covering jailbreak, prompt-injection and data-leak probes; the offensive companion to guardrails. Global, pilot, permissive, self-hostable.
-- [PyRIT](https://github.com/Azure/PyRIT) - Microsoft first-party Python risk-identification toolkit for generative-AI red-teaming that automates adversarial probing at scale, MITRE-aligned. Global, pilot, permissive, self-hostable.
-- [Giskard](https://github.com/Giskard-AI/giskard) - Open-source evaluation and vulnerability scan for LLM agents and ML models covering hallucination, injection, bias and robustness, wiring red-teaming into CI. Global, production, permissive, self-hostable.
+- [PyRIT](https://github.com/microsoft/PyRIT) - Microsoft first-party Python risk-identification toolkit for generative-AI red-teaming that automates adversarial probing at scale, MITRE-aligned. Global, pilot, permissive, self-hostable.
+- [Giskard](https://github.com/Giskard-AI/giskard-oss) - Open-source evaluation and vulnerability scan for LLM agents and ML models covering hallucination, injection, bias and robustness, wiring red-teaming into CI. Global, production, permissive, self-hostable.
 - [LLM Guard](https://github.com/protectai/llm-guard) - Input and output security toolkit for LLM interactions with prompt-injection, PII, toxicity and secret scanners; a self-hostable gateway-side filter. Global, pilot, permissive, self-hostable.
-- [Rebuff](https://github.com/protectai/rebuff) - Multi-layer prompt-injection detector combining heuristics, an LLM and canary tokens. Global, pilot, permissive.
 - [ModelScan](https://github.com/protectai/modelscan) - Scans model files (pickle, H5, SavedModel) for serialization attacks, the supply-chain check for models pulled from a hub. Global, pilot, permissive, self-hostable.
+- [NemoClaw](https://github.com/NVIDIA/NemoClaw) - NVIDIA runtime for executing agents more securely inside OpenShell with managed inference, a vendor-backed path for agent sandboxing. Global, pilot, permissive, self-hostable.
+- [defending-code-reference-harness](https://github.com/anthropics/defending-code-reference-harness) - Anthropic skills for threat modeling, scanning, triage and patching plus an autonomous scanning harness, the defensive-AI counterpart to the skill packs above. Global, pilot, permissive, self-hostable.
+- [AgentAegis](https://github.com/antgroup/agent-aegis) - Ant Group full-lifecycle runtime protection for autonomous agents covering prompt-injection detection, permission gating, behavior audit and resource circuit breakers. China-led, watch, permissive, self-hostable.
 
 ### Enterprise security substrate
 
@@ -340,7 +368,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [Wazuh](https://github.com/wazuh/wazuh) - Open-source unified XDR and SIEM for log analysis, threat detection and compliance monitoring; GPL-2.0, so legal review is mandatory before redistribution. Global, production, restricted, self-hostable.
 - [Falco](https://github.com/falcosecurity/falco) - CNCF runtime security that detects anomalous syscalls and behavior in Kubernetes pods. Global, production, permissive, self-hostable.
 - [Semgrep](https://github.com/semgrep/semgrep) - Fast multi-language static analysis (SAST); LGPL-2.1 core, so check terms for embedding. Global, production, conditional, self-hostable.
-- [Gitleaks](https://github.com/gitleaks/gitleaks) - Secret scanner for git repositories and CI to stop keys, tokens and credentials leaking into code. Global, production, permissive, self-hostable.
+- [Gitleaks](https://github.com/gitleaks/gitleaks) - Secret scanner for Git repositories and CI to stop keys, tokens and credentials leaking into code. Global, production, permissive, self-hostable.
 - [Nuclei](https://github.com/projectdiscovery/nuclei) - Fast, template-driven vulnerability scanner for exposed services and endpoints. Global, production, permissive, self-hostable.
 - [OWASP ZAP](https://github.com/zaproxy/zaproxy) - The de-facto open dynamic application security testing (DAST) web-app scanner. Global, production, permissive, self-hostable.
 - [OSV-Scanner](https://github.com/google/osv-scanner) - Dependency vulnerability scanner over the OSV database for supply-chain checks. Global, production, permissive, self-hostable.
@@ -353,6 +381,11 @@ Every entry answers one question: can this open-source project be brought into a
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) - NIST, 2023. The govern, map, measure and manage framework for making AI risk board-defensible.
 - [NIST Cybersecurity Framework 2.0](https://www.nist.gov/cyberframework) - NIST, 2024. The foundational govern, identify, protect, detect, respond and recover framework for enterprise security programs.
 - [Agent Skills standard (agentskills.io)](https://agentskills.io/) - Open spec. A standardized way to give AI agents new capabilities, the cross-vendor SKILL.md format both security-skill libraries above build on, portable across Claude Code, Copilot, Cursor, Codex CLI, Gemini CLI and 20-plus hosts.
+- [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) - OWASP, 2025. The formal agentic counterpart to the LLM Top 10, peer-reviewed by over 100 experts, the de-facto checklist for securing agents that plan, act and use tools.
+- [OWASP AI Security Solutions Landscape for Agentic AI](https://genai.owasp.org/resource/ai-security-solutions-landscape-for-agentic-ai-q2-2026/) - OWASP, 2026. Quarterly map of agent-security tooling across the agent lifecycle, the procurement companion to the Top 10.
+- [NIST COSAiS](https://csrc.nist.gov/projects/cosais) - NIST, 2026. Control Overlays for Securing AI Systems, SP 800-53 overlays covering single-agent and multi-agent AI, the control baseline auditors will map to.
+- [EU AI Act regulatory framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) - European Commission, 2026. The first-party obligations timeline, with transparency duties from August 2026 and high-risk obligations moved to December 2027.
+- [China AI-agent regulation](https://www.cac.gov.cn/2026-05/08/c_1779979789472520.htm) - CAC, NDRC and MIIT, 2026. The first national regulatory framework specifically for AI agents, defining 19 application scenarios and tiered oversight for sensitive sectors.
 
 ## Autonomous Research
 
@@ -363,6 +396,8 @@ Every entry answers one question: can this open-source project be brought into a
 - [open-ai-co-scientist](https://github.com/llnl/open-ai-co-scientist) - Open reproduction of the Google AI co-scientist multi-agent system. Global, watch, permissive.
 - [GPT-Researcher](https://github.com/assafelovic/gpt-researcher) - Autonomous deep-research agent. Global, pilot, permissive, self-hostable.
 - [Arbor](https://github.com/RUC-NLPIR/Arbor) - Generalist autonomous research agent that runs experiments and iteratively self-optimizes; academic and early-stage. China-led, watch, permissive, self-hostable.
+- [Tongyi DeepResearch](https://github.com/Alibaba-NLP/DeepResearch) - Alibaba open deep-research agent model plus the full training pipeline, topping open agent-model leaderboards. China-led, pilot, permissive, self-hostable.
+- [autoresearch](https://github.com/karpathy/autoresearch) - AI agents autonomously running research experiments on nanochat training, the most-starred reference point for agentic research loops; it carries no license, so it is reference-only and cannot be adopted. Global, watch, restricted.
 
 ## Vibe Coding for Enterprise R&D
 
@@ -377,23 +412,30 @@ Every entry answers one question: can this open-source project be brought into a
 
 ### Terminal coding agents
 
-- [Aider](https://github.com/Aider-AI/aider) - Battle-tested terminal pair-programmer with strong git integration and repo-map context, bring your own model. Global, production, permissive, self-hostable.
+- [Aider](https://github.com/Aider-AI/aider) - Battle-tested terminal pair-programmer with strong Git integration and repo-map context, bring your own model. Global, production, permissive, self-hostable.
 - [Goose](https://github.com/aaif-goose/goose) - Block extensible on-machine agent that installs, edits, runs and tests, with an MCP-based extension model. Global, production, permissive, self-hostable.
 - [OpenCode](https://github.com/anomalyco/opencode) - Model-agnostic terminal coding agent that works against OpenAI-compatible endpoints. Global, production, permissive, self-hostable.
 - [Qwen Code](https://github.com/QwenLM/qwen-code) - Terminal agent tuned for the open-weight Qwen-Coder family, the cleanest path to a fully on-prem open-weight coding stack. China-led, production, permissive, self-hostable.
 - [Codex CLI](https://github.com/openai/codex) - OpenAI Apache-2.0 terminal agent and scriptable harness that defaults to OpenAI-hosted models, so it is not air-gapped by default. Global, production, permissive.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) - Google Apache-2.0 terminal agent and a popular fork base; an open client with a hosted model by default. Global, production, permissive.
+- [Mistral Vibe](https://github.com/mistralai/mistral-vibe) - Minimal CLI coding agent from Mistral, the only EU-vendor first-party open coding agent, relevant under EU data-sovereignty constraints. Global, pilot, permissive, self-hostable.
 
 ### Autonomous software engineering and harness
 
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) - Reference GitHub issue-to-patch agent that runs in your own sandbox, a base for internal issue-automation experiments. Global, pilot, permissive, self-hostable.
 - [Superpowers](https://github.com/obra/superpowers) - A curated skills and methodology harness you can vendor internally to standardize how coding agents behave; pin a commit before org-wide use. Global, pilot, permissive.
+- [open-code-review](https://github.com/alibaba/open-code-review) - Hybrid deterministic-pipeline and LLM-agent code-review tool battle-tested at Alibaba scale, a production guardrail for AI-generated code entering enterprise repositories. China-led, pilot, permissive, self-hostable.
 
 ### Practices and playbooks
 
 - [Equipping Agents for the Real World with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) - Anthropic, 2025. The practice behind Skills, packaging team know-how as composable SKILL.md folders of instructions, scripts and resources, with symptom-to-solution maps and a growing gotchas list that captures each real-world failure.
 - [How Anthropic Teams Use Claude Code](https://www.anthropic.com/news/how-anthropic-teams-use-claude-code) - Anthropic, 2025. A field report on how data science, security, design, growth and legal teams wire coding agents into daily work.
 - [The Complete Guide to Building Skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) - Anthropic, 2025. The build reference covering a lean SKILL.md with progressive disclosure, deterministic scripts, one job per skill, and skills that evolve from a few lines to gotchas to validation scripts.
+- [Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/) - Simon Willison, 2026. The community's de-facto practice handbook on professional coding-agent work, from "writing code is cheap now" to red-green TDD for agents.
+- [Scaling Managed Agents](https://www.anthropic.com/engineering/managed-agents) - Anthropic, 2026. Decouple the brain from the hands: virtualize the harness versus sandboxes, sessions and tools behind stable interfaces so agent systems survive model upgrades.
+- [How We Contain Claude](https://www.anthropic.com/engineering/how-we-contain-claude) - Anthropic, 2026. Layered agent containment via gVisor, OS sandboxes, virtual machines and egress controls; the weakest layer is the one you built yourself.
+- [2026 Agentic Coding Trends Report](https://resources.anthropic.com/2026-agentic-coding-trends-report) - Anthropic, 2026. The delegation gap: AI touches about 60 percent of work but is fully delegable in only 0 to 20 percent.
+- [How Agents Are Transforming Work](https://openai.com/index/how-agents-are-transforming-work/) - OpenAI, 2026. Quantified agent-native work inside a frontier lab, with 97.9 percent of staff using Codex and over 70 percent delegating tasks longer than an hour.
 
 ## Internal Knowledge Base
 
@@ -406,6 +448,7 @@ Every entry answers one question: can this open-source project be brought into a
 - [MaxKB](https://github.com/1Panel-dev/MaxKB) - Turnkey enterprise knowledge-base and agent platform with a workflow builder, a top on-prem chatbot choice in China; GPL-3.0, so review before redistribution. China-led, production, restricted, self-hostable.
 - [Khoj](https://github.com/khoj-ai/khoj) - Self-hostable second-brain search over documents and the web with custom agents and scheduled automations, under network-copyleft AGPL-3.0. Global, production, restricted, self-hostable.
 - [DocsGPT](https://github.com/arc53/DocsGPT) - Private document question-answering and enterprise-search platform with agents and API connectivity. Global, pilot, permissive, self-hostable.
+- [WeKnora](https://github.com/Tencent/WeKnora) - Tencent LLM knowledge platform combining RAG question answering, a ReAct agent and a self-maintaining wiki, with auto-sync from Feishu, Notion and Yuque; MIT with listed third-party components. China-led, production, permissive, self-hostable.
 
 ### Scientific research, documents and literature
 
@@ -430,10 +473,12 @@ Every entry answers one question: can this open-source project be brought into a
 - [MindSpore](https://github.com/mindspore-ai/mindspore) - Huawei Ascend training and inference framework. China-led, production, permissive, self-hostable.
 - [vllm-ascend](https://github.com/vllm-project/vllm-ascend) - vLLM Ascend backend; the Xinchuang inference path. China-led, pilot, permissive, self-hostable.
 - [LocalAI](https://github.com/mudler/LocalAI) - OpenAI-compatible local inference. Global, production, permissive, self-hostable, edge.
-- [Jan](https://github.com/menloresearch/jan) - Offline AI assistant. Global, production, permissive, self-hostable, edge.
+- [Jan](https://github.com/janhq/jan) - Offline AI assistant. Global, production, permissive, self-hostable, edge.
 - [Ollama](https://github.com/ollama/ollama) - Local model runtime, MIT; mind trademark and commercial positioning rather than the license. Global, production, permissive, self-hostable, edge.
 - [Open WebUI](https://github.com/open-webui/open-webui) - De-facto self-hosted chat and RAG front-end over local models that runs fully offline, under a custom license (BSD-3 plus a branding clause restricting white-labeling above 50 users), so review before rebranding and disable telemetry for true air-gap. Global, production, conditional, self-hostable.
 - [GPT4All](https://github.com/nomic-ai/gpt4all) - Desktop offline LLM app needing no GPU or API, MIT and air-gap-clean, though release cadence has slowed so track maturity before standardizing. Global, pilot, permissive, self-hostable, edge.
+- [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw) - Rust single-binary autonomous-assistant and agent infrastructure with swappable components and no cloud dependency, ideal for air-gapped and edge estates. Global, production, permissive, self-hostable, edge.
+- [llmfit](https://github.com/AlexsJones/llmfit) - One command to determine which of hundreds of models and providers actually run on your hardware, answering the capacity-planning question before procurement. Global, pilot, permissive, self-hostable.
 
 > Air-gap bundle: a self-carried starter kit of SKILL.md packages, an internal MCP manifest, agent definitions and an offline docker-compose lives in the repository at [/bundle](bundle/), assembling the self-hostable picks above into a zero-egress library for LAN deployment.
 
