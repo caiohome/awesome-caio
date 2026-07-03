@@ -607,6 +607,7 @@ flowchart TB
 - **[awesome-private-ai](https://github.com/tdi/awesome-private-ai)** (`tdi`) 🌍 — On-prem / air-gap / self-hosted curated list.
 - **[MindSpore](https://github.com/mindspore-ai/mindspore)** / **[CANN](https://www.hiascend.com/software/cann)** (`mindspore-ai` / Huawei Ascend) 🇨🇳 ⭐ 🟢 🏠 🛡️ — Ascend training/inference stack.
 - **[vllm-ascend](https://github.com/vllm-project/vllm-ascend)** (`vllm-project`) 🇨🇳 🧪 🟢 🏠 🛡️ — vLLM Ascend backend; the Xinchuang inference path.
+- **[openPangu 2.0](https://ai.gitcode.com/ascend-tribe/openPangu-2.0-Flash)** (`ascend-tribe` / Huawei) 🇨🇳 🧪 🟡 🏠 🛡️ — Huawei's open-weight Pangu line, natively optimized for Ascend (claimed 2× single-card throughput vs mainstream open models): **2.0-Flash** (92B-A6B MoE, 512K context; weights + inference code + train/infer operators) live on GitCode, **2.0-Pro** (505B-A18B) rolling out through H2 2026. ⚠️ Custom *openPangu Model License 2.0* — legal review before commercial use. The anchor release for a fully domestic model + chip stack.
 - **[LocalAI](https://github.com/mudler/LocalAI)** (`mudler`) 🌍 ⭐ 🟢 🏠 📱 — OpenAI-compatible local inference.
 - **[Jan](https://github.com/janhq/jan)** (`janhq`) 🌍 ⭐ 🟢 🏠 📱 — Offline AI assistant.
 - **[Ollama](https://github.com/ollama/ollama)** (`ollama`) 🌍 ⭐ 🟢 🏠 📱 — Local model runtime (MIT; mind trademark & commercial positioning, not the license).

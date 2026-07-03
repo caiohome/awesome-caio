@@ -472,6 +472,7 @@ Every entry answers one question: can this open-source project be brought into a
 
 - [MindSpore](https://github.com/mindspore-ai/mindspore) - Huawei Ascend training and inference framework. China-led, production, permissive, self-hostable.
 - [vllm-ascend](https://github.com/vllm-project/vllm-ascend) - vLLM Ascend backend; the Xinchuang inference path. China-led, pilot, permissive, self-hostable.
+- [openPangu 2.0](https://ai.gitcode.com/ascend-tribe/openPangu-2.0-Flash) - Huawei open-weight Pangu models natively optimized for Ascend, with the 92B Flash release on GitCode shipping weights, inference code and operators and the 505B Pro rolling out through 2026; custom openPangu model license, so legal review before commercial use. China-led, pilot, conditional, self-hostable.
 - [LocalAI](https://github.com/mudler/LocalAI) - OpenAI-compatible local inference. Global, production, permissive, self-hostable, edge.
 - [Jan](https://github.com/janhq/jan) - Offline AI assistant. Global, production, permissive, self-hostable, edge.
 - [Ollama](https://github.com/ollama/ollama) - Local model runtime, MIT; mind trademark and commercial positioning rather than the license. Global, production, permissive, self-hostable, edge.
