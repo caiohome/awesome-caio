@@ -151,6 +151,7 @@ flowchart TB
 - [17 · Platforms, Hubs & Registries — where CAIOs source & host](#17--platforms-hubs--registries--where-caios-source--host)
 - [18 · Orgs & People to Follow (open-source account index)](#18--orgs--people-to-follow-open-source-account-index)
 - [19 · Other Awesome Lists (meta-index)](#19--other-awesome-lists-meta-index)
+- [20 · Department & Vertical Agent Applications](#20--department--vertical-agent-applications)
 - [🤝 Contributing](#contributing) · [⚖️ Disclaimer](#disclaimer)
 
 > Each section below gives **representative anchor entries** that demonstrate the tagging format; full coverage is community-driven (see [Contributing](CONTRIBUTING.md)).
@@ -377,7 +378,14 @@ flowchart TB
 - **[Langflow](https://github.com/langflow-ai/langflow)** (`langflow-ai`) 🌍 ⭐ 🟢 🏠 — Visual low-code builder for agents & RAG flows; self-hostable and can export a flow as an API or an MCP server — a fast on-prem path from prototype to internal tool. (Telemetry on by default; set `DO_NOT_TRACK` for air-gap.)
 - **[Paperclip](https://github.com/paperclipai/paperclip)** (`paperclipai`) 🌍 ⭐ 🟢 🏠 — The de-facto open **agent workforce console**: assign, review and audit fleets of agents at work — the management layer *above* your agent frameworks.
 - **[nanobot](https://github.com/HKUDS/nanobot)** (`HKUDS`) 🌍 ⭐ 🟢 🏠 — Lightweight agent runtime for tools, chats and workflows from the LightRAG group; the fastest-growing minimal harness of 2026 — tiny footprint, MIT.
+- **[Page Agent](https://github.com/alibaba/page-agent)** (`alibaba`) 🇨🇳 ⭐ 🟢 🏠 — In-page GUI agent that drives a web app's DOM from natural-language instructions via a single script tag — adds an assistant layer to existing internal web tools without a rewrite; MIT.
 - **[OpenSandbox](https://github.com/opensandbox-group/OpenSandbox)** (`opensandbox-group`) 🌍 🧪 🟢 🏠 — Secure, extensible sandbox runtime for agent code execution — the neutral-governance, self-hostable answer to sandbox SaaS; pairs with `agent-sandbox` above.
+- **[Microsoft Agent Framework](https://github.com/microsoft/agent-framework)** (`microsoft`) 🌍 🧪 🟢 🏠 — MIT framework for building, orchestrating and deploying AI agents and multi-agent workflows in Python and .NET — the open substrate under Microsoft's closed Copilot Studio / Foundry enterprise agent story.
+- **[OpenClaw](https://github.com/openclaw/openclaw)** (`openclaw`) 🌍 ⭐ 🟢 🏠 — General-purpose personal AI assistant / agent harness that has become a de-facto substrate in the China enterprise ecosystem (Kingdee's kclaw wraps it); raw LICENSE is plain MIT even though GitHub's license detector reports none.
+- **[SAP Cloud SDK for AI](https://github.com/SAP/ai-sdk-js)** (`SAP`) 🌍 🧪 🟢 — Apache-2.0 official SDK (JS/TS, Java, Python) for SAP AI Core, Generative AI Hub and the Orchestration Service — the genuine open-source substrate under SAP's closed Joule-era agents.
+- **[SAP Astonish](https://github.com/SAP/astonish)** (`SAP`) 🌍 👀 🟢 🏠 — SAP's own Apache-2.0 multi-tenant AI agent platform for teams (Studio, CLI, shared memory, reusable flows, generative UI, sandboxed execution); tiny community but genuinely first-party and actively pushed.
+- **[Joule A2A Agent Toolkit](https://github.com/SAP-samples/joule-a2a-agent-toolkit)** (`SAP-samples`) 🌍 👀 🟢 — Apache-2.0 toolkit for building custom agents that connect into SAP Joule over the A2A protocol on BTP Cloud Foundry (TypeScript/CAP or Python/LangGraph).
+- **[Agentforce Agent SDK](https://github.com/salesforce/agent-sdk)** (`salesforce`) 🌍 🧪 🟢 — Apache-2.0 Python SDK for creating, managing and running agents on Salesforce's closed Agentforce platform — the linkable OSS core for the reference closed enterprise agent suite (service / sales / marketing).
 
 > ⚠️ Medical Class II/III: fully dynamic multi-agent systems conflict with NMPA "deterministic, auditable" requirements — freeze a traceable chain at the orchestration layer.
 
@@ -395,10 +403,16 @@ flowchart TB
 - **[Archestra](https://github.com/archestra-ai/archestra)** (`archestra-ai`) 🌍 🧪 🔴 🏠 ⚠️ — Enterprise AI platform: private MCP registry + K8s MCP gateway + deterministic guardrails (prompt-injection isolation) + A2A orchestration. **AGPL-3.0 — legal review before SaaS redistribution.**
 - **[Composio](https://github.com/ComposioHQ/composio)** (`ComposioHQ`) 🌍 🧪 🟢 — Tool integration.
 - **[FastMCP](https://github.com/PrefectHQ/fastmcp)** (`PrefectHQ`) 🌍 ⭐ 🟢 — The fast, Pythonic way to build MCP servers and clients.
+- **[Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)** (`ChromeDevTools`) 🌍 ⭐ 🟢 🏠 — Official MCP server that gives coding agents live control of Chrome for automation, debugging and performance tracing; the de-facto browser-control MCP server.
 - **[awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** (`ComposioHQ`) 🌍 — Skills asset index.
 - **[SkillHub](https://github.com/iflytek/skillhub)** (`iflytek`) 🇨🇳 🧪 🟢 🏠 — Self-hosted enterprise agent-skill registry: publish & version SKILL.md packages, team namespaces, RBAC + audit logs, on-prem Docker/K8s. A governed "npm for agent skills."
 - **[agent-skills](https://github.com/addyosmani/agent-skills)** (`addyosmani`) 🌍 ⭐ 🟢 — Production-grade engineering skill library for coding agents curated by Addy Osmani (Google Chrome); MIT, directly importable into Claude Code / Codex fleets.
+- **[Google Skills](https://github.com/google/skills)** (`google`) 🌍 🧪 🟢 — First-party agent skill packages for Google products and technologies — the vendor-maintained counterpart to the community skill libraries above.
 - **[financial-services](https://github.com/anthropics/financial-services)** (`anthropics`) 🌍 🧪 🟢 — Anthropic's official skill/agent pack for financial-services workflows — the first vendor-maintained **regulated-vertical** skill pack, and the pattern to replicate for your own vertical.
+- **[Stripe Agent Toolkit](https://github.com/stripe/ai)** (`stripe`) 🌍 🧪 🟢 — MIT toolkit exposing Stripe payments / billing tools to agent frameworks and MCP — the one major finance-adjacent vendor shipping a genuinely open, actively maintained agent toolkit.
+- **[Salesforce sf-skills](https://github.com/forcedotcom/sf-skills)** (`forcedotcom`) 🌍 🧪 🟢 — Apache-2.0 curated collection of Salesforce agent skills, optimized for Agentforce Vibes but compatible with general coding agents; the most active repo in Salesforce's agent OSS set.
+- **[Skills for Copilot Studio](https://github.com/microsoft/skills-for-copilot-studio)** (`microsoft`) 🌍 🧪 🟢 — MIT first-party Skill that lets coding agents (Claude Code, Copilot CLI, etc.) author and edit Copilot Studio agents as YAML; the Copilot Studio runtime itself remains closed SaaS.
+- **[Kingdee Skill Publisher](https://github.com/kingdee/kingdee-skill-publisher)** (`kingdee`) 🇨🇳 👀 🟢 — MIT meta-Skill that generates and publishes Cangqiong ERP business Skills (financial voucher query, supply-chain order query) on top of Kingdee's open-platform APIs and MCP services — the one first-party OSS artifact from a major China ERP vendor's agent stack.
 
 ## 10 · RAG / Knowledge Base / Data Processing
 
@@ -432,7 +446,9 @@ flowchart TB
 - **[markitdown](https://github.com/microsoft/markitdown)** (`microsoft`) 🌍 ⭐ 🟢 — Convert Office / PDF / HTML and more into clean Markdown for LLMs.
 - **[LiteParse](https://github.com/run-llama/liteparse)** (`run-llama`) 🌍 🧪 🟢 🏠 — Fast, local, model-free document parser (PDF / Office → clean structured output) from the LlamaIndex team; no GPU or API — the on-prem answer to paid parse services.
 - **[MonkeyOCR](https://github.com/Yuliang-Liu/MonkeyOCR)** (`Yuliang-Liu`) 🇨🇳 🧪 🟢 🏠 — Lightweight LMM-based document-parsing model; strong on tables, formulas and complex layouts for high-fidelity RAG ingestion of scanned/visual docs.
+- **[OpenDataLoader PDF](https://github.com/opendataloader-project/opendataloader-pdf)** (`opendataloader-project`) 🌍 🧪 🟢 🏠 — Parses PDFs into AI-ready structured output and automates PDF accessibility tagging; a clean Apache-2.0 alternative in the parser cluster with a compliance angle for regulated documents.
 - **[ParseBench](https://github.com/run-llama/ParseBench)** (`run-llama`) 🌍 🧪 🟢 — Reproducible benchmark to objectively compare document parsers (OCR, tables, layout) before you standardize on one — the eval companion to the parsers above.
+- **[Unlimited-OCR](https://github.com/baidu/Unlimited-OCR)** (`baidu`) 🇨🇳 🧪 🟢 🏠 — Baidu's open-weight OCR model and toolkit for one-shot parsing of very long documents into structured output; MIT code — check the Hugging Face weight terms separately.
 
 **Web ingestion & memory**
 - **[Crawl4AI](https://github.com/unclecode/crawl4ai)** (`unclecode`) 🌍 ⭐ 🟢 — LLM-friendly web crawler / scraper for RAG data ingestion.
@@ -441,6 +457,7 @@ flowchart TB
 - **[Hindsight](https://github.com/vectorize-io/hindsight)** (`vectorize-io`) 🌍 🧪 🟢 🏠 — Self-improving long-term agent memory that learns from past interactions; a vendor-neutral memory backbone, an alternative to mem0.
 - **[memsearch](https://github.com/zilliztech/memsearch)** (`zilliztech` / Zilliz) 🇨🇳 🧪 🟢 🏠 — Persistent, unified agent memory backed by Markdown + Milvus; governance-friendly plaintext storage over a production vector DB.
 - **[OpenViking](https://github.com/volcengine/OpenViking)** (`volcengine` / ByteDance) 🇨🇳 🧪 🔴 🏠 — Open "context database" for agents: unifies memory, resources and skills under a filesystem paradigm with hierarchical, self-evolving context delivery. **AGPL-3.0 — legal review before SaaS redistribution.**
+- **[TencentDB Agent Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory)** (`TencentCloud`) 🇨🇳 🧪 🟢 🏠 — Team-level memory hub that turns conversations, docs and code into governed, shareable memory assets (chat memory, skills, an LLM-wiki, a code graph) usable across agent frameworks; MIT via a custom-worded LICENSE file (GitHub reports no SPDX id).
 
 **Knowledge formats & context standards**
 - **[OKF (Open Knowledge Format)](https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf)** (`GoogleCloudPlatform` / Google Cloud) 🌍 👀 🟢 🏠 — Vendor-neutral open spec (v0.1) that packages curated enterprise knowledge — table schemas, metrics, join paths, docs — as plain **Markdown + YAML frontmatter** files agents can read, diff in Git, and ship as a tarball. Formalizes the "LLM wiki" / `AGENTS.md` / *metadata-as-code* pattern into a portable knowledge graph (markdown links = edges); separates knowledge *producers* from *consumers*. Apache-2.0; ships a BigQuery enrichment agent + a self-contained HTML graph visualizer + sample bundles. **New standard — track the direction before standardizing on it.**
@@ -456,12 +473,16 @@ flowchart TB
 - **[promptfoo](https://github.com/promptfoo/promptfoo)** (`promptfoo`) 🌍 ⭐ 🟢 🏠 — Engineering-grade prompt/model eval & red-teaming.
 - **[Ragas](https://github.com/vibrantlabsai/ragas)** (`vibrantlabsai`) 🌍 ⭐ 🟢 — RAG evaluation toolkit (faithfulness, answer relevancy, context metrics).
 - **[DeepEval](https://github.com/confident-ai/deepeval)** (`confident-ai`) 🌍 ⭐ 🟢 — LLM evaluation / unit-testing framework with many built-in metrics.
+- **[WorkBuddy Bench](https://github.com/Tencent/workbuddy-bench)** (`Tencent`) 🇨🇳 🧪 🔴 — 260-task agent benchmark (Code 80 / Web 70 / Office 50 / Security 60) that drops an agent CLI into a Docker sandbox and grades the result; the only real first-party GitHub artifact in Tencent's Buddy family — custom Tencent license explicitly excluding EU use, legal review mandatory.
+- **[ServiceNow StarShell](https://github.com/ServiceNow/StarShell)** (`ServiceNow`) 🌍 👀 🟢 — Apache-2.0 source for the paper "Terminal Agents Suffice for Enterprise Automation" — a directly on-thesis first-party research codebase from ServiceNow's otherwise-closed AI Agents vendor.
 
 **Observability / tracing**
 - **[Langfuse](https://github.com/langfuse/langfuse)** (`langfuse`) 🌍 ⭐ 🟢 🏠 — Open-source LLM observability, self-hostable.
 - **[Phoenix](https://github.com/Arize-ai/phoenix)** (`Arize-ai`) 🌍 ⭐ 🟢 🏠 — Tracing & evaluation.
 - **[OpenLLMetry](https://github.com/traceloop/openllmetry)** (`traceloop`) 🌍 🧪 🟢 — OpenTelemetry semantic conventions for LLMs.
 - **[LangWatch](https://github.com/langwatch/langwatch)** (`langwatch`) 🌍 🧪 🟢 🏠 — Fully open-source (Apache-2.0) LLM evaluation + agent testing + tracing in one platform; OTel-style instrumentation, self-hostable.
+- **[Keep](https://github.com/keephq/keep)** (`keephq`) 🌍 ⭐ 🟡 🏠 — Open-source alert-management / AIOps platform ("GitHub Actions for monitoring") with AI-driven alert correlation and enrichment across observability integrations; open-core — MIT core, separately licensed `ee/` tree.
+- **[bk-lite](https://github.com/TencentBlueKing/bk-lite)** (`TencentBlueKing`) 🇨🇳 👀 🟢 🏠 — Lightweight, AI-first ops/AIOps platform from Tencent's BlueKing suite — a lower-footprint entry point than the full BlueKing PaaS (bk-cmdb / bk-sops / bk-job); MIT, small but first-party and active.
 
 **Guardrails / safety**
 - **[NeMo Guardrails](https://github.com/NVIDIA-NeMo/Guardrails)** (`NVIDIA-NeMo`) 🌍 ⭐ 🟢 🏠 — Conversational guardrails.
@@ -484,10 +505,14 @@ flowchart TB
 - **[garak](https://github.com/NVIDIA/garak)** (`NVIDIA`) 🌍 🧪 🟢 🏠 — The LLM vulnerability scanner (jailbreak / prompt-injection / data-leak probes); also in §11 — the *offensive* companion to the guardrails you deploy.
 - **[PyRIT](https://github.com/microsoft/PyRIT)** (`microsoft`) 🌍 🧪 🟢 🏠 — Microsoft's first-party Python risk-identification toolkit for **generative-AI red-teaming**; automates adversarial probing at scale, MITRE-aligned. Smaller community — pilot-grade.
 - **[Giskard](https://github.com/Giskard-AI/giskard-oss)** (`Giskard-AI`) 🌍 ⭐ 🟢 🏠 — Open-source eval **+ vulnerability scan** for LLM agents and ML models (hallucination, injection, bias, robustness); wires red-teaming into CI.
+- **[Strix](https://github.com/usestrix/strix)** (`usestrix`) 🌍 ⭐ 🟢 🏠 — Multi-agent AI penetration-testing tool that autonomously finds and validates application vulnerabilities; runs against your own targets from behind the firewall.
+- **[AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)** (`Tencent`) 🇨🇳 🧪 🟢 🏠 — Red-teaming platform that scans agents, agent skills, MCP servers and AI infrastructure and runs LLM jailbreak evaluations — the China-origin counterpart to garak / PyRIT.
 - **[LLM Guard](https://github.com/protectai/llm-guard)** (`protectai`) 🌍 🧪 🟢 🏠 — Input/output security toolkit for LLM interactions: prompt-injection, PII, toxicity and secret scanners — a self-hostable gateway-side filter.
 - **[ModelScan](https://github.com/protectai/modelscan)** (`protectai`) 🌍 🧪 🟢 🏠 — Scans model files (pickle / H5 / SavedModel) for **serialization attacks** — malware hiding in weights you pull from a hub; the supply-chain check for §01 / §17 model downloads.
+- **[SkillSpector](https://github.com/NVIDIA/SkillSpector)** (`NVIDIA`) 🌍 🧪 🟢 🏠 — Scans AI agent skill packages for prompt injection, malicious patterns and supply-chain risks before installation — the skill-layer counterpart to ModelScan for the §09 / §14 skill libraries.
 - **[NemoClaw](https://github.com/NVIDIA/NemoClaw)** (`NVIDIA`) 🌍 🧪 🟢 🏠 — Vendor-backed **secure agent execution**: runs agents inside NVIDIA OpenShell with managed inference — an enterprise-support path for agent sandboxing; pairs with §08's `agent-sandbox` / OpenSandbox.
 - **[defending-code-reference-harness](https://github.com/anthropics/defending-code-reference-harness)** (`anthropics`) 🌍 🧪 🟢 🏠 — Anthropic's skills for threat modeling, scanning, triage and patching plus an autonomous scanning harness — the *defensive-AI* counterpart to the skill packs above (LICENSE file is Apache-2.0).
+- **[codex-security](https://github.com/openai/codex-security)** (`openai`) 🌍 🧪 🟢 — OpenAI's CLI and TypeScript SDK for finding, validating and fixing security vulnerabilities in a codebase; distributed via npm and distinct from the Codex CLI coding agent.
 - **[AgentAegis](https://github.com/antgroup/agent-aegis)** (`antgroup` / Ant + Tsinghua) 🇨🇳 👀 🟢 🏠 — Full-lifecycle runtime protection for autonomous agents: prompt-injection / intent-tampering detection, permission gating on sensitive ops, behavior audit, resource circuit breakers. Early-stage — track.
 
 **Enterprise security substrate the AI stack rides on · AI 栈所依赖的安全底座**
@@ -546,10 +571,13 @@ flowchart TB
 - **[Aider](https://github.com/Aider-AI/aider)** (`Aider-AI`) 🌍 ⭐ 🟢 🏠 — Battle-tested terminal pair-programmer with strong Git integration and repo-map context; low footprint, BYO model.
 - **[Goose](https://github.com/aaif-goose/goose)** (`aaif-goose` / Block) 🌍 ⭐ 🟢 🏠 — Block's extensible on-machine agent (install / edit / run / test); MCP-based extension model for internal tooling.
 - **[OpenCode](https://github.com/anomalyco/opencode)** (`anomalyco`) 🌍 ⭐ 🟢 🏠 — Model-agnostic terminal coding agent (OpenAI-compatible endpoints); MIT, very active.
+- **[pi](https://github.com/earendil-works/pi)** (`earendil-works`) 🌍 ⭐ 🟢 🏠 — TypeScript agent toolkit bundling a unified LLM API, an agent loop, a TUI and a coding-agent CLI; model-agnostic and embeddable in internal tooling.
 - **[Qwen Code](https://github.com/QwenLM/qwen-code)** (`QwenLM`) 🇨🇳 ⭐ 🟢 🏠 — Terminal agent tuned for the open-weight Qwen-Coder family — the cleanest path to a fully on-prem, open-weight coding stack.
 - **[Codex CLI](https://github.com/openai/codex)** (`openai`) 🌍 ⭐ 🟢 — OpenAI's Apache-2.0 terminal agent; scriptable harness, but defaults to OpenAI-hosted models (not air-gapped).
 - **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** (`google-gemini`) 🌍 ⭐ 🟢 — Google's Apache-2.0 terminal agent and a popular fork base; open client, hosted model by default.
+- **[Grok Build](https://github.com/xai-org/grok-build)** (`xai-org`) 🌍 🧪 🟢 — xAI's open coding-agent harness and terminal UI (Rust) for its Grok-based coding stack; open client, hosted models by default — not air-gapped.
 - **[Mistral Vibe](https://github.com/mistralai/mistral-vibe)** (`mistralai`) 🌍 🧪 🟢 🏠 — Minimal CLI coding agent from Mistral — the only EU-vendor first-party open coding agent; relevant under EU data-sovereignty constraints.
+- **[DeepSeek Harness (dsh)](https://github.com/deepseek-ai/deepseek-harness)** (`deepseek-ai`) 🇨🇳 👀 🟢 🏠 — Plugin-based agent harness with a CLI and local web UI from DeepSeek; MIT and self-hostable, but still a developer preview with compatibility-breaking changes ahead — track before standardizing.
 
 **Autonomous SWE & the agent-harness layer**
 - **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** (`SWE-agent` / Princeton) 🌍 🧪 🟢 🏠 — Reference "GitHub issue → patch" agent; runs in your own sandbox (SWE-ReX) — the base for internal issue-automation experiments.
@@ -588,6 +616,10 @@ flowchart TB
 - **[Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx)** (`paperless-ngx`) 🌍 ⭐ 🔴 🏠 — Self-hosted document management with OCR, tagging and full-text archive; the standard for internal doc archival. **GPL-3.0.**
 - **[STORM](https://github.com/stanford-oval/storm)** (`stanford-oval`) 🌍 🧪 🟢 🏠 — Generates cited, Wikipedia-style research reports from a topic; useful for internal literature synthesis.
 - **[Zotero](https://github.com/zotero/zotero)** (`zotero`) 🌍 ⭐ 🔴 🏠 — The de-facto open reference/literature manager for collecting, annotating and citing sources; anchors a research KB. **AGPL-3.0.**
+
+**Document & content authoring (AI writing tools)**
+- **[OfficeCLI](https://github.com/iOfficeAI/OfficeCLI)** (`iOfficeAI`) 🌍 🧪 🟢 🏠 — Single-binary CLI that lets agents read, edit and render Word, Excel and PowerPoint files without an Office installation, including HTML/PNG rendering for visual verification of generated documents.
+- **[OpenWiki](https://github.com/langchain-ai/openwiki)** (`langchain-ai`) 🌍 🧪 🟢 🏠 — CLI that writes and continuously maintains agent-facing documentation for a codebase — keeps the internal "LLM wiki" current instead of hand-curating it; pairs with §10's OKF knowledge format.
 
 **Web collection — crawlers & scrapers (corpus ingestion)**
 - **[Firecrawl](https://github.com/firecrawl/firecrawl)** (`firecrawl`) 🌍 ⭐ 🔴 🏠 — Turn whole sites into clean, LLM-ready markdown; the dominant ingestion tool. **AGPL-3.0 — flag before SaaS use.**
@@ -703,6 +735,32 @@ flowchart TB
 - **[EthicalML/awesome-production-machine-learning](https://github.com/EthicalML/awesome-production-machine-learning)** — Production ML / governance, the elder list.
 - **[punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)** · **[bh-rat/awesome-mcp-enterprise](https://github.com/bh-rat/awesome-mcp-enterprise)** — MCP ecosystem.
 - **[Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)** · **[e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents)** — Apps & agents.
+
+## 20 · Department & Vertical Agent Applications
+
+> **Adoption logic:** the vertical layer on top of everything above — where agents meet a specific business function rather than a technical layer. Surveyed across finance, marketing, after-sales, supply chain, procurement, quality, manufacturing, infrastructure, legal, admin, government affairs, IT, brand, board office, president's office and internal audit, the 2026 pattern is stark and consistent: vendors open the harness, models and SDKs (§01/§08/§09) while keeping almost every department-suite runtime closed. After-sales is the one function with real, deployable OSS; finance and supply-chain OSS exists only at the edges; every other department surveyed returned effectively zero genuine open-source cores — treat those as buy-or-track, not build.
+> 引入逻辑：叠加在前面所有层之上的垂直应用层 —— Agent 真正对接具体业务职能，而非技术层。覆盖财务、营销、售后、供应链、采购、质量、生产、基建、法务、行政、政府事务、IT、品牌、董事会办公室、总裁办、内控审计等职能后，2026 年的规律非常一致且鲜明：厂商开源 harness、模型与 SDK（对应 §01/§08/§09），但几乎所有部门级套件运行时都保持闭源。售后是唯一有真实可部署开源方案的职能；财务与供应链的开源仅存在于边缘地带；其余被调研的职能基本没有真正的开源内核 —— 只能等或买，而非自建。
+
+**After-sales / customer service · 售后与客服（唯一有真实开源方案的职能）**
+- **[Chatwoot](https://github.com/chatwoot/chatwoot)** (`chatwoot`) 🌍 ⭐ 🟡 🏠 — The largest genuinely open-source after-sales / customer-service desk (omnichannel chat, email, ticketing) with a built-in Captain AI agent; open-core — MIT-style core with a separately licensed `enterprise/` tree, so tag conditional, not plain MIT.
+- **[Frappe Helpdesk](https://github.com/frappe/helpdesk)** (`frappe`) 🌍 🧪 🔴 🏠 — Open-source customer-service / ticketing system in the ERPNext ecosystem; the cleanest-licensed after-sales candidate (unambiguous AGPL-3.0), but AGPL means legal review before adoption.
+- **[Agent Desk](https://github.com/huabeitech/agent-desk)** (`huabeitech`) 🇨🇳 👀 🟢 🏠 — 2026-native open-source customer-support system built agent-first ("AI-first support, human-ready operations") rather than a ticketing tool with a bot bolted on; Apache-2.0, young and small.
+
+**Finance · 财务（开源仅存在于边缘地带）**
+- **[FinRobot](https://github.com/AI4Finance-Foundation/FinRobot)** (`AI4Finance-Foundation`) 🌍 🧪 🟢 🏠 — Apache-2.0 finance agent platform (equity research, forecasting, valuation, report generation); the most-adopted OSS finance-department framework, though aimed at analysis rather than close / reconciliation / FP&A workflow.
+- **[Accounted](https://github.com/erp-mafia/accounted)** (`erp-mafia`) 🌍 👀 🔴 🏠 — Agent-native open-source bookkeeping ERP exposing its full double-entry engine as ~100 MCP tools (categorize, draft vouchers, reconcile, prepare filings); AGPL-family license and Sweden-specific accounting — a proof-of-pattern, not a globally deployable finance agent.
+
+**Supply chain · 供应链**
+- **[frePPLe](https://github.com/frePPLe/frepple)** (`frePPLe`) 🌍 🧪 🟢 🏠 — Open-source supply-chain planning / MRP engine (demand forecasting, inventory, capacity-constrained scheduling); classical optimization rather than agentic AI, but the one genuinely open, actively-maintained planning core in a department where every commercial "AI agent" (SAP IBP, o9, Blue Yonder, Kinaxis) is closed. Free under MIT; paid tier adds support/extra features.
+
+**Practices & playbooks — closed department suites, cited for field data · 实践案例（闭源套件，仅作数据引用）**
+- **[SAP Business AI: Q2 2026 Release Highlights](https://news.sap.com/2026/07/sap-business-ai-release-highlights-q2-2026/)** — *SAP, 2026.* The best-documented first-party department-agent rollout: GA/beta agents across finance, procurement, supply chain and sales with quantified outcomes (−30% expense-report time, −75% billing-discrepancy resolution, ~−50% order-exception analysis).
+- **[AI Service Agents Improve Customer Satisfaction](https://www.salesforce.com/news/stories/ai-service-agents-improve-customer-satisfaction/)** — *Salesforce, 2026.* Service-org AI-agent adoption rose 39% → 66% year over year; 70% report measurable value within 60 days — first-party adoption data from the reference closed after-sales agent suite.
+- **[Alibaba launches Qwen Work 千问办公](https://www.alibabagroup.com/zh-HK/document-2021039099929952256)** — *Alibaba Group, 2026.* First-party announcement of the enterprise agent office suite (public beta 2026-08): QoderWork + MuleRun + 悟空 merged into one platform on Qwen3.8, wired into DingTalk's 20M+ organizations — the harness stays closed even as Alibaba open-sources the models and Qwen Code.
+- **[Tencent Cloud launches WorkBuddy Enterprise & Agent Suite](https://cn.chinadaily.com.cn/a/202606/08/WS6a266fc1a310942cc49b0842.html)** — *China Daily, 2026.* Coverage of Tencent's 2026-06-05 launch binding CodeBuddy + WorkBuddy + Managed Agents into one per-seat enterprise suite (198–316 CNY/mo) — the umbrella product is closed; WorkBuddy Bench above is the only public first-party artifact.
+- **[Kingdee 苍穹Agent平台 2.0 launch](https://www.kingdee.com/article/1925506968693325826.html)** — *Kingdee 金蝶, 2026.* First-party write-up of a major China ERP vendor's low/zero-code agent platform and five named department agents (金钥财报 financial reporting, ChatBI, recruiting, travel, enterprise knowledge) deployed across its 星瀚/星空/星辰 product lines.
+
+> 🔗 Infrastructure these vertical apps sit on: **[Microsoft Agent Framework](#08--orchestration-frameworks--agents)**, **[SAP Cloud SDK for AI](#08--orchestration-frameworks--agents)**, **[Agentforce Agent SDK](#08--orchestration-frameworks--agents)** and **[Kingdee Skill Publisher](#09--mcp--tools--skills)** in §08/§09, and **[WorkBuddy Bench](#11--evaluation--observability--guardrails--governance)** in §11.
 
 ---
 
