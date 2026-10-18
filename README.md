@@ -286,7 +286,8 @@ flowchart TB
 > **Adoption logic:** this is the **main cost battleground.** Engine choice directly sets per-GPU throughput and concurrency cost.
 > 引入逻辑：降本主战场，引擎选型直接决定单卡吞吐与并发成本。
 
-- **[vLLM](https://github.com/vllm-project/vllm)** (`vllm-project`) 🌍 ⭐ 🟢 🏠 — High-throughput inference standard (PagedAttention); 🛡️ [`vllm-ascend`](https://github.com/vllm-project/vllm-ascend) Ascend fork exists.
+- **[vLLM](https://github.com/vllm-project/vllm)** (`vllm-project`) 🌍 ⭐ 🟢 🏠 — High-throughput inference standard (PagedAttention); native support for speculative decoding and chunked prefill.
+- **[vllm-ascend](https://github.com/vllm-project/vllm-ascend)** (`vllm-project` / Huawei) 🇨🇳 ⭐ 🟢 🏠 🛡️ — Official Huawei Ascend NPU backend plugin for vLLM; enables high-performance serving of DeepSeek, Qwen and Llama on Ascend 910B/310P hardware — essential for sovereign AI and Xinchuang on-prem deployments.
 - **[SGLang](https://github.com/sgl-project/sglang)** (`sgl-project`) 🌍 ⭐ 🟢 🏠 — High-performance serving; common for RAG / structured output.
 - **[TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)** (`NVIDIA`) 🌍 ⭐ 🟢 — Peak optimization on NVIDIA GPUs.
 - **[LMDeploy](https://github.com/InternLM/lmdeploy)** (`InternLM`) 🇨🇳 ⭐ 🟢 🏠 — InternLM team's deploy stack; domestic-ecosystem friendly.
@@ -386,6 +387,7 @@ flowchart TB
 - **[SAP Astonish](https://github.com/SAP/astonish)** (`SAP`) 🌍 👀 🟢 🏠 — SAP's own Apache-2.0 multi-tenant AI agent platform for teams (Studio, CLI, shared memory, reusable flows, generative UI, sandboxed execution); tiny community but genuinely first-party and actively pushed.
 - **[Joule A2A Agent Toolkit](https://github.com/SAP-samples/joule-a2a-agent-toolkit)** (`SAP-samples`) 🌍 👀 🟢 — Apache-2.0 toolkit for building custom agents that connect into SAP Joule over the A2A protocol on BTP Cloud Foundry (TypeScript/CAP or Python/LangGraph).
 - **[Agentforce Agent SDK](https://github.com/salesforce/agent-sdk)** (`salesforce`) 🌍 🧪 🟢 — Apache-2.0 Python SDK for creating, managing and running agents on Salesforce's closed Agentforce platform — the linkable OSS core for the reference closed enterprise agent suite (service / sales / marketing).
+- **[Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk-python)** (`anthropics`) 🌍 ⭐ 🟢 — Anthropic's official multi-agent development SDK; built-in MCP integration, subagent delegation, session memory, and human-in-the-loop approval workflows for production-grade agent loops.
 
 > ⚠️ Medical Class II/III: fully dynamic multi-agent systems conflict with NMPA "deterministic, auditable" requirements — freeze a traceable chain at the orchestration layer.
 
@@ -413,6 +415,7 @@ flowchart TB
 - **[Salesforce sf-skills](https://github.com/forcedotcom/sf-skills)** (`forcedotcom`) 🌍 🧪 🟢 — Apache-2.0 curated collection of Salesforce agent skills, optimized for Agentforce Vibes but compatible with general coding agents; the most active repo in Salesforce's agent OSS set.
 - **[Skills for Copilot Studio](https://github.com/microsoft/skills-for-copilot-studio)** (`microsoft`) 🌍 🧪 🟢 — MIT first-party Skill that lets coding agents (Claude Code, Copilot CLI, etc.) author and edit Copilot Studio agents as YAML; the Copilot Studio runtime itself remains closed SaaS.
 - **[Kingdee Skill Publisher](https://github.com/kingdee/kingdee-skill-publisher)** (`kingdee`) 🇨🇳 👀 🟢 — MIT meta-Skill that generates and publishes Cangqiong ERP business Skills (financial voucher query, supply-chain order query) on top of Kingdee's open-platform APIs and MCP services — the one first-party OSS artifact from a major China ERP vendor's agent stack.
+- **[mcp-agent](https://github.com/lastmile-ai/mcp-agent)** (`lastmile-ai`) 🌍 ⭐ 🟢 🏠 — Production framework for building agents natively on MCP; automates server connection pooling, tool discovery, dynamic routing, and OpenTelemetry-based tracing.
 
 ## 10 · RAG / Knowledge Base / Data Processing
 
@@ -480,6 +483,7 @@ flowchart TB
 - **[Langfuse](https://github.com/langfuse/langfuse)** (`langfuse`) 🌍 ⭐ 🟢 🏠 — Open-source LLM observability, self-hostable.
 - **[Phoenix](https://github.com/Arize-ai/phoenix)** (`Arize-ai`) 🌍 ⭐ 🟢 🏠 — Tracing & evaluation.
 - **[OpenLLMetry](https://github.com/traceloop/openllmetry)** (`traceloop`) 🌍 🧪 🟢 — OpenTelemetry semantic conventions for LLMs.
+- **[OpenInference](https://github.com/Arize-ai/openinference)** (`Arize-ai`) 🌍 ⭐ 🟢 🏠 — OpenTelemetry semantic conventions and instrumentation libraries for LLMs and agents (LangChain, LlamaIndex, DSPy, CrewAI, AutoGen); standardizes tracing payloads to prevent observability vendor lock-in.
 - **[LangWatch](https://github.com/langwatch/langwatch)** (`langwatch`) 🌍 🧪 🟢 🏠 — Fully open-source (Apache-2.0) LLM evaluation + agent testing + tracing in one platform; OTel-style instrumentation, self-hostable.
 - **[Keep](https://github.com/keephq/keep)** (`keephq`) 🌍 ⭐ 🟡 🏠 — Open-source alert-management / AIOps platform ("GitHub Actions for monitoring") with AI-driven alert correlation and enrichment across observability integrations; open-core — MIT core, separately licensed `ee/` tree.
 - **[bk-lite](https://github.com/TencentBlueKing/bk-lite)** (`TencentBlueKing`) 🇨🇳 👀 🟢 🏠 — Lightweight, AI-first ops/AIOps platform from Tencent's BlueKing suite — a lower-footprint entry point than the full BlueKing PaaS (bk-cmdb / bk-sops / bk-job); MIT, small but first-party and active.
@@ -566,9 +570,11 @@ flowchart TB
 - **[Continue](https://github.com/continuedev/continue)** (`continuedev`) 🌍 ⭐ 🟢 🏠 — Self-hostable VS Code / JetBrains assistant **plus** a governance hub to share approved rules/models across the org; BYO local models.
 - **[Cline](https://github.com/cline/cline)** (`cline`) 🌍 ⭐ 🟢 🏠 — Most-starred in-editor autonomous agent (plan/act, MCP, terminal); runs against internal/self-hosted endpoints, transparent loop is good for review.
 - **[Kilo Code](https://github.com/Kilo-Org/kilocode)** (`Kilo-Org`) 🌍 ⭐ 🟢 🏠 — All-in-one agentic VS Code platform (Roo/Cline lineage); the active migration target now that Roo-Code is archived.
+- **[Roo Code](https://github.com/RooCodeInc/Roo-Code)** (`RooCodeInc`) 🌍 ⭐ 🟢 🏠 — Actively maintained community successor to Roo-Cline with custom personas, MCP tool integration, and direct support for enterprise self-hosted model endpoints.
 
 **Terminal / CLI coding agents**
 - **[Aider](https://github.com/Aider-AI/aider)** (`Aider-AI`) 🌍 ⭐ 🟢 🏠 — Battle-tested terminal pair-programmer with strong Git integration and repo-map context; low footprint, BYO model.
+- **[Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview)** (`anthropic`) 🌍 ⭐ 🟢 — Anthropic's terminal agentic coding harness; combines deep codebase search, subagent dispatch, architectural linting, and automated test-driven iteration in an auditable REPL loop.
 - **[Goose](https://github.com/aaif-goose/goose)** (`aaif-goose` / Block) 🌍 ⭐ 🟢 🏠 — Block's extensible on-machine agent (install / edit / run / test); MCP-based extension model for internal tooling.
 - **[OpenCode](https://github.com/anomalyco/opencode)** (`anomalyco`) 🌍 ⭐ 🟢 🏠 — Model-agnostic terminal coding agent (OpenAI-compatible endpoints); MIT, very active.
 - **[pi](https://github.com/earendil-works/pi)** (`earendil-works`) 🌍 ⭐ 🟢 🏠 — TypeScript agent toolkit bundling a unified LLM API, an agent loop, a TUI and a coding-agent CLI; model-agnostic and embeddable in internal tooling.
